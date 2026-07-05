@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" fill="none" role="img" aria-labelledby="heroDiagramTitle heroDiagramDesc">
+  <title id="heroDiagramTitle">Schemat linii do sleevowania</title>
+  <desc id="heroDiagramDesc">Aplikator rkawa, tunel obkurczajcy i transporter w ukBadzie liniowym</desc>
+
+  <!-- TBo -->
+  <rect width="720" height="420" fill="#f7f9fb"/>
+
+  <!-- Linia transportowa -->
+  <line x1="48" y1="210" x2="672" y2="210" stroke="#c8cdd4" stroke-width="2" stroke-dasharray="6 5"/>
+
+  <!-- StrzaBki przepBywu -->
+  <path d="M300 210 L318 210" stroke="#0066cc" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M520 210 L538 210" stroke="#0066cc" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#0066cc"/>
+    </marker>
+  </defs>
+
+  <!-- 1. Aplikator rkawa -->
+  <g id="applicator">
+    <rect x="56" y="118" width="168" height="184" rx="6" fill="#fff" stroke="#9aa3ad" stroke-width="1.5"/>
+    <rect x="72" y="134" width="136" height="52" rx="3" fill="#eef1f4" stroke="#c8cdd4" stroke-width="1"/>
+    <rect x="88" y="148" width="48" height="24" rx="2" fill="#0066cc" opacity=".15" stroke="#0066cc" stroke-width="1"/>
+    <rect x="72" y="198" width="136" height="88" rx="3" fill="#f3f5f7" stroke="#c8cdd4" stroke-width="1"/>
+    <!-- Butelka -->
+    <path d="M128 218 L128 208 C128 202 132 198 138 198 L150 198 C156 198 160 202 160 208 L160 218 L164 218 L164 268 C164 276 158 282 150 282 L138 282 C130 282 124 276 124 268 L124 218 Z" fill="#fff" stroke="#6b7280" stroke-width="1.5"/>
+    <rect x="132" y="228" width="24" height="38" rx="1" fill="none" stroke="#0066cc" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <circle cx="144" cy="170" r="4" fill="#0066cc"/>
+    <text x="140" y="324" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#3d4450">Aplikator rkawa</text>
+  </g>
+
+  <!-- 2. Tunel obkurczajcy -->
+  <g id="tunnel">
+    <rect x="318" y="148" width="184" height="124" rx="6" fill="#fff" stroke="#9aa3ad" stroke-width="1.5"/>
+    <rect x="334" y="164" width="152" height="92" rx="4" fill="#eef1f4" stroke="#c8cdd4" stroke-width="1"/>
+    <!-- GrzaBki / fale ciepBa -->
+    <path d="M350 200 Q362 188 374 200 Q386 212 398 200 Q410 188 422 200" stroke="#0066cc" stroke-width="1.5" fill="none" opacity=".7"/>
+    <path d="M350 220 Q362 208 374 220 Q386 232 398 220 Q410 208 422 220" stroke="#0066cc" stroke-width="1.5" fill="none" opacity=".45"/>
+    <!-- Butelka w tunelu -->
+    <path d="M398 188 L398 178 C398 174 401 172 405 172 L411 172 C415 172 418 174 418 178 L418 188 L420 188 L420 232 C420 238 416 242 410 242 L406 242 C400 242 396 238 396 232 L396 188 Z" fill="#fff" stroke="#6b7280" stroke-width="1.2"/>
+    <rect x="400" y="194" width="16" height="32" rx="1" fill="#0066cc" opacity=".25" stroke="#0066cc" stroke-width="1"/>
+    <text x="410" y="296" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#3d4450">Tunel obkurczajcy</text>
+  </g>
+
+  <!-- 3. Transporter -->
+  <g id="conveyor">
+    <rect x="538" y="168" width="154" height="104" rx="6" fill="#fff" stroke="#9aa3ad" stroke-width="1.5"/>
+    <line x1="554" y1="210" x2="676" y2="210" stroke="#c8cdd4" stroke-width="2"/>
+    <line x1="554" y1="224" x2="676" y2="224" stroke="#c8cdd4" stroke-width="1"/>
+    <line x1="554" y1="238" x2="676" y2="238" stroke="#c8cdd4" stroke-width="1"/>
+    <!-- Rolki -->
+    <circle cx="568" cy="252" r="8" fill="#eef1f4" stroke="#9aa3ad" stroke-width="1"/>
+    <circle cx="662" cy="252" r="8" fill="#eef1f4" stroke="#9aa3ad" stroke-width="1"/>
+    <!-- Gotowy produkt -->
+    <path d="M610 182 L610 174 C610 170 613 168 617 168 L623 168 C627 168 630 170 630 174 L630 182 L632 182 L632 226 C632 232 628 236 622 236 L618 236 C612 236 608 232 608 226 L608 182 Z" fill="#fff" stroke="#6b7280" stroke-width="1.2"/>
+    <rect x="612" y="188" width="16" height="32" rx="1" fill="#0066cc" opacity=".55"/>
+    <text x="615" y="296" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#3d4450">Transporter</text>
+  </g>
+
+  <!-- Etykiety kroków -->
+  <text x="140" y="96" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing=".08em" fill="#0066cc">01</text>
+  <text x="410" y="96" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing=".08em" fill="#0066cc">02</text>
+  <text x="615" y="96" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing=".08em" fill="#0066cc">03</text>
+
+  <!-- Ramka techniczna -->
+  <rect x="24" y="24" width="672" height="372" rx="8" fill="none" stroke="#e2e6ea" stroke-width="1"/>
+</svg>

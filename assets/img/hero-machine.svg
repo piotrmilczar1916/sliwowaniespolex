@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" role="img" aria-label="Wizualizacja linii do sleevowania">
+  <rect width="720" height="560" fill="#f7f8fa"/>
+  <rect x="40" y="410" width="640" height="26" rx="6" fill="#e4e4e7"/>
+  <g fill="#a1a1aa">
+    <circle cx="90" cy="446" r="12"/><circle cx="170" cy="446" r="12"/>
+    <circle cx="250" cy="446" r="12"/><circle cx="470" cy="446" r="12"/>
+    <circle cx="550" cy="446" r="12"/><circle cx="630" cy="446" r="12"/>
+  </g>
+  <rect x="360" y="250" width="300" height="170" rx="16" fill="#ffffff" stroke="#d0d0d4" stroke-width="3"/>
+  <rect x="384" y="278" width="118" height="114" rx="10" fill="#0a0a0a"/>
+  <rect x="392" y="286" width="102" height="98" rx="6" fill="#141414"/>
+  <g stroke="#0066cc" stroke-width="5" stroke-linecap="round" opacity="0.9">
+    <path d="M406 300v70M430 300v70M454 300v70M478 300v70"/>
+  </g>
+  <rect x="520" y="286" width="120" height="70" rx="8" fill="#0a0a0a"/>
+  <circle cx="548" cy="312" r="9" fill="#0066cc"/>
+  <circle cx="576" cy="312" r="9" fill="#ffffff"/>
+  <rect x="120" y="150" width="130" height="60" rx="10" fill="#0a0a0a"/>
+  <rect x="150" y="210" width="70" height="120" rx="8" fill="#ffffff" stroke="#d0d0d4" stroke-width="3"/>
+  <circle cx="185" cy="140" r="34" fill="none" stroke="#0066cc" stroke-width="10"/>
+  <rect x="300" y="336" width="34" height="74" rx="8" fill="#0066cc"/>
+  <rect x="300" y="352" width="34" height="42" fill="#0a0a0a"/>
+  <rect x="200" y="348" width="30" height="62" rx="7" fill="#e6f2ff"/>
+  <rect x="200" y="362" width="30" height="34" fill="#0066cc"/>
+  <text x="360" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#737373">Linia do sleevowania (podglad graficzny)</text>
+</svg>
