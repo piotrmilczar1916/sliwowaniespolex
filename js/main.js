@@ -266,6 +266,7 @@
 
       // Tabela porównania – stagger wierszy + podświetlenie kolumny MTM
       var compareSection = document.getElementById('porownanie');
+      var compareTarget = compareSection && compareSection.querySelector('.compare-table-wrap');
       if (compareSection && 'IntersectionObserver' in window) {
         var compareObs = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
@@ -274,17 +275,33 @@
             if (!prefersReduced) {
               window.setTimeout(function () {
                 compareSection.classList.add('compare-highlight');
-              }, 420);
+              }, 520);
             }
             compareObs.unobserve(entry.target);
           });
-        }, { threshold: 0.2 });
-        compareObs.observe(compareSection);
+        }, { threshold: 0.15, rootMargin: '0px 0px -5% 0px' });
+        compareObs.observe(compareTarget || compareSection);
       } else if (compareSection) {
         compareSection.classList.add('compare-ready');
       }
       if (prefersReduced && compareSection) {
         compareSection.classList.add('compare-ready');
+        compareSection.classList.remove('compare-highlight');
+      }
+
+      // Branże — scroll-reveal kart
+      var industryGrid = document.getElementById('industry-grid');
+      if (industryGrid && 'IntersectionObserver' in window && !prefersReduced) {
+        var industryObs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            industryGrid.classList.add('is-ready');
+            industryObs.unobserve(entry.target);
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+        industryObs.observe(industryGrid);
+      } else if (industryGrid) {
+        industryGrid.classList.add('is-ready');
       }
 
       // Liczniki count-up w pasku statystyk
@@ -325,45 +342,6 @@
         }
       }
 
-      var isFileProtocol = window.location.protocol === 'file:';
-
-      // Lazy-load YouTube (miniatura → iframe po kliknięciu lub scrollu)
-      function mountYoutubeEmbed(wrap, autoplay) {
-        if (!wrap || wrap.dataset.embedLoaded === '1') return;
-        var src = wrap.getAttribute('data-embed-src');
-        if (!src) return;
-        var title = wrap.getAttribute('data-title') || 'Film pokazowy';
-        var iframe = document.createElement('iframe');
-        iframe.src = autoplay ? src + (src.indexOf('?') >= 0 ? '&' : '?') + 'autoplay=1' : src;
-        iframe.title = title;
-        iframe.className = 'video-embed__iframe';
-        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
-        iframe.setAttribute('allowfullscreen', '');
-        iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
-        wrap.classList.add('is-loaded');
-        wrap.innerHTML = '';
-        wrap.appendChild(iframe);
-        wrap.dataset.embedLoaded = '1';
-      }
-
-      document.querySelectorAll('.lazy-video').forEach(function (wrap) {
-        var poster = wrap.querySelector('.video-embed__poster');
-        if (poster) {
-          poster.addEventListener('click', function () {
-            mountYoutubeEmbed(wrap, true);
-          });
-        }
-      });
-
-      var videoObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting || isFileProtocol) return;
-          mountYoutubeEmbed(entry.target, false);
-          videoObserver.unobserve(entry.target);
-        });
-      }, { rootMargin: '120px', threshold: 0.15 });
-      document.querySelectorAll('.lazy-video').forEach(function (el) { videoObserver.observe(el); });
-
       // Scroll do kontaktu z prefill pola „produkt”
       var produktField = document.getElementById('produkt');
       function scrollToKontaktWithPrefill(note) {
@@ -374,7 +352,7 @@
         var kontakt = document.getElementById('kontakt');
         if (!kontakt) return;
         var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        var offset = header.offsetHeight + 12;
+        var offset = (header ? header.offsetHeight : 0) + 12;
         var top = kontakt.getBoundingClientRect().top + window.pageYOffset - offset;
         window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' });
         history.pushState(null, '', '#kontakt');
@@ -459,7 +437,7 @@
         field.addEventListener('input', function () { clearField(field); });
       });
 
-      form.addEventListener('submit', function (e) {
+      if (form) form.addEventListener('submit', function (e) {
         e.preventDefault();
         var firstInvalid = null;
         requiredFields.forEach(function (id) {

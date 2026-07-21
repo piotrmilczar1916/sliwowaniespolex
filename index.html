@@ -130,6 +130,18 @@
       background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
     }
 
+    .section-bg--compare::before {
+      background: linear-gradient(180deg, #f8fafc 0%, #f0f9ff 45%, #ffffff 100%);
+    }
+    .section-bg--compare .section-bg__orb--1 {
+      width: 22rem; height: 22rem; top: 5%; right: -5rem;
+      background: rgba(14, 165, 233, .09);
+    }
+    .section-bg--compare .section-bg__orb--2 {
+      width: 18rem; height: 18rem; bottom: 0; left: -4rem;
+      background: rgba(245, 158, 11, .07);
+    }
+
     .section-bg--filmy::before {
       background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
     }
@@ -195,31 +207,6 @@
     #korzysci article > div:first-of-type { background: var(--color-blue) !important; }
     #korzysci article:nth-child(2) > div:first-of-type { background: var(--color-amber) !important; }
 
-    #porownanie {
-      color: var(--text-primary);
-      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
-    }
-    #porownanie .text-white { color: var(--text-primary) !important; }
-    #porownanie .text-accent-400 { color: var(--color-blue) !important; }
-    #porownanie .text-steel-300 { color: var(--text-secondary) !important; }
-    #porownanie .text-steel-400 { color: var(--text-muted) !important; }
-    #porownanie .text-steel-500 { color: var(--text-muted) !important; }
-    #porownanie thead .text-accent-400 { color: var(--color-blue) !important; }
-    #porownanie thead .bg-accent-400 { background: var(--color-blue) !important; }
-    #porownanie thead th:last-child { color: var(--text-secondary) !important; }
-    #porownanie tbody th { color: var(--text-primary) !important; border-color: #e2e8f0 !important; }
-    #porownanie tbody td { border-color: #e2e8f0 !important; }
-    #porownanie .compare-col-mtm {
-      background: rgba(14, 165, 233, .06) !important;
-      color: var(--text-primary) !important;
-      font-weight: 500;
-    }
-    #porownanie tbody td:last-child {
-      background: var(--surface-muted) !important;
-      color: var(--text-secondary) !important;
-    }
-    #porownanie table { background: #fff; border-radius: 1rem; overflow: hidden; box-shadow: 0 1px 2px rgba(16,28,38,.04), 0 8px 24px -12px rgba(16,28,38,.10); }
-
     #kontakt {
       color: var(--text-primary);
       background:
@@ -241,26 +228,50 @@
     }
 
     footer[role="contentinfo"] {
-      color: var(--text-muted);
-      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%) !important;
+      color: #8a99a8;
+      background: #0a0c12 !important;
     }
-    footer[role="contentinfo"] .text-white { color: var(--text-primary) !important; }
-    footer[role="contentinfo"] .text-steel-300 { color: var(--text-secondary) !important; }
-    footer[role="contentinfo"] .text-steel-400 { color: var(--text-muted) !important; }
-    footer[role="contentinfo"] .text-steel-500 { color: #94a3b8 !important; }
-    footer[role="contentinfo"] .border-steel-800 { border-color: #e2e8f0 !important; }
+    footer[role="contentinfo"] .footer-lead {
+      font-family: var(--font-display, inherit);
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.35;
+      color: #fff;
+      letter-spacing: -0.01em;
+    }
+    footer[role="contentinfo"] .footer-label {
+      font-family: var(--font-display, inherit);
+      font-weight: 600;
+      font-size: 0.75rem;
+      line-height: 1.2;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    footer[role="contentinfo"] .footer-desc {
+      margin-top: 0.75rem;
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      color: #8a99a8;
+    }
+    footer[role="contentinfo"] .footer-desc a {
+      color: #8a99a8;
+      transition: color .2s ease;
+    }
+    footer[role="contentinfo"] .footer-desc a:hover {
+      color: #fff;
+    }
+    @media (min-width: 768px) {
+      footer[role="contentinfo"] .footer-grid {
+        grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr) minmax(0, 1fr);
+      }
+    }
 
     /* Karty Problem — niebieski + bursztyn na środkowej */
     #problem ul li { border-top: 3px solid rgba(14, 165, 233, .30); overflow: hidden; }
     #problem ul li:nth-child(2) { border-top-color: rgba(245, 158, 11, .50); }
     #problem ul li > div:first-child { background: rgba(14, 165, 233, .10) !important; color: var(--color-blue) !important; }
     #problem ul li:nth-child(2) > div:first-child { background: var(--color-amber-muted) !important; color: #b45309 !important; }
-
-    /* Branże — niebieski badge, bursztyn przy hover co druga */
-    #zastosowania li > span:first-of-type { background: rgba(14, 165, 233, .10) !important; color: var(--color-blue) !important; }
-    #zastosowania li:nth-child(even):hover > span:first-of-type { background: var(--color-amber) !important; color: #fff !important; }
-    #zastosowania li:nth-child(odd):hover > span:first-of-type { background: var(--color-blue) !important; color: #fff !important; }
-    #zastosowania li:hover { --tw-ring-color: rgba(245, 158, 11, .30); }
 
     /* Filmy — jasna ramka */
     #filmy figure.bg-navy-900 { background: #fff !important; }
@@ -319,7 +330,8 @@
       html { scroll-behavior: auto; }
       .reveal, .reveal-stagger, .hero-item, .hero-visual-wrap,
       .compare-row, .hero-parallax-layer { opacity: 1 !important; transform: none !important; transition: none !important; animation: none !important; }
-      #porownanie .compare-row { opacity: 1 !important; transform: none !important; }
+      #porownanie .compare-row { opacity: 1 !important; }
+      #porownanie.compare-highlight .compare-col-mtm { animation: none !important; }
       .counter.is-done { color: var(--color-blue) !important; }
       #process-diagram[data-reduced="true"] .proc-unit { transform: translate(300px, 62px) !important; animation: none !important; }
       #process-diagram[data-reduced="true"] .proc-sleeve-fall { opacity: 0 !important; animation: none !important; }
@@ -329,7 +341,9 @@
       #process-diagram[data-reduced="true"] .proc-tunnel-glow { opacity: .35 !important; animation: none !important; }
       #process-diagram[data-reduced="true"] .proc-label-2 { opacity: 1 !important; fill: #0EA5E9 !important; }
       .process-step, .process-step-num { transform: none !important; transition: none !important; }
-      #zastosowania .reveal-stagger > span:first-of-type { animation: none !important; opacity: 1 !important; transform: none !important; }
+      #zastosowania .industry-card { opacity: 1 !important; transform: none !important; transition: box-shadow .2s ease !important; }
+      #zastosowania .industry-card:hover { transform: none !important; }
+      #zastosowania .industry-card__icon svg { transform: none !important; }
     }
     .reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
     .reveal.is-visible { opacity: 1; transform: translateY(0); }
@@ -345,28 +359,76 @@
     .reveal-stagger { opacity: 0; transform: translateY(1.25rem); transition: opacity .65s cubic-bezier(.16,1,.3,1), transform .65s cubic-bezier(.16,1,.3,1); transition-delay: calc(var(--stagger-i, 0) * 90ms); }
     .reveal-grid.is-visible .reveal-stagger { opacity: 1; transform: translateY(0); }
 
-    /* Ikony branż – bounce przy scroll reveal */
-    @keyframes industry-icon-bounce {
-      0% { transform: scale(0.4) translateY(6px); opacity: 0; }
-      55% { transform: scale(1.14) translateY(-5px); opacity: 1; }
-      75% { transform: scale(0.96) translateY(1px); }
-      100% { transform: scale(1) translateY(0); opacity: 1; }
+    /* Branże — siatka kart z animacją */
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
     }
-    #zastosowania .reveal-stagger > span:first-of-type {
-      transform: scale(0.85);
+    @media (min-width: 640px) {
+      .industry-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.875rem;
+      }
+    }
+    .industry-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1rem 0.75rem;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.75rem;
+      box-shadow: 0 1px 2px rgba(16, 28, 38, .04);
       opacity: 0;
+      transform: translateY(15px) scale(0.95);
+      transition:
+        opacity .55s cubic-bezier(.16, 1, .3, 1),
+        transform .55s cubic-bezier(.16, 1, .3, 1),
+        box-shadow .2s ease;
+      transition-delay: calc(var(--card-i, 0) * 70ms);
     }
-    #zastosowania .reveal-grid.is-visible .reveal-stagger > span:first-of-type {
-      animation: industry-icon-bounce 0.7s cubic-bezier(.34, 1.45, .64, 1) forwards;
-      animation-delay: calc(var(--stagger-i, 0) * 90ms + 0.28s);
-    }
-    /* Branże – karty widoczne od razu (bez pustego białego bloku przed reveal) */
-    #zastosowania .reveal-stagger {
+    .industry-grid.is-ready .industry-card {
       opacity: 1;
-      transform: translateY(0.75rem);
+      transform: translateY(0) scale(1);
     }
-    #zastosowania .reveal-grid.is-visible .reveal-stagger {
-      transform: translateY(0);
+    .industry-grid.is-ready .industry-card:hover {
+      transform: translateY(-4px) scale(1);
+      box-shadow: 0 8px 24px -8px rgba(0, 102, 204, .22), 0 2px 8px -2px rgba(16, 28, 38, .10);
+    }
+    .industry-card__icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-bottom: 0.625rem;
+      border-radius: 0.5rem;
+      background: rgba(0, 102, 204, .08);
+      color: #0066cc;
+      transition: background-color .2s ease;
+    }
+    .industry-card__icon svg {
+      width: 1.375rem;
+      height: 1.375rem;
+      transition: transform .2s ease;
+    }
+    .industry-card:hover .industry-card__icon {
+      background: rgba(0, 102, 204, .14);
+    }
+    .industry-card:hover .industry-card__icon svg {
+      transform: scale(1.12);
+    }
+    .industry-card__title {
+      font-family: 'Space Grotesk', Inter, system-ui, sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: #0f172a;
+    }
+    @media (min-width: 640px) {
+      .industry-card__title { font-size: 0.875rem; }
     }
 
     /* Linia – bez pustego białego bloku przed reveal */
@@ -378,65 +440,7 @@
       transform: translateY(0);
     }
 
-    /* Filmy — embed YouTube zawsze widoczny (bez ukrywania iframe w reveal) */
-    .video-embed {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      height: 0;
-      background: #f1f5f9;
-      overflow: hidden;
-    }
-    .video-embed__iframe,
-    .video-embed__poster {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-    .video-embed__poster {
-      display: block;
-      cursor: pointer;
-      padding: 0;
-      margin: 0;
-      background: #f1f5f9;
-    }
-    .video-embed__poster:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-    }
-    .video-embed__thumb {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .video-embed__play {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 4.5rem;
-      height: 4.5rem;
-      border-radius: 9999px;
-      background: rgba(14, 165, 233, 0.92);
-      box-shadow: 0 8px 32px rgba(14, 165, 233, 0.35);
-      pointer-events: none;
-    }
-    .video-embed__play::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 54%;
-      transform: translate(-50%, -50%);
-      border-style: solid;
-      border-width: 0.75rem 0 0.75rem 1.25rem;
-      border-color: transparent transparent transparent #fff;
-    }
-    .video-embed.is-loaded .video-embed__poster { display: none; }
-
-    /* Licznik – błysk po zakończeniu */
+    /* Filmy — jasna ramka */
     @keyframes counter-flash {
       0% { transform: scale(1); }
       40% { transform: scale(1.06); text-shadow: 0 0 20px currentColor; filter: brightness(1.2); }
@@ -461,6 +465,7 @@
     .sleev-diagram { position: relative; }
     .sleev-diagram svg { display: block; width: 100%; height: 100%; overflow: visible; }
     .proc-label { font-family: 'Inter', system-ui, sans-serif; font-size: 9px; font-weight: 600; fill: #92a1b3; opacity: .45; }
+    .proc-label-2 { font-size: 8px; }
     .proc-applicator { transform-origin: 80px 31px; }
     .proc-unit { transform: translate(48px, 62px); }
     .proc-sleeve-fall { transform: translate(48px, 62px); opacity: 0; pointer-events: none; }
@@ -551,12 +556,119 @@
     #process-diagram[data-reduced="true"] .proc-conveyor-dot { animation: none !important; }
 
     /* Tabela porównania */
-    .compare-row { opacity: 0; transform: translateY(.75rem); transition: opacity .5s cubic-bezier(.16,1,.3,1), transform .5s cubic-bezier(.16,1,.3,1); transition-delay: calc(var(--row-i, 0) * 70ms); }
-    #porownanie.compare-ready .compare-row { opacity: 1; transform: translateY(0); }
+    .compare-table-wrap { -webkit-overflow-scrolling: touch; }
+    .compare-table-card {
+      background: #fff;
+      box-shadow: 0 1px 2px rgba(16, 28, 38, .04), 0 12px 32px -16px rgba(16, 28, 38, .14);
+    }
+    .compare-table { border-collapse: collapse; width: 100%; table-layout: fixed; }
+    .compare-th {
+      padding: 1rem 1.25rem;
+      vertical-align: bottom;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    @media (min-width: 640px) {
+      .compare-th { padding: 1.125rem 1.5rem; }
+    }
+    .compare-th--criteria {
+      width: 30%;
+      font-size: .6875rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .compare-th--highlight {
+      width: 36%;
+      background: #eff8ff;
+      border-top: 3px solid var(--color-blue);
+    }
+    .compare-th--alt {
+      width: 34%;
+      color: var(--text-secondary);
+      background: #f8fafc;
+    }
+    .compare-col-label {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: .5rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: .875rem;
+      font-weight: 700;
+      color: var(--color-blue);
+      line-height: 1.35;
+      white-space: normal;
+    }
+    @media (min-width: 640px) {
+      .compare-col-label { font-size: .9375rem; }
+    }
+    .compare-col-label--muted { color: var(--text-secondary); font-weight: 600; }
+    .compare-col-dot {
+      width: .5rem;
+      height: .5rem;
+      margin-top: .35rem;
+      border-radius: 9999px;
+      background: var(--color-blue);
+      box-shadow: 0 0 0 3px rgba(14, 165, 233, .18);
+      flex-shrink: 0;
+    }
+    #porownanie tbody th {
+      padding: 1.125rem 1.25rem 1.125rem 1.5rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      border-top: 1px solid #e2e8f0;
+      vertical-align: top;
+      background: #fff;
+    }
+    @media (min-width: 640px) {
+      #porownanie tbody th { padding: 1.25rem 1.5rem; }
+    }
+    #porownanie tbody td {
+      padding: 1.125rem 1.25rem;
+      border-top: 1px solid #e2e8f0;
+      vertical-align: top;
+      transition: background-color .2s ease;
+    }
+    @media (min-width: 640px) {
+      #porownanie tbody td { padding: 1.25rem 1.5rem; }
+    }
+    .compare-col-mtm {
+      background: rgba(14, 165, 233, .035);
+      border-left: 1px solid rgba(14, 165, 233, .10);
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    .compare-col-trad {
+      background: #fafbfc;
+      color: var(--text-secondary);
+    }
+    #porownanie tbody tr:last-child th,
+    #porownanie tbody tr:last-child td { border-bottom: 1px solid #e2e8f0; }
+    .compare-row { opacity: 0; transition: opacity .45s cubic-bezier(.16,1,.3,1); transition-delay: calc(var(--row-i, 0) * 70ms); }
+    #porownanie.compare-ready .compare-row { opacity: 1; }
+    #porownanie .compare-row:hover th { background: #f8fafc !important; }
+    #porownanie .compare-row:hover .compare-col-mtm { background: rgba(14, 165, 233, .08) !important; }
+    #porownanie .compare-row:hover .compare-col-trad { background: #f1f5f9 !important; }
+    .compare-cell { display: flex; align-items: flex-start; gap: .75rem; }
+    .compare-cell__badge {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.625rem;
+      height: 1.625rem;
+      margin-top: .05rem;
+      border-radius: 9999px;
+    }
+    .compare-cell__badge--yes { background: rgba(14, 165, 233, .12); color: var(--color-blue); }
+    .compare-cell__badge--no { background: rgba(148, 163, 184, .16); color: #64748b; }
+    .compare-cell__icon { width: .875rem; height: .875rem; }
+    .compare-cell__text { flex: 1; min-width: 0; line-height: 1.55; }
     @keyframes compare-col-glow {
       0% { background-color: rgba(14, 165, 233, 0); }
-      35% { background-color: rgba(14, 165, 233, .12); }
-      100% { background-color: rgba(14, 165, 233, .06); }
+      35% { background-color: rgba(14, 165, 233, .14); }
+      100% { background-color: rgba(14, 165, 233, .035); }
     }
     #porownanie.compare-highlight .compare-col-mtm { animation: compare-col-glow 1.2s ease forwards; }
 
@@ -594,6 +706,14 @@
     .nav-link.is-active::after { background: linear-gradient(90deg, var(--color-blue), var(--color-amber-light)); transform: scaleX(1); }
     .mobile-nav-link.is-active { color: var(--accent-dark); font-weight: 600; }
 
+    .line-visual-wrap { position: relative; }
+    .line-visual-glow {
+      position: absolute; inset: 8% 4% 12% 4%;
+      background: radial-gradient(ellipse 75% 65% at 50% 50%, rgba(14, 165, 233, .14), transparent 72%);
+      pointer-events: none;
+    }
+    .line-visual-media { position: relative; z-index: 1; background: transparent; overflow: visible; }
+
     /* Hero – wejście ze staggerem */
     .hero-item { opacity: 0; transform: translateY(1.25rem); transition: opacity .65s cubic-bezier(.16,1,.3,1), transform .65s cubic-bezier(.16,1,.3,1); transition-delay: var(--hero-delay, 0ms); }
     #hero.hero-ready .hero-item { opacity: 1; transform: translateY(0); }
@@ -615,7 +735,7 @@
     .hero-copy { display: flex; flex-direction: column; align-items: stretch; }
     .hero-body p { margin: 0; }
     .hero-stats-cell { display: flex; flex-direction: column; min-height: 100%; }
-    .hero-stats-cell dd { flex: 1; }
+    .hero-stats-cell dd { flex: 1; font-weight: 600; }
 
     /* Menu mobilne – płynne rozwijanie */
     #mobile-menu { transition: max-height .3s ease, opacity .25s ease; overflow: hidden; max-height: 0; opacity: 0; }
@@ -698,6 +818,18 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Sleevowanie — kompleksowa linia do etykietowania folią termokurczliwą",
+    "description": "Film pokazowy linii do sleevowania — aplikator rękawa termokurczliwego, tunel obkurczający i gotowe opakowanie 360°.",
+    "contentUrl": "https://sleever.com.pl/assets/filmy/sleevowanie-linia.mp4",
+    "thumbnailUrl": "https://sleever.com.pl/assets/img/hero-machine.png",
+    "uploadDate": "2024-01-01",
+    "inLanguage": "pl-PL"
+  }
+  </script>
 </head>
 <body class="font-sans text-steel-800 antialiased selection:bg-accent-500/20 selection:text-navy-900">
 
@@ -720,6 +852,7 @@
             <a href="#zastosowania" class="nav-link hover:text-navy-900 transition-colors shrink-0">Branże</a>
             <a href="#faq" class="nav-link hover:text-navy-900 transition-colors shrink-0">FAQ</a>
             <a href="#filmy" class="nav-link hover:text-navy-900 transition-colors shrink-0">Filmy</a>
+            <a href="#kontakt" class="nav-link hover:text-navy-900 transition-colors shrink-0">Kontakt</a>
           </nav>
         </div>
 
@@ -745,6 +878,7 @@
         <a href="#zastosowania" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">Branże</a>
         <a href="#faq" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">FAQ</a>
         <a href="#filmy" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">Filmy</a>
+        <a href="#kontakt" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">Kontakt</a>
         <a href="#kontakt" class="mobile-nav-link mt-3 inline-flex justify-center px-4 py-3 font-semibold text-white bg-accent-500 rounded-lg">Zapytaj o dobór maszyny</a>
       </nav>
     </div>
@@ -936,11 +1070,19 @@
                     <text x="32" y="72" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="7" font-weight="700" class="proc-sleeve-fit-text">360°</text>
                   </g>
 
-                  <text class="proc-label proc-label-1" x="80" y="208">1 · Sleeve spada na opakowanie</text>
-                  <text class="proc-label proc-label-2" x="280" y="208">2 · Obkurczanie w tunelu → dopasowanie</text>
+                  <text class="proc-label proc-label-1" x="108" y="208" text-anchor="middle">1 · Sleeve spada na opakowanie</text>
+                  <text class="proc-label proc-label-2" x="332" y="208" text-anchor="middle">2 · Obkurczanie w tunelu → dopasowanie</text>
                 </svg>
               </div>
-              <figcaption class="px-4 py-3 text-xs text-steel-500 bg-steel-50 border-t border-steel-200 text-center">Sleeve spada na butelkę · przejazd przez tunel · etykieta dopasowana do kształtu opakowania</figcaption>
+              <figcaption class="px-4 py-3 text-xs text-steel-500 bg-steel-50 border-t border-steel-200">
+                <span class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center">
+                  <span>Sleeve spada na butelkę</span>
+                  <svg class="w-3.5 h-3.5 text-accent-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                  <span>Przejazd przez tunel</span>
+                  <svg class="w-3.5 h-3.5 text-accent-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                  <span>Etykieta dopasowana do kształtu opakowania</span>
+                </span>
+              </figcaption>
             </figure>
           </div>
         </div>
@@ -989,59 +1131,84 @@
     </section>
 
     <!-- ========== 4. PORÓWNANIE ========== -->
-    <section id="porownanie" class="py-20 lg:py-28 text-white relative overflow-hidden" aria-labelledby="porownanie-heading" data-compare-section>
-      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-[40rem] bg-accent-500/18 rounded-full blur-[150px]" aria-hidden="true"></div>
-      <div class="absolute bottom-0 right-0 w-[20rem] h-[20rem] bg-accent-300/10 rounded-full blur-[90px]" aria-hidden="true"></div>
+    <section id="porownanie" class="section-bg section-bg--compare py-20 lg:py-28 border-y border-steel-200/70 relative overflow-hidden" aria-labelledby="porownanie-heading" data-compare-section>
+      <div class="section-bg__orb section-bg__orb--1" aria-hidden="true"></div>
+      <div class="section-bg__orb section-bg__orb--2" aria-hidden="true"></div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="reveal">
-          <p class="eyebrow text-accent-400 mb-4"><span class="text-steel-500">04</span> Porównanie</p>
-          <h2 id="porownanie-heading" class="font-display text-3xl sm:text-4xl font-bold tracking-tight">
+        <div class="reveal max-w-3xl">
+          <p class="eyebrow text-accent-600 mb-4"><span class="text-steel-400">04</span> Porównanie</p>
+          <h2 id="porownanie-heading" class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-navy-900">
             Etykiety termokurczliwe czy tradycyjne?
           </h2>
-          <p class="mt-4 text-base sm:text-lg text-steel-300">Porównujemy pokrycie opakowania, elastyczność formatów, trwałość i koszty eksploatacji obu technologii etykietowania.</p>
+          <p class="mt-4 text-lg text-steel-600">Porównujemy pokrycie opakowania, elastyczność formatów, trwałość i koszty eksploatacji obu technologii etykietowania.</p>
         </div>
-        <div class="mt-12 reveal overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
-          <table class="w-full min-w-[680px] text-left border-separate border-spacing-0">
-            <caption class="sr-only">Porównanie etykiet termokurczliwych i tradycyjnych</caption>
-            <thead>
-              <tr>
-                <th scope="col" class="py-4 pr-6 text-sm font-semibold uppercase tracking-wider text-steel-400 align-bottom w-1/3">Kryterium</th>
-                <th scope="col" class="py-4 px-6 align-bottom">
-                  <span class="inline-flex items-center gap-2 font-display text-base font-bold text-accent-400">
-                    <span class="w-2 h-2 rounded-full bg-accent-400"></span> Etykiety termokurczliwe
-                  </span>
-                </th>
-                <th scope="col" class="py-4 pl-6 align-bottom font-display text-base font-semibold text-steel-300">Etykiety tradycyjne</th>
-              </tr>
-            </thead>
-            <tbody class="text-[0.95rem]">
-              <tr class="compare-row" style="--row-i: 0">
-                <th scope="row" class="py-5 pr-6 font-semibold text-white border-t border-steel-700 align-top">Pokrycie opakowania</th>
-                <td class="compare-col-mtm py-5 px-6 text-steel-100 border-t border-steel-700 bg-accent-500/[0.06] align-top">Pełne 360°, bezszwowe</td>
-                <td class="py-5 pl-6 text-steel-400 border-t border-steel-700 align-top">Fragmentaryczne, płaskie</td>
-              </tr>
-              <tr class="compare-row" style="--row-i: 1">
-                <th scope="row" class="py-5 pr-6 font-semibold text-white border-t border-steel-700 align-top">Kształty opakowań</th>
-                <td class="compare-col-mtm py-5 px-6 text-steel-100 border-t border-steel-700 bg-accent-500/[0.06] align-top">Dowolne, także nieregularne</td>
-                <td class="py-5 pl-6 text-steel-400 border-t border-steel-700 align-top">Głównie proste, cylindryczne</td>
-              </tr>
-              <tr class="compare-row" style="--row-i: 2">
-                <th scope="row" class="py-5 pr-6 font-semibold text-white border-t border-steel-700 align-top">Tamper-evident</th>
-                <td class="compare-col-mtm py-5 px-6 text-steel-100 border-t border-steel-700 bg-accent-500/[0.06] align-top">Wbudowane — plomba na zamknięciu</td>
-                <td class="py-5 pl-6 text-steel-400 border-t border-steel-700 align-top">Wymaga dodatkowych elementów</td>
-              </tr>
-              <tr class="compare-row" style="--row-i: 3">
-                <th scope="row" class="py-5 pr-6 font-semibold text-white border-t border-steel-700 align-top">Odporność w wilgoci</th>
-                <td class="compare-col-mtm py-5 px-6 text-steel-100 border-t border-steel-700 bg-accent-500/[0.06] align-top">Wysoka — nie odkleja się w chłodni</td>
-                <td class="py-5 pl-6 text-steel-400 border-t border-steel-700 align-top">Ryzyko odklejania i zawilgocenia</td>
-              </tr>
-              <tr class="compare-row" style="--row-i: 4">
-                <th scope="row" class="py-5 pr-6 font-semibold text-white border-t border-b border-steel-700 align-top">Klej</th>
-                <td class="compare-col-mtm py-5 px-6 text-steel-100 border-t border-b border-steel-700 bg-accent-500/[0.06] align-top rounded-b-lg">Brak — stabilniejszy proces</td>
-                <td class="py-5 pl-6 text-steel-400 border-t border-b border-steel-700 align-top rounded-b-lg">Zależność od kleju i temperatury</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="compare-table-wrap mt-12 reveal overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div class="compare-table-card rounded-2xl ring-1 ring-steel-200 overflow-hidden min-w-[680px]">
+            <table class="compare-table w-full text-left">
+              <caption class="sr-only">Porównanie etykiet termokurczliwych i tradycyjnych</caption>
+              <thead>
+                <tr>
+                  <th scope="col" class="compare-th compare-th--criteria">Kryterium</th>
+                  <th scope="col" class="compare-th compare-th--highlight">
+                    <span class="compare-col-label">
+                      <span class="compare-col-dot" aria-hidden="true"></span>
+                      Etykiety termokurczliwe
+                    </span>
+                  </th>
+                  <th scope="col" class="compare-th compare-th--alt">
+                    <span class="compare-col-label compare-col-label--muted">Etykiety tradycyjne</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="text-[0.9375rem]">
+                <tr class="compare-row" style="--row-i: 0">
+                  <th scope="row">Pokrycie opakowania</th>
+                  <td class="compare-col-mtm">
+                    <span class="compare-cell compare-cell--yes"><span class="compare-cell__badge compare-cell__badge--yes" aria-hidden="true"><svg class="compare-cell__icon" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 10l3 3 7-7"/></svg></span><span class="compare-cell__text">Pełne 360°, bezszwowe</span></span>
+                  </td>
+                  <td class="compare-col-trad">
+                    <span class="compare-cell compare-cell--no"><span class="compare-cell__badge compare-cell__badge--no" aria-hidden="true"><svg class="compare-cell__icon" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l8 8M14 6l-8 8"/></svg></span><span class="compare-cell__text">Fragmentaryczne, płaskie</span></span>
+                  </td>
+                </tr>
+                <tr class="compare-row" style="--row-i: 1">
+                  <th scope="row">Kształty opakowań</th>
+                  <td class="compare-col-mtm">
+                    <span class="compare-cell compare-cell--yes"><span class="compare-cell__badge compare-cell__badge--yes" aria-hidden="true"><svg class="compare-cell__icon" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 10l3 3 7-7"/></svg></span><span class="compare-cell__text">Dowolne, także nieregularne</span></span>
+                  </td>
+                  <td class="compare-col-trad">
+                    <span class="compare-cell compare-cell--no"><span class="compare-cell__badge compare-cell__badge--no" aria-hidden="true"><svg class="compare-cell__icon" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l8 8M14 6l-8 8"/></svg></span><span class="compare-cell__text">Głównie proste, cylindryczne</span></span>
+                  </td>
+                </tr>
+                <tr class="compare-row" style="--row-i: 2">
+                  <th scope="row">Tamper-evident</th>
+                  <td class="compare-col-mtm">
+                    <span class="compare-cell compare-cell--yes"><span class="compare-cell__badge compare-cell__badge--yes" aria-hidden="true"><svg class="compare-cell__icon" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 10l3 3 7-7"/></svg></span><span class="compare-cell__text">Wbudowane — plomba na zamknięciu</span></span>
+                  </td>
+                  <td class="compare-col-trad">
+                    <span class="compare-cell compare-cell--no"><span class="compare-cell__badge compare-cell__badge--no" aria-hidden="true"><svg class="compare-cell__icon" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l8 8M14 6l-8 8"/></svg></span><span class="compare-cell__text">Wymaga dodatkowych elementów</span></span>
+                  </td>
+                </tr>
+                <tr class="compare-row" style="--row-i: 3">
+                  <th scope="row">Odporność w wilgoci</th>
+                  <td class="compare-col-mtm">
+                    <span class="compare-cell compare-cell--yes"><span class="compare-cell__badge compare-cell__badge--yes" aria-hidden="true"><svg class="compare-cell__icon" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 10l3 3 7-7"/></svg></span><span class="compare-cell__text">Wysoka — nie odkleja się w chłodni</span></span>
+                  </td>
+                  <td class="compare-col-trad">
+                    <span class="compare-cell compare-cell--no"><span class="compare-cell__badge compare-cell__badge--no" aria-hidden="true"><svg class="compare-cell__icon" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l8 8M14 6l-8 8"/></svg></span><span class="compare-cell__text">Ryzyko odklejania i zawilgocenia</span></span>
+                  </td>
+                </tr>
+                <tr class="compare-row" style="--row-i: 4">
+                  <th scope="row">Klej</th>
+                  <td class="compare-col-mtm">
+                    <span class="compare-cell compare-cell--yes"><span class="compare-cell__badge compare-cell__badge--yes" aria-hidden="true"><svg class="compare-cell__icon" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 10l3 3 7-7"/></svg></span><span class="compare-cell__text">Brak — stabilniejszy proces</span></span>
+                  </td>
+                  <td class="compare-col-trad">
+                    <span class="compare-cell compare-cell--no"><span class="compare-cell__badge compare-cell__badge--no" aria-hidden="true"><svg class="compare-cell__icon" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l8 8M14 6l-8 8"/></svg></span><span class="compare-cell__text">Zależność od kleju i temperatury</span></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>
@@ -1103,11 +1270,12 @@
         </div>
           </div>
 
-          <figure class="lg:col-span-5 order-1 lg:order-2 reveal max-w-md lg:max-w-none lg:sticky lg:top-24 rounded-2xl overflow-hidden ring-1 ring-steel-200 shadow-card bg-white">
-            <div class="aspect-[16/9] lg:aspect-[4/3] bg-white p-3 sm:p-4">
-              <img src="assets/img/linia-sleevowania.png" alt="Kompletna linia do sleevowania z transporterem, aplikatorem rękawa i modułami obkurczania" width="1024" height="562" class="w-full h-full object-contain object-center" loading="lazy" decoding="async">
+          <figure class="line-visual-wrap lg:col-span-5 order-1 lg:order-2 reveal max-w-md lg:max-w-none lg:sticky lg:top-24">
+            <div class="line-visual-glow" aria-hidden="true"></div>
+            <div class="line-visual-media aspect-[16/9] lg:aspect-[4/3] relative">
+              <img src="assets/img/linia-sleevowania-nobg.png?v=2" alt="Kompletna linia do sleevowania z transporterem, aplikatorem rękawa i modułami obkurczania" width="889" height="488" class="absolute inset-0 w-full h-full object-contain object-center drop-shadow-xl" loading="lazy" decoding="async">
             </div>
-            <figcaption class="px-4 py-3 text-xs text-steel-500 bg-steel-50 border-t border-steel-200 text-left lg:text-center">Kompletna linia do sleevowania · transporter · aplikator rękawa · tunele obkurczające</figcaption>
+            <figcaption class="relative z-10 mt-3 text-xs text-steel-500 text-left lg:text-center">Kompletna linia do sleevowania · transporter · aplikator rękawa · tunele obkurczające</figcaption>
           </figure>
         </div>
       </div>
@@ -1124,19 +1292,55 @@
           </h2>
           <p class="mt-4 text-lg text-steel-600 text-justify">Etykiety termokurczliwe sprawdzają się wszędzie tam, gdzie liczy się wygląd opakowania, bezpieczeństwo produktu i trwałość etykiety — od napojów po chemię gospodarczą.</p>
         </div>
-        <ul class="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2.5 sm:gap-3 reveal-grid">
-          <li class="reveal-stagger group flex flex-col items-center text-center p-3 bg-white ring-1 ring-steel-200 rounded-lg hover:ring-accent-500/50 hover:shadow-card transition-all" style="--stagger-i: 0"><span class="inline-flex w-8 h-8 items-center justify-center rounded-md bg-steel-100 text-accent-500 mb-2 group-hover:bg-accent-500 group-hover:text-white transition-colors" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 2h8l-1 6a3 3 0 011 2v10a2 2 0 01-2 2h-4a2 2 0 01-2-2V10a3 3 0 011-2L8 2Z"/></svg></span><h3 class="font-display text-xs sm:text-sm font-semibold text-navy-900 leading-snug">Food &amp; Beverage</h3></li>
-          <li class="reveal-stagger group flex flex-col items-center text-center p-3 bg-white ring-1 ring-steel-200 rounded-lg hover:ring-accent-500/50 hover:shadow-card transition-all" style="--stagger-i: 1"><span class="inline-flex w-8 h-8 items-center justify-center rounded-md bg-steel-100 text-accent-500 mb-2 group-hover:bg-accent-500 group-hover:text-white transition-colors" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M9 2h6v4l3 4v10a2 2 0 01-2 2H8a2 2 0 01-2-2V10l3-4V2Z"/></svg></span><h3 class="font-display text-xs sm:text-sm font-semibold text-navy-900 leading-snug">Kosmetyka</h3></li>
-          <li class="reveal-stagger group flex flex-col items-center text-center p-3 bg-white ring-1 ring-steel-200 rounded-lg hover:ring-accent-500/50 hover:shadow-card transition-all" style="--stagger-i: 2"><span class="inline-flex w-8 h-8 items-center justify-center rounded-md bg-steel-100 text-accent-500 mb-2 group-hover:bg-accent-500 group-hover:text-white transition-colors" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2" stroke-width="1.7"/><path stroke-linecap="round" stroke-width="1.7" d="M12 8v6M9 11h6"/></svg></span><h3 class="font-display text-xs sm:text-sm font-semibold text-navy-900 leading-snug">Farmacja</h3></li>
-          <li class="reveal-stagger group flex flex-col items-center text-center p-3 bg-white ring-1 ring-steel-200 rounded-lg hover:ring-accent-500/50 hover:shadow-card transition-all" style="--stagger-i: 3"><span class="inline-flex w-8 h-8 items-center justify-center rounded-md bg-steel-100 text-accent-500 mb-2 group-hover:bg-accent-500 group-hover:text-white transition-colors" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M10 2h4v5l4 9a3 3 0 01-3 4H9a3 3 0 01-3-4l4-9V2Z"/></svg></span><h3 class="font-display text-xs sm:text-sm font-semibold text-navy-900 leading-snug">Chemia gospodarcza</h3></li>
-          <li class="reveal-stagger group flex flex-col items-center text-center p-3 bg-white ring-1 ring-steel-200 rounded-lg hover:ring-accent-500/50 hover:shadow-card transition-all" style="--stagger-i: 4"><span class="inline-flex w-8 h-8 items-center justify-center rounded-md bg-steel-100 text-accent-500 mb-2 group-hover:bg-accent-500 group-hover:text-white transition-colors" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.7" d="M6 20h12M8 20V8l4-4 4 4v12"/></svg></span><h3 class="font-display text-xs sm:text-sm font-semibold text-navy-900 leading-snug">Napoje i soki</h3></li>
-          <li class="reveal-stagger group flex flex-col items-center text-center p-3 bg-white ring-1 ring-steel-200 rounded-lg hover:ring-accent-500/50 hover:shadow-card transition-all" style="--stagger-i: 5"><span class="inline-flex w-8 h-8 items-center justify-center rounded-md bg-steel-100 text-accent-500 mb-2 group-hover:bg-accent-500 group-hover:text-white transition-colors" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke-width="1.7"/><path stroke-linecap="round" stroke-width="1.7" d="M8 12h8"/></svg></span><h3 class="font-display text-xs sm:text-sm font-semibold text-navy-900 leading-snug">Nabiał</h3></li>
-          <li class="reveal-stagger group flex flex-col items-center text-center p-3 bg-white ring-1 ring-steel-200 rounded-lg hover:ring-accent-500/50 hover:shadow-card transition-all" style="--stagger-i: 6"><span class="inline-flex w-8 h-8 items-center justify-center rounded-md bg-steel-100 text-accent-500 mb-2 group-hover:bg-accent-500 group-hover:text-white transition-colors" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.7" d="M4 12h16M12 4v16"/></svg></span><h3 class="font-display text-xs sm:text-sm font-semibold text-navy-900 leading-snug">Suplementy</h3></li>
-          <li class="reveal-stagger group flex flex-col items-center text-center p-3 bg-white ring-1 ring-steel-200 rounded-lg hover:ring-accent-500/50 hover:shadow-card transition-all" style="--stagger-i: 7"><span class="inline-flex w-8 h-8 items-center justify-center rounded-md bg-steel-100 text-accent-500 mb-2 group-hover:bg-accent-500 group-hover:text-white transition-colors" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="12" rx="2" stroke-width="1.7"/></svg></span><h3 class="font-display text-xs sm:text-sm font-semibold text-navy-900 leading-snug">Produkty premium</h3></li>
-          <li class="reveal-stagger group flex flex-col items-center text-center p-3 bg-white ring-1 ring-steel-200 rounded-lg hover:ring-accent-500/50 hover:shadow-card transition-all" style="--stagger-i: 8"><span class="inline-flex w-8 h-8 items-center justify-center rounded-md bg-steel-100 text-accent-500 mb-2 group-hover:bg-accent-500 group-hover:text-white transition-colors" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.7" d="M12 3v18M3 12h18"/></svg></span><h3 class="font-display text-xs sm:text-sm font-semibold text-navy-900 leading-snug">Tuby i flakony</h3></li>
-          <li class="reveal-stagger group flex flex-col items-center text-center p-3 bg-white ring-1 ring-steel-200 rounded-lg hover:ring-accent-500/50 hover:shadow-card transition-all" style="--stagger-i: 9"><span class="inline-flex w-8 h-8 items-center justify-center rounded-md bg-steel-100 text-accent-500 mb-2 group-hover:bg-accent-500 group-hover:text-white transition-colors" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.7" d="M8 4h8v16H8z"/></svg></span><h3 class="font-display text-xs sm:text-sm font-semibold text-navy-900 leading-snug">Słoiki i puszki</h3></li>
-          <li class="reveal-stagger group flex flex-col items-center text-center p-3 bg-white ring-1 ring-steel-200 rounded-lg hover:ring-accent-500/50 hover:shadow-card transition-all" style="--stagger-i: 10"><span class="inline-flex w-8 h-8 items-center justify-center rounded-md bg-steel-100 text-accent-500 mb-2 group-hover:bg-accent-500 group-hover:text-white transition-colors" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.7" d="M6 8h12v8H6z"/></svg></span><h3 class="font-display text-xs sm:text-sm font-semibold text-navy-900 leading-snug">Kubki i opakowania nieregularne</h3></li>
-          <li class="reveal-stagger group flex flex-col items-center text-center p-3 bg-white ring-1 ring-steel-200 rounded-lg hover:ring-accent-500/50 hover:shadow-card transition-all" style="--stagger-i: 11"><span class="inline-flex w-8 h-8 items-center justify-center rounded-md bg-steel-100 text-accent-500 mb-2 group-hover:bg-accent-500 group-hover:text-white transition-colors" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.7" d="M4 7h16v10H4z"/></svg></span><h3 class="font-display text-xs sm:text-sm font-semibold text-navy-900 leading-snug">Inne branże</h3></li>
+        <ul class="industry-grid mt-10" id="industry-grid" aria-label="Branże zastosowań sleevowania">
+          <li class="industry-card" style="--card-i: 0">
+            <span class="industry-card__icon" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 2h8l-1 6a3 3 0 011 2v10a2 2 0 01-2 2h-4a2 2 0 01-2-2V10a3 3 0 011-2L8 2Z"/></svg></span>
+            <h3 class="industry-card__title">Food &amp; Beverage</h3>
+          </li>
+          <li class="industry-card" style="--card-i: 1">
+            <span class="industry-card__icon" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M9 2h6v4l3 4v10a2 2 0 01-2 2H8a2 2 0 01-2-2V10l3-4V2Z"/><path stroke-linecap="round" stroke-width="1.7" d="M9 10h6"/></svg></span>
+            <h3 class="industry-card__title">Kosmetyka</h3>
+          </li>
+          <li class="industry-card" style="--card-i: 2">
+            <span class="industry-card__icon" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="8" rx="4" stroke-width="1.7"/><path stroke-linecap="round" stroke-width="1.7" d="M8 8V6a4 4 0 018 0v2"/></svg></span>
+            <h3 class="industry-card__title">Farmacja</h3>
+          </li>
+          <li class="industry-card" style="--card-i: 3">
+            <span class="industry-card__icon" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M10 2h4v5l4 9a3 3 0 01-3 4H9a3 3 0 01-3-4l4-9V2Z"/></svg></span>
+            <h3 class="industry-card__title">Chemia gospodarcza</h3>
+          </li>
+          <li class="industry-card" style="--card-i: 4">
+            <span class="industry-card__icon" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M12 3c-3 4-5 7-5 10a5 5 0 0010 0c0-3-2-6-5-10z"/></svg></span>
+            <h3 class="industry-card__title">Napoje i soki</h3>
+          </li>
+          <li class="industry-card" style="--card-i: 5">
+            <span class="industry-card__icon" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 4h8v3l2 14H6l2-14V4z"/><path stroke-linecap="round" stroke-width="1.7" d="M8 7h8"/></svg></span>
+            <h3 class="industry-card__title">Nabiał</h3>
+          </li>
+          <li class="industry-card" style="--card-i: 6">
+            <span class="industry-card__icon" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="6" rx="3" stroke-width="1.7"/><path stroke-linecap="round" stroke-width="1.7" d="M8 9v12h8V9"/></svg></span>
+            <h3 class="industry-card__title">Suplementy</h3>
+          </li>
+          <li class="industry-card" style="--card-i: 7">
+            <span class="industry-card__icon" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.8 7.2 17l.9-5.4L4.2 7.7l5.4-.8L12 2z"/></svg></span>
+            <h3 class="industry-card__title">Produkty premium</h3>
+          </li>
+          <li class="industry-card" style="--card-i: 8">
+            <span class="industry-card__icon" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M9 4h6v16H9z"/><path stroke-linecap="round" stroke-width="1.7" d="M9 8h6"/></svg></span>
+            <h3 class="industry-card__title">Tuby i flakony</h3>
+          </li>
+          <li class="industry-card" style="--card-i: 9">
+            <span class="industry-card__icon" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 4h8v3l2 14H6l2-14V4z"/><path stroke-linecap="round" stroke-width="1.7" d="M9 7h6"/></svg></span>
+            <h3 class="industry-card__title">Słoiki i puszki</h3>
+          </li>
+          <li class="industry-card" style="--card-i: 10">
+            <span class="industry-card__icon" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M7 8h10l-2 13H9L7 8z"/><path stroke-linecap="round" stroke-width="1.7" d="M9 5h6v3H9z"/></svg></span>
+            <h3 class="industry-card__title">Kubki i opakowania nieregularne</h3>
+          </li>
+          <li class="industry-card" style="--card-i: 11">
+            <span class="industry-card__icon" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5" stroke-width="1.7"/><rect x="13" y="4" width="7" height="7" rx="1.5" stroke-width="1.7"/><rect x="4" y="13" width="7" height="7" rx="1.5" stroke-width="1.7"/><rect x="13" y="13" width="7" height="7" rx="1.5" stroke-width="1.7"/></svg></span>
+            <h3 class="industry-card__title">Inne branże</h3>
+          </li>
         </ul>
       </div>
     </section>
@@ -1174,29 +1378,15 @@
           <h2 id="filmy-heading" class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-navy-900">Sleevowanie w pracy — aplikator, tunel i linia produkcyjna</h2>
           <p class="mt-4 text-lg text-steel-600">Zobacz proces nakładania rękawa termokurczliwego i obkurczania etykiety w tunelu — od aplikatora po gotowe opakowanie na linii.</p>
         </div>
-        <div class="mt-12 max-w-4xl mx-auto">
+        <div class="mt-12 max-w-4xl mx-auto reveal">
           <figure class="rounded-2xl overflow-hidden ring-1 ring-steel-200 shadow-card bg-navy-900">
-            <div
-              class="video-embed lazy-video"
-              data-embed-src="https://www.youtube-nocookie.com/embed/w0nAXTwsu3E?rel=0&modestbranding=1"
-              data-title="Sleevowanie — kompleksowa linia do etykietowania folią termokurczliwą"
-            >
-              <button type="button" class="video-embed__poster" aria-label="Odtwórz film o sleevowaniu na YouTube">
-                <img
-                  src="https://i.ytimg.com/vi/w0nAXTwsu3E/hqdefault.jpg"
-                  alt=""
-                  class="video-embed__thumb"
-                  width="480"
-                  height="360"
-                  loading="lazy"
-                >
-                <span class="video-embed__play" aria-hidden="true"></span>
-              </button>
+            <div class="aspect-video bg-navy-950">
+              <video class="w-full h-full object-contain" controls preload="metadata" playsinline title="Sleevowanie — kompleksowa linia do etykietowania folią termokurczliwą">
+                <source src="assets/filmy/sleevowanie-linia.mp4" type="video/mp4">
+                Twoja przeglądarka nie obsługuje odtwarzania wideo.
+              </video>
             </div>
-            <figcaption class="px-4 py-3 text-xs text-steel-400 bg-navy-900 border-t border-steel-700/50 text-center">
-              Sleevowanie — kompleksowa linia do etykietowania folią termokurczliwą
-              <span class="block mt-1 text-steel-500">Kliknij miniaturę, aby odtworzyć · <a href="https://www.youtube.com/watch?v=w0nAXTwsu3E" class="text-accent-400 hover:text-accent-300 underline" target="_blank" rel="noopener noreferrer">Otwórz na YouTube</a></span>
-            </figcaption>
+            <figcaption class="px-4 py-3 text-xs text-steel-400 bg-navy-900 border-t border-steel-700/50 text-center">Sleevowanie — kompleksowa linia do etykietowania folią termokurczliwą</figcaption>
           </figure>
         </div>
       </div>
@@ -1289,32 +1479,30 @@
   </main>
 
   <!-- ========== 12. STOPKA ========== -->
-  <footer class="text-steel-400 py-16" role="contentinfo">
+  <footer class="py-16 lg:py-20" role="contentinfo">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="md:col-span-1">
-          <p class="font-display text-white font-bold text-xl">sleever.com.pl</p>
-          <p class="mt-3 text-sm leading-relaxed max-w-xs">Baza wiedzy o sleevowaniu i etykietach termokurczliwych — przewodnik edukacyjny.</p>
+      <div class="footer-grid grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
+        <div>
+          <p class="footer-lead">Autoryzowany partner Clever Machines</p>
+          <p class="footer-desc max-w-md">Dostarczamy, instalujemy, uruchamiamy i serwisujemy linie do sleevowania Clever Machines</p>
         </div>
-        <div class="text-sm space-y-3">
-          <p class="font-display font-semibold text-white uppercase tracking-wider text-xs">Kontakt</p>
-          <p>Tel.: <a href="tel:+48223517191" class="text-steel-300 hover:text-white transition-colors">22 351 71 91</a></p>
-          <p>E-mail: <a href="mailto:biuro@spolex.com" class="text-steel-300 hover:text-white transition-colors">biuro@spolex.com</a></p>
-          <p>
-            <a href="https://www.spolex.com/" class="inline-flex items-center gap-1.5 text-steel-300 hover:text-white transition-colors link-arrow">
-              www.spolex.com
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-            </a>
-          </p>
+        <div>
+          <p class="footer-label">Kontakt</p>
+          <div class="footer-desc space-y-2">
+            <p>Tel.: <a href="tel:+48223517191">22 351 71 91</a></p>
+            <p>E-mail: <a href="mailto:biuro@spolex.com">biuro@spolex.com</a></p>
+            <p>
+              <a href="https://www.spolex.com/" class="inline-flex items-center gap-1.5 link-arrow">
+                www.spolex.com
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+              </a>
+            </p>
+          </div>
         </div>
-        <div class="text-sm space-y-3">
-          <p class="font-display font-semibold text-white uppercase tracking-wider text-xs">Adres</p>
-          <p class="text-steel-300 leading-relaxed">Spolex Sp. z o.o.<br>ul. Rzemieślnicza 13<br>05-082 Blizne Łaszczyńskiego, Polska</p>
+        <div>
+          <p class="footer-label">Adres</p>
+          <p class="footer-desc">Spolex Sp. z o.o.<br>ul. Rzemieślnicza 13<br>05-082 Blizne Łaszczyńskiego, Polska</p>
         </div>
-      </div>
-      <div class="mt-12 pt-8 border-t border-steel-800 flex flex-col sm:flex-row sm:justify-between gap-4 text-xs text-steel-500">
-        <p>© <span id="year"></span> sleever.com.pl w Polsce. Wszelkie prawa zastrzeżone.</p>
-        <p>Formularz kontaktowy obsługuje zespół SPOLEX.</p>
       </div>
     </div>
   </footer>
