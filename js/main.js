@@ -409,7 +409,7 @@
         }
       }
 
-      // Formularz – walidacja inline + stany wysyłki (placeholder, bez backendu)
+      // Formularz – walidacja inline + wysyłka do mail.php
       var form = document.getElementById('lead-form');
       var status = document.getElementById('form-status');
       var submitBtn = document.getElementById('submit-btn');
@@ -462,17 +462,48 @@
         label.textContent = 'Wysyłanie…';
         status.classList.add('hidden');
 
-        // TODO: fetch(form.action, { method: 'POST', body: new FormData(form) })
-        // Symulacja odpowiedzi – podmień na realny endpoint
-        window.setTimeout(function () {
-          spinner.classList.add('hidden');
-          arrow.classList.remove('hidden');
-          label.textContent = 'Wyślij wiadomość';
-          submitBtn.disabled = false;
-          status.textContent = 'Dziękujemy — wiadomość dotarła (formularz demo: podłącz backend w polu action).';
-          status.className = 'text-sm font-medium text-green-600 mt-2 block';
-          status.classList.remove('hidden');
-          form.reset();
-        }, 900);
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        })
+          .then(function (res) {
+            return res.text().then(function (text) {
+              var data = null;
+              try { data = JSON.parse(text); } catch (e) { data = null; }
+              return { ok: res.ok, status: res.status, data: data };
+            });
+          })
+          .then(function (result) {
+            spinner.classList.add('hidden');
+            arrow.classList.remove('hidden');
+            label.textContent = 'Wyślij wiadomość';
+            submitBtn.disabled = false;
+            if (result.data && result.data.ok) {
+              status.textContent = result.data.message;
+              status.className = 'text-sm font-medium text-green-600 mt-2 block';
+              status.classList.remove('hidden');
+              form.reset();
+              return;
+            }
+            if (result.data && result.data.message) {
+              status.textContent = result.data.message;
+            } else if (result.status === 404) {
+              status.textContent = 'Brak pliku mail.php na serwerze. Wgraj mail.php obok index.html.';
+            } else {
+              status.textContent = 'Błąd serwera (HTTP ' + result.status + '). Sprawdź, czy hosting obsługuje PHP.';
+            }
+            status.className = 'text-sm font-medium text-red-600 mt-2 block';
+            status.classList.remove('hidden');
+          })
+          .catch(function () {
+            spinner.classList.add('hidden');
+            arrow.classList.remove('hidden');
+            label.textContent = 'Wyślij wiadomość';
+            submitBtn.disabled = false;
+            status.textContent = 'Brak połączenia z serwerem. Formularz wymaga hostingu z PHP (mail.php).';
+            status.className = 'text-sm font-medium text-red-600 mt-2 block';
+            status.classList.remove('hidden');
+          });
       });
     })();
