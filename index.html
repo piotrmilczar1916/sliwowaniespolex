@@ -6,7 +6,7 @@
   <title>Sleevowanie – etykiety termokurczliwe 360° | sleever.com.pl</title>
   <meta name="description" content="Kompendium wiedzy o sleevowaniu na sleever.com.pl: jak działają etykiety termokurczliwe, rodzaje tuneli obkurczających, porównanie z etykietami tradycyjnymi i zastosowania branżowe.">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0EA5E9">
+  <meta name="theme-color" content="#1a0b3b">
   <link rel="canonical" href="https://sleever.com.pl/">
   <link rel="preload" as="image" href="assets/img/hero-machine-nobg.png" fetchpriority="high">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -34,7 +34,7 @@
           colors: {
             steel: { 50: '#f6f8fa', 100: '#eef1f5', 200: '#dce2ea', 300: '#bcc7d4', 400: '#92a1b3', 500: '#6c7d92', 600: '#536273', 700: '#404d5c', 800: '#2c3742', 900: '#1d262f', 950: '#121922' },
             navy: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#020617' },
-            accent: { 300: '#7dd3fc', 400: '#38bdf8', 500: '#0EA5E9', 600: '#0284c7', 700: '#0369a1', 800: '#075985' }
+            accent: { 300: '#F472B6', 400: '#EC4899', 500: '#E91E63', 600: '#BE185D', 700: '#9D174D', 800: '#831843' }
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'Segoe UI', 'sans-serif'],
@@ -53,28 +53,42 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --color-blue: #0EA5E9;
-      --color-amber: #F59E0B;
-      --color-amber-light: #FBBF24;
-      --color-amber-soft: #FFFBEB;
-      --color-amber-muted: rgba(245, 158, 11, .12);
+      --color-indigo: #1a0b3b;
+      --color-indigo-mid: #2e0854;
+      --color-blue: #E91E63;
+      --color-amber: #FFB800;
+      --color-amber-light: #FF9800;
+      --color-amber-soft: #FFF8E7;
+      --color-amber-muted: rgba(255, 184, 0, .16);
+      --color-green: #22C55E;
+      --color-green-soft: #ECFDF5;
+      --color-pink: #FF00A8;
+      --color-pink-soft: #FDF2F8;
+      --color-violet: #7C3AED;
+      --color-violet-soft: #F3E8FF;
+      --color-red: #EF4444;
+      --color-red-soft: #FEF2F2;
       --accent: var(--color-blue);
-      --accent-light: #38bdf8;
-      --accent-lighter: #7dd3fc;
-      --accent-dark: #0284c7;
-      --surface-muted: #f1f5f9;
+      --accent-light: #F472B6;
+      --accent-lighter: #FBCFE8;
+      --accent-dark: #BE185D;
+      --surface-muted: #f5f3ff;
       --text-primary: #0f172a;
       --text-secondary: #475569;
       --text-muted: #64748b;
+      --gradient-brand: linear-gradient(135deg, var(--color-violet) 0%, var(--color-pink) 45%, var(--color-amber) 100%);
+      --gradient-warm: linear-gradient(90deg, #E91E63 0%, #FF9800 100%);
+      --gradient-hero: linear-gradient(145deg, #1a0b3b 0%, #2e0854 45%, #1e0a3c 100%);
     }
 
     html { scroll-behavior: smooth; }
     body {
       font-feature-settings: "ss01","cv01","cv02";
       background:
-        radial-gradient(ellipse 70% 45% at 100% 0%, rgba(14, 165, 233, .06), transparent 55%),
-        radial-gradient(ellipse 60% 40% at 0% 100%, rgba(245, 158, 11, .05), transparent 50%),
-        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        radial-gradient(ellipse 80% 50% at 100% 0%, rgba(233, 30, 99, .10), transparent 55%),
+        radial-gradient(ellipse 65% 45% at 0% 100%, rgba(255, 184, 0, .10), transparent 50%),
+        radial-gradient(ellipse 50% 40% at 50% 50%, rgba(124, 58, 237, .06), transparent 60%),
+        linear-gradient(180deg, #ffffff 0%, #faf5ff 55%, #fff8e7 100%);
       background-attachment: fixed;
     }
 
@@ -99,119 +113,147 @@
     }
 
     .section-bg--problem::before {
-      background: linear-gradient(160deg, #ffffff 0%, var(--color-amber-soft) 100%);
+      background: linear-gradient(160deg, #f3e8ff 0%, #fff8e7 55%, #ffffff 100%);
     }
     .section-bg--problem .section-bg__orb--1 {
-      width: 22rem; height: 22rem; top: -6rem; right: -4rem;
-      background: rgba(245, 158, 11, .10);
+      width: 26rem; height: 26rem; top: -6rem; right: -4rem;
+      background: rgba(255, 184, 0, .18);
     }
 
     .section-bg--process::before {
-      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+      background: linear-gradient(180deg, #f5f3ff 0%, #fce7f3 50%, #ffffff 100%);
     }
     .section-bg--process .section-bg__orb--1 {
-      width: 18rem; height: 18rem; bottom: -4rem; left: -3rem;
-      background: rgba(14, 165, 233, .08);
+      width: 22rem; height: 22rem; bottom: -4rem; left: -3rem;
+      background: rgba(124, 58, 237, .16);
     }
 
     .section-bg--linia::before {
-      background: linear-gradient(180deg, #ffffff 0%, var(--color-amber-soft) 100%);
+      background: linear-gradient(180deg, #faf5ff 0%, #fff8e7 60%, #ffffff 100%);
     }
 
     .section-bg--branze::before {
-      background: linear-gradient(135deg, var(--color-amber-soft) 0%, #ffffff 100%);
+      background: linear-gradient(135deg, #fdf2f8 0%, #fff8e7 45%, #f3e8ff 100%);
     }
     .section-bg--branze .section-bg__orb--1 {
-      width: 20rem; height: 20rem; top: 20%; left: -5rem;
-      background: rgba(245, 158, 11, .08);
+      width: 24rem; height: 24rem; top: 20%; left: -5rem;
+      background: rgba(255, 0, 168, .12);
+    }
+    .section-bg--branze .section-bg__orb--2 {
+      width: 20rem; height: 20rem; bottom: -2rem; right: -4rem;
+      background: rgba(124, 58, 237, .12);
     }
 
     .section-bg--faq::before {
-      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+      background: linear-gradient(180deg, #f3e8ff 0%, #fce7f3 50%, #ffffff 100%);
     }
 
     .section-bg--compare::before {
-      background: linear-gradient(180deg, #f8fafc 0%, #f0f9ff 45%, #ffffff 100%);
+      background: linear-gradient(180deg, #faf5ff 0%, #fce7f3 45%, #fff8e7 100%);
     }
     .section-bg--compare .section-bg__orb--1 {
-      width: 22rem; height: 22rem; top: 5%; right: -5rem;
-      background: rgba(14, 165, 233, .09);
+      width: 26rem; height: 26rem; top: 5%; right: -5rem;
+      background: rgba(233, 30, 99, .12);
     }
     .section-bg--compare .section-bg__orb--2 {
-      width: 18rem; height: 18rem; bottom: 0; left: -4rem;
-      background: rgba(245, 158, 11, .07);
+      width: 22rem; height: 22rem; bottom: 0; left: -4rem;
+      background: rgba(255, 184, 0, .14);
+    }
+
+    .section-bg--sposoby::before {
+      background: linear-gradient(180deg, #fff8e7 0%, #f3e8ff 50%, #ffffff 100%);
+    }
+    .section-bg--sposoby .section-bg__orb--1 {
+      width: 24rem; height: 24rem; top: 10%; right: -5rem;
+      background: rgba(233, 30, 99, .12);
     }
 
     .section-bg--filmy::before {
-      background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+      background: linear-gradient(180deg, #fdf2f8 0%, #f3e8ff 100%);
     }
 
-    /* Hero — niebieski + ciepły bursztyn */
+    /* Hero — ciemny fiolet z kolorowymi poświatami */
     #hero {
-      color: var(--text-primary);
+      color: #fff;
       background:
-        radial-gradient(ellipse 70% 55% at 90% 8%, rgba(14, 165, 233, .11), transparent 55%),
-        radial-gradient(ellipse 60% 50% at 5% 85%, rgba(245, 158, 11, .09), transparent 50%),
-        linear-gradient(145deg, #ffffff 0%, #f0f9ff 45%, var(--color-amber-soft) 100%) !important;
+        radial-gradient(ellipse 75% 60% at 92% 5%, rgba(255, 0, 168, .28), transparent 55%),
+        radial-gradient(ellipse 65% 55% at 3% 90%, rgba(255, 184, 0, .18), transparent 50%),
+        radial-gradient(ellipse 45% 40% at 60% 40%, rgba(124, 58, 237, .22), transparent 55%),
+        var(--gradient-hero) !important;
     }
-    #hero-glow-bg { background: rgba(14, 165, 233, .14) !important; }
+    #hero-glow-bg { background: rgba(233, 30, 99, .25) !important; }
     #hero .hero-glow-left {
       position: absolute;
       bottom: -20%;
       left: -15%;
-      width: 32rem;
-      height: 32rem;
+      width: 36rem;
+      height: 36rem;
       border-radius: 9999px;
-      background: rgba(245, 158, 11, .10);
+      background: rgba(255, 152, 0, .18);
       filter: blur(120px);
       pointer-events: none;
     }
     #hero #hero-heading .bg-accent-500 {
-      background: linear-gradient(90deg, var(--color-blue), var(--color-amber-light)) !important;
+      background: var(--gradient-warm) !important;
+      box-shadow: 0 2px 12px -2px rgba(233, 30, 99, .45);
     }
-    #hero .text-white { color: var(--text-primary) !important; }
-    #hero .text-steel-200 { color: var(--text-secondary) !important; }
-    #hero .text-steel-300 { color: var(--text-secondary) !important; }
+    #hero .text-steel-200 { color: rgba(255, 255, 255, .82) !important; }
+    #hero .text-steel-300 { color: rgba(255, 255, 255, .72) !important; }
     #hero .text-steel-400,
-    #hero .text-steel-500 { color: var(--text-muted) !important; }
+    #hero .text-steel-500 { color: rgba(255, 255, 255, .55) !important; }
     #hero .hero-stats-cell,
-    #hero .bg-navy-900\/60 { background: rgba(255, 255, 255, .92) !important; backdrop-filter: blur(8px); }
-    #hero dl.grid {
-      background: linear-gradient(135deg, rgba(14, 165, 233, .04), rgba(245, 158, 11, .04)) !important;
-      border-color: rgba(14, 165, 233, .10) !important;
+    #hero .bg-navy-900\/60 {
+      background: rgba(255, 255, 255, .07) !important;
+      backdrop-filter: blur(10px);
+      border-color: rgba(255, 255, 255, .12) !important;
     }
-    #hero .hero-stats-cell:nth-child(odd) .counter { color: var(--color-blue) !important; font-weight: 800; }
-    #hero .hero-stats-cell:nth-child(even) .counter { color: var(--color-amber) !important; font-weight: 800; }
+    #hero dl.grid {
+      background: rgba(255, 255, 255, .04) !important;
+      border-color: rgba(255, 255, 255, .14) !important;
+      box-shadow: 0 8px 32px -12px rgba(0, 0, 0, .35);
+    }
+    #hero .hero-stats-cell:nth-child(1) { background: rgba(233, 30, 99, .12) !important; }
+    #hero .hero-stats-cell:nth-child(2) { background: rgba(255, 184, 0, .10) !important; }
+    #hero .hero-stats-cell:nth-child(3) { background: rgba(124, 58, 237, .12) !important; }
+    #hero .hero-stats-cell:nth-child(4) { background: rgba(255, 0, 168, .10) !important; }
+    #hero .hero-stats-cell:nth-child(1) .counter { color: #F472B6 !important; font-weight: 800; }
+    #hero .hero-stats-cell:nth-child(2) .counter { color: var(--color-amber) !important; font-weight: 800; }
+    #hero .hero-stats-cell:nth-child(3) .counter { color: #C4B5FD !important; font-weight: 800; }
+    #hero .hero-stats-cell:nth-child(4) .counter { color: var(--color-pink) !important; font-weight: 800; }
     #hero a.border-steel-500 {
-      color: #b45309 !important;
-      border-color: rgba(245, 158, 11, .45) !important;
-      background: #fff !important;
+      color: var(--color-amber) !important;
+      border-color: rgba(255, 184, 0, .45) !important;
+      background: rgba(255, 255, 255, .06) !important;
     }
     #hero a.border-steel-500:hover {
       border-color: var(--color-amber) !important;
-      background: var(--color-amber-soft) !important;
+      background: rgba(255, 184, 0, .12) !important;
     }
-    #hero .focus\:ring-offset-navy-900:focus { --tw-ring-offset-color: #fff !important; }
+    #hero .focus\:ring-offset-navy-900:focus { --tw-ring-offset-color: var(--color-indigo) !important; }
 
     #korzysci {
       color: var(--text-primary);
-      background: linear-gradient(180deg, var(--color-amber-soft) 0%, #ffffff 100%) !important;
+      background:
+        radial-gradient(ellipse 70% 50% at 0% 0%, rgba(255, 184, 0, .14), transparent 55%),
+        radial-gradient(ellipse 60% 45% at 100% 100%, rgba(233, 30, 99, .12), transparent 50%),
+        linear-gradient(180deg, #fff8e7 0%, #fdf2f8 50%, #ffffff 100%) !important;
     }
     #korzysci .text-white { color: var(--text-primary) !important; }
     #korzysci .text-accent-400 { color: var(--color-amber) !important; }
     #korzysci .text-steel-500 { color: var(--text-muted) !important; }
-    #korzysci article { border-top: 3px solid rgba(14, 165, 233, .30); overflow: hidden; }
-    #korzysci article:nth-child(2) { border-top-color: rgba(245, 158, 11, .55); }
+    #korzysci article { border-top: 4px solid var(--color-blue); overflow: hidden; }
+    #korzysci article:nth-child(2) { border-top-color: var(--color-pink); }
     #korzysci article .text-accent-500 { color: var(--color-blue) !important; }
-    #korzysci article:nth-child(2) .text-accent-500 { color: var(--color-amber) !important; }
-    #korzysci article > div:first-of-type { background: var(--color-blue) !important; }
-    #korzysci article:nth-child(2) > div:first-of-type { background: var(--color-amber) !important; }
+    #korzysci article:nth-child(2) .text-accent-500 { color: var(--color-pink) !important; }
+    #korzysci article > div:first-of-type { background: var(--gradient-warm) !important; }
+    #korzysci article:nth-child(2) > div:first-of-type { background: linear-gradient(135deg, var(--color-pink), var(--color-violet)) !important; }
 
     #kontakt {
       color: var(--text-primary);
       background:
-        radial-gradient(ellipse 60% 45% at 100% 0%, rgba(245, 158, 11, .07), transparent 55%),
-        linear-gradient(135deg, #f0f9ff 0%, #ffffff 60%, var(--color-amber-soft) 100%) !important;
+        radial-gradient(ellipse 65% 50% at 100% 0%, rgba(255, 0, 168, .10), transparent 55%),
+        radial-gradient(ellipse 55% 45% at 0% 100%, rgba(124, 58, 237, .12), transparent 50%),
+        linear-gradient(135deg, #f3e8ff 0%, #fdf2f8 50%, #fff8e7 100%) !important;
     }
     #kontakt .text-white { color: var(--text-primary) !important; }
     #kontakt .text-accent-400 { color: var(--color-blue) !important; }
@@ -219,17 +261,17 @@
     #kontakt .text-steel-300 { color: var(--text-secondary) !important; }
     #kontakt .text-steel-500 { color: var(--text-muted) !important; }
     #kontakt .bg-white\/5 { background: rgba(255, 255, 255, .8) !important; }
-    #kontakt .ring-white\/10 { --tw-ring-color: rgba(14, 165, 233, .12) !important; }
+    #kontakt .ring-white\/10 { --tw-ring-color: rgba(233, 30, 99, .12) !important; }
 
     #kontakt .section-bg__orb--1 {
       width: 28rem; height: 28rem; top: -8rem; right: -6rem;
-      background: rgba(245, 158, 11, .09);
+      background: rgba(255, 184, 0, .08);
       filter: blur(100px);
     }
 
     footer[role="contentinfo"] {
-      color: #8a99a8;
-      background: #0a0c12 !important;
+      color: rgba(255, 255, 255, .65);
+      background: linear-gradient(180deg, var(--color-indigo-mid) 0%, var(--color-indigo) 100%) !important;
     }
     footer[role="contentinfo"] .footer-lead {
       font-family: var(--font-display, inherit);
@@ -252,10 +294,10 @@
       margin-top: 0.75rem;
       font-size: 0.9375rem;
       line-height: 1.65;
-      color: #8a99a8;
+      color: rgba(255, 255, 255, .55);
     }
     footer[role="contentinfo"] .footer-desc a {
-      color: #8a99a8;
+      color: rgba(255, 255, 255, .55);
       transition: color .2s ease;
     }
     footer[role="contentinfo"] .footer-desc a:hover {
@@ -267,58 +309,71 @@
       }
     }
 
-    /* Karty Problem — niebieski + bursztyn na środkowej */
-    #problem ul li { border-top: 3px solid rgba(14, 165, 233, .30); overflow: hidden; }
-    #problem ul li:nth-child(2) { border-top-color: rgba(245, 158, 11, .50); }
-    #problem ul li > div:first-child { background: rgba(14, 165, 233, .10) !important; color: var(--color-blue) !important; }
-    #problem ul li:nth-child(2) > div:first-child { background: var(--color-amber-muted) !important; color: #b45309 !important; }
+    /* Karty Problem — trzy kolory akcentu */
+    #problem ul li { border-top: 4px solid var(--color-blue); overflow: hidden; transition: box-shadow .25s ease, transform .25s ease; }
+    #problem ul li:nth-child(2) { border-top-color: var(--color-amber); }
+    #problem ul li:nth-child(3) { border-top-color: var(--color-violet); }
+    #problem ul li:hover { box-shadow: 0 12px 32px -12px rgba(233, 30, 99, .25); }
+    #problem ul li:nth-child(2):hover { box-shadow: 0 12px 32px -12px rgba(255, 184, 0, .30); }
+    #problem ul li:nth-child(3):hover { box-shadow: 0 12px 32px -12px rgba(124, 58, 237, .28); }
+    #problem ul li > div:first-child { background: rgba(233, 30, 99, .12) !important; color: var(--color-blue) !important; }
+    #problem ul li:nth-child(2) > div:first-child { background: rgba(255, 184, 0, .16) !important; color: #b45309 !important; }
+    #problem ul li:nth-child(3) > div:first-child { background: rgba(124, 58, 237, .12) !important; color: #6D28D9 !important; }
 
-    /* Filmy — jasna ramka */
-    #filmy figure.bg-navy-900 { background: #fff !important; }
+    /* Filmy — kolorowa ramka wokół wideo */
+    #filmy figure.bg-navy-900 {
+      background: #fff !important;
+      box-shadow: 0 8px 32px -12px rgba(255, 0, 168, .18), 0 4px 16px -8px rgba(233, 30, 99, .16);
+      outline: 2px solid rgba(233, 30, 99, .18);
+      outline-offset: -2px;
+    }
     #filmy figcaption.bg-navy-900 { background: #f8fafc !important; color: var(--text-muted) !important; border-color: #e2e8f0 !important; }
     #filmy figcaption .text-steel-400,
     #filmy figcaption .text-steel-500 { color: var(--text-muted) !important; }
     #filmy figcaption .text-accent-400 { color: var(--color-blue) !important; }
 
-    /* Przyciski CTA — spójny niebieski */
+    /* Przyciski CTA — gradient z poświatą */
     a.bg-accent-500,
     button.bg-accent-500,
     #submit-btn.bg-accent-500 {
-      background: var(--color-blue) !important;
-      box-shadow: 0 4px 14px -4px rgba(14, 165, 233, .35);
-      transition: background-color .2s ease, box-shadow .2s ease, transform .2s ease;
+      background: var(--gradient-warm) !important;
+      box-shadow: 0 4px 18px -4px rgba(233, 30, 99, .45), 0 2px 8px -2px rgba(255, 152, 0, .30);
+      transition: background .2s ease, box-shadow .2s ease, transform .2s ease, filter .2s ease;
     }
     a.bg-accent-500:hover,
     button.bg-accent-500:hover,
     #submit-btn.bg-accent-500:hover:not(:disabled) {
-      background: var(--accent-dark) !important;
-      box-shadow: 0 6px 20px -6px rgba(14, 165, 233, .45);
-      transform: translateY(-1px);
+      background: linear-gradient(90deg, var(--accent-dark) 0%, #E65100 100%) !important;
+      box-shadow: 0 8px 28px -6px rgba(233, 30, 99, .55), 0 4px 12px -4px rgba(255, 152, 0, .40);
+      transform: translateY(-2px);
+      filter: brightness(1.05);
     }
 
     /* Kroki procesu — aktywny krok w bursztynie */
     #jak-dziala .process-step-num { background: var(--color-blue) !important; }
-    #jak-dziala .process-step.is-active { background-color: var(--color-amber-muted); box-shadow: inset 3px 0 0 var(--color-amber); }
-    #jak-dziala .process-step.is-active .process-step-num { background: var(--color-amber) !important; box-shadow: 0 4px 14px -4px rgba(245, 158, 11, .40); }
+    #jak-dziala .process-step[data-process-step="2"] .process-step-num { background: var(--color-violet) !important; }
+    #jak-dziala .process-step[data-process-step="3"] .process-step-num { background: var(--color-violet) !important; }
+    #jak-dziala .process-step.is-active { background-color: var(--color-amber-muted); box-shadow: inset 4px 0 0 var(--color-amber); }
+    #jak-dziala .process-step.is-active .process-step-num { background: var(--color-amber) !important; box-shadow: 0 4px 14px -4px rgba(255, 184, 0, .40); }
 
     /* Diagram procesu — ciepło tunelu w bursztynie */
     #process-diagram stop[offset="100%"] { stop-color: var(--color-blue); }
-    #process-diagram #proc-sleeve-loose-grad stop:first-child { stop-color: #7dd3fc; }
-    #process-diagram #proc-sleeve-fit-grad stop:first-child { stop-color: #38bdf8; }
-    #process-diagram #proc-sleeve-fit-grad stop:last-child { stop-color: #0284c7; }
-    #process-diagram #proc-tunnel-heat stop:first-child { stop-color: #FBBF24; }
-    #process-diagram #proc-tunnel-heat stop:last-child { stop-color: rgba(14, 165, 233, .15); }
-    #process-diagram svg [stroke="#0066cc"] { stroke: var(--color-blue); }
-    #process-diagram svg [fill="#0066cc"] { fill: var(--color-blue); }
+    #process-diagram #proc-sleeve-loose-grad stop:first-child { stop-color: #F472B6; }
+    #process-diagram #proc-sleeve-fit-grad stop:first-child { stop-color: #EC4899; }
+    #process-diagram #proc-sleeve-fit-grad stop:last-child { stop-color: #BE185D; }
+    #process-diagram #proc-tunnel-heat stop:first-child { stop-color: #FFB800; }
+    #process-diagram #proc-tunnel-heat stop:last-child { stop-color: rgba(233, 30, 99, .15); }
+    #process-diagram svg [stroke="#E91E63"] { stroke: var(--color-blue); }
+    #process-diagram svg [fill="#E91E63"] { fill: var(--color-blue); }
     #process-diagram .proc-conveyor-dot { fill: var(--color-blue) !important; }
 
-    #to-top { background: var(--color-blue) !important; }
-    #to-top:hover { background: var(--color-amber) !important; }
+    #to-top { background: var(--gradient-warm) !important; box-shadow: 0 4px 16px -4px rgba(233, 30, 99, .45); }
+    #to-top:hover { background: linear-gradient(135deg, var(--color-pink), var(--color-violet)) !important; }
 
-    /* Eyebrow — bursztynowa kreska, niebieski tekst */
+    /* Eyebrow — wyraźniejszy gradient */
     .eyebrow.text-accent-600,
-    .eyebrow.text-accent-400 { color: var(--color-blue) !important; }
-    .eyebrow::before { background: linear-gradient(90deg, var(--color-blue), var(--color-amber-light)) !important; opacity: .75; }
+    .eyebrow.text-accent-400 { color: var(--color-blue) !important; font-weight: 700; }
+    .eyebrow::before { background: var(--gradient-brand) !important; opacity: 1; height: 3px; width: 2.25rem; }
 
     /* Pasek postępu i łącznik linii — gradient niebieski → bursztyn (reguły niżej) */
 
@@ -328,18 +383,19 @@
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .reveal, .reveal-stagger, .hero-item, .hero-visual-wrap,
+      .reveal, .reveal-stagger, .hero-item, .hero-visual-wrap, .hero-visual-img,
       .compare-row, .hero-parallax-layer { opacity: 1 !important; transform: none !important; transition: none !important; animation: none !important; }
       #porownanie .compare-row { opacity: 1 !important; }
       #porownanie.compare-highlight .compare-col-mtm { animation: none !important; }
       .counter.is-done { color: var(--color-blue) !important; }
-      #process-diagram[data-reduced="true"] .proc-unit { transform: translate(300px, 62px) !important; animation: none !important; }
+      #process-diagram[data-reduced="true"] .proc-unit { transform: translate(301px, 62px) !important; animation: none !important; }
       #process-diagram[data-reduced="true"] .proc-sleeve-fall { opacity: 0 !important; animation: none !important; }
       #process-diagram[data-reduced="true"] .proc-sleeve-loose { opacity: 0 !important; animation: none !important; }
       #process-diagram[data-reduced="true"] .proc-sleeve-fit,
       #process-diagram[data-reduced="true"] .proc-sleeve-fit-text { opacity: 1 !important; transform: none !important; animation: none !important; }
-      #process-diagram[data-reduced="true"] .proc-tunnel-glow { opacity: .35 !important; animation: none !important; }
-      #process-diagram[data-reduced="true"] .proc-label-2 { opacity: 1 !important; fill: #0EA5E9 !important; }
+      #process-diagram[data-reduced="true"] .proc-tunnel-glow { opacity: 0 !important; animation: none !important; }
+      #process-diagram[data-reduced="true"] .proc-dry-glow { opacity: .35 !important; animation: none !important; }
+      #process-diagram[data-reduced="true"] .proc-label-3 { opacity: 1 !important; fill: #7C3AED !important; }
       .process-step, .process-step-num { transform: none !important; transition: none !important; }
       #zastosowania .industry-card { opacity: 1 !important; transform: none !important; transition: box-shadow .2s ease !important; }
       #zastosowania .industry-card:hover { transform: none !important; }
@@ -348,7 +404,9 @@
     .reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
     .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-    .header-scrolled { box-shadow: 0 1px 0 rgba(220,226,234,.9), 0 8px 30px -12px rgba(16,28,38,.18); }
+    .header-scrolled { box-shadow: 0 1px 0 rgba(220,226,234,.9), 0 8px 30px -12px rgba(233, 30, 99, .12); }
+    #site-header { background: rgba(255, 255, 255, .92) !important; }
+    #site-header a.font-display { background: var(--gradient-warm); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
     #header-inner { transition: height .3s cubic-bezier(.16,1,.3,1), padding .3s cubic-bezier(.16,1,.3,1); }
     #site-header.header-compact #header-inner { height: 3.5rem; }
     @media (min-width: 1024px) {
@@ -380,13 +438,14 @@
       background: #fff;
       border: 1px solid #e2e8f0;
       border-radius: 0.75rem;
-      box-shadow: 0 1px 2px rgba(16, 28, 38, .04);
+      box-shadow: 0 2px 8px rgba(16, 28, 38, .06);
       opacity: 0;
       transform: translateY(15px) scale(0.95);
       transition:
         opacity .55s cubic-bezier(.16, 1, .3, 1),
         transform .55s cubic-bezier(.16, 1, .3, 1),
-        box-shadow .2s ease;
+        box-shadow .2s ease,
+        border-color .2s ease;
       transition-delay: calc(var(--card-i, 0) * 70ms);
     }
     .industry-grid.is-ready .industry-card {
@@ -394,29 +453,40 @@
       transform: translateY(0) scale(1);
     }
     .industry-grid.is-ready .industry-card:hover {
-      transform: translateY(-4px) scale(1);
-      box-shadow: 0 8px 24px -8px rgba(0, 102, 204, .22), 0 2px 8px -2px rgba(16, 28, 38, .10);
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 12px 28px -8px rgba(233, 30, 99, .28);
     }
     .industry-card__icon {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 2.75rem;
+      height: 2.75rem;
       margin-bottom: 0.625rem;
-      border-radius: 0.5rem;
-      background: rgba(0, 102, 204, .08);
-      color: #0066cc;
-      transition: background-color .2s ease;
+      border-radius: 0.625rem;
+      background: rgba(233, 30, 99, .12);
+      color: var(--color-blue);
+      transition: background-color .2s ease, transform .2s ease;
     }
+    .industry-card:nth-child(4n+2) .industry-card__icon { background: rgba(255, 184, 0, .16); color: var(--color-amber); }
+    .industry-card:nth-child(4n+3) .industry-card__icon { background: rgba(34, 197, 94, .14); color: var(--color-green); }
+    .industry-card:nth-child(4n) .industry-card__icon { background: rgba(255, 0, 168, .14); color: var(--color-pink); }
+    .industry-card:nth-child(4n+1):hover { border-color: rgba(233, 30, 99, .35); }
+    .industry-card:nth-child(4n+2):hover { border-color: rgba(255, 184, 0, .40); box-shadow: 0 12px 28px -8px rgba(255, 184, 0, .28); }
+    .industry-card:nth-child(4n+3):hover { border-color: rgba(34, 197, 94, .35); box-shadow: 0 12px 28px -8px rgba(34, 197, 94, .25); }
+    .industry-card:nth-child(4n):hover { border-color: rgba(255, 0, 168, .35); box-shadow: 0 12px 28px -8px rgba(255, 0, 168, .25); }
     .industry-card__icon svg {
       width: 1.375rem;
       height: 1.375rem;
       transition: transform .2s ease;
     }
     .industry-card:hover .industry-card__icon {
-      background: rgba(0, 102, 204, .14);
+      transform: scale(1.08);
     }
+    .industry-card:nth-child(4n+1):hover .industry-card__icon { background: rgba(233, 30, 99, .22); }
+    .industry-card:nth-child(4n+2):hover .industry-card__icon { background: rgba(255, 184, 0, .26); }
+    .industry-card:nth-child(4n+3):hover .industry-card__icon { background: rgba(34, 197, 94, .22); }
+    .industry-card:nth-child(4n):hover .industry-card__icon { background: rgba(255, 0, 168, .22); }
     .industry-card:hover .industry-card__icon svg {
       transform: scale(1.12);
     }
@@ -429,6 +499,227 @@
     }
     @media (min-width: 640px) {
       .industry-card__title { font-size: 0.875rem; }
+    }
+
+    /* Sposoby sleevowania — obraz + akordeon */
+    .sleeve-board {
+      margin-top: 2.5rem;
+      display: grid;
+      gap: 1rem;
+      align-items: stretch;
+    }
+    @media (min-width: 1024px) {
+      .sleeve-board {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 1.25rem;
+        margin-top: 3rem;
+        min-height: 22rem;
+      }
+    }
+    .sleeve-showcase {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      margin: 0;
+      padding: 1.25rem 1rem 1rem;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(233, 30, 99, .12), transparent 65%),
+        linear-gradient(180deg, #ffffff 0%, #faf5ff 100%);
+      border: 1px solid rgba(233, 30, 99, .15);
+      border-radius: 1.25rem;
+      box-shadow: 0 12px 40px -16px rgba(233, 30, 99, .25);
+    }
+    .sleeve-showcase__img-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 0;
+    }
+    .sleeve-showcase__img {
+      display: block;
+      width: 100%;
+      max-height: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    .sleeve-showcase__markers {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0.375rem;
+      margin: 0.875rem 0 0;
+      padding: 0;
+      list-style: none;
+      flex-shrink: 0;
+    }
+    .sleeve-showcase__markers li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 1.625rem;
+      border-radius: 9999px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      color: #64748b;
+      background: rgba(255, 255, 255, .85);
+      border: 1px solid #e2e8f0;
+      transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+    }
+    .sleeve-showcase__markers li.is-active {
+      color: #fff;
+      background: var(--color-blue);
+      border-color: var(--color-blue);
+    }
+    .sleeve-showcase__markers li:nth-child(2).is-active { background: var(--color-amber); border-color: var(--color-amber); }
+    .sleeve-showcase__markers li:nth-child(3).is-active { background: var(--color-green); border-color: var(--color-green); }
+    .sleeve-showcase__markers li:nth-child(4).is-active { background: var(--color-pink); border-color: var(--color-pink); }
+    .sleeve-showcase__markers li:nth-child(5).is-active { background: var(--color-violet); border-color: var(--color-violet); }
+    .sleeve-showcase__markers li:nth-child(6).is-active { background: var(--color-violet); border-color: var(--color-violet); }
+    .sleeve-showcase__caption {
+      margin-top: 0.625rem;
+      font-size: 0.6875rem;
+      line-height: 1.45;
+      text-align: center;
+      color: #64748b;
+      flex-shrink: 0;
+    }
+    .sleeve-acc-list {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      gap: 0.375rem;
+    }
+    @media (min-width: 1024px) {
+      .sleeve-acc-list:not(:has(.sleeve-acc-item.is-open)) {
+        justify-content: space-between;
+      }
+      .sleeve-acc-list:has(.sleeve-acc-item.is-open) {
+        height: auto;
+        min-height: 100%;
+        justify-content: flex-start;
+      }
+    }
+    .sleeve-acc-item {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.75rem;
+      background: #fff;
+      overflow: hidden;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    @media (min-width: 1024px) {
+      .sleeve-acc-list:not(:has(.sleeve-acc-item.is-open)) .sleeve-acc-item {
+        flex: 1;
+        min-height: 0;
+      }
+      .sleeve-acc-list:has(.sleeve-acc-item.is-open) .sleeve-acc-item {
+        flex: 0 0 auto;
+        min-height: auto;
+      }
+    }
+    .sleeve-acc-item.is-open {
+      overflow: visible;
+    }
+    .sleeve-acc-item.is-open {
+      border-color: rgba(233, 30, 99, .35);
+      box-shadow: 0 4px 16px -8px rgba(233, 30, 99, .18);
+    }
+    .sleeve-acc-item[data-sleeve-type="1"].is-open { border-color: rgba(255, 184, 0, .4); box-shadow: 0 4px 16px -8px rgba(255, 184, 0, .15); }
+    .sleeve-acc-item[data-sleeve-type="2"].is-open { border-color: rgba(34, 197, 94, .35); }
+    .sleeve-acc-item[data-sleeve-type="3"].is-open { border-color: rgba(255, 0, 168, .35); }
+    .sleeve-acc-item[data-sleeve-type="4"].is-open { border-color: rgba(139, 92, 246, .35); }
+    .sleeve-acc-item[data-sleeve-type="5"].is-open { border-color: rgba(2, 132, 199, .35); }
+    .sleeve-acc-trigger {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      width: 100%;
+      padding: 0.625rem 0.875rem;
+      text-align: left;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    @media (min-width: 1024px) {
+      .sleeve-acc-list:not(:has(.sleeve-acc-item.is-open)) .sleeve-acc-trigger {
+        flex: 1;
+        min-height: 2.5rem;
+      }
+      .sleeve-acc-trigger {
+        min-height: 2.5rem;
+        padding: 0.5rem 0.875rem;
+      }
+    }
+    .sleeve-acc-trigger:hover { background: rgba(233, 30, 99, .04); }
+    .sleeve-acc-num {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.5rem;
+      background: rgba(233, 30, 99, .12);
+      color: var(--color-blue);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .sleeve-acc-item[data-sleeve-type="1"] .sleeve-acc-num { background: rgba(255, 184, 0, .14); color: var(--color-amber); }
+    .sleeve-acc-item[data-sleeve-type="2"] .sleeve-acc-num { background: rgba(34, 197, 94, .14); color: var(--color-green); }
+    .sleeve-acc-item[data-sleeve-type="3"] .sleeve-acc-num { background: rgba(255, 0, 168, .14); color: var(--color-pink); }
+    .sleeve-acc-item[data-sleeve-type="4"] .sleeve-acc-num { background: rgba(139, 92, 246, .14); color: var(--color-violet); }
+    .sleeve-acc-item[data-sleeve-type="5"] .sleeve-acc-num { background: rgba(124, 58, 237, .12); color: var(--color-violet); }
+    .sleeve-acc-title {
+      flex: 1;
+      min-width: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #0f172a;
+    }
+    @media (min-width: 640px) {
+      .sleeve-acc-title { font-size: 0.875rem; }
+    }
+    .sleeve-acc-chevron {
+      flex-shrink: 0;
+      width: 1.125rem;
+      height: 1.125rem;
+      color: #94a3b8;
+      transition: transform .25s ease, color .25s ease;
+    }
+    .sleeve-acc-trigger[aria-expanded="true"] .sleeve-acc-chevron {
+      transform: rotate(180deg);
+      color: var(--color-blue);
+    }
+    .sleeve-acc-panel {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .3s cubic-bezier(.16, 1, .3, 1);
+    }
+    .sleeve-acc-panel.is-open { grid-template-rows: 1fr; }
+    .sleeve-acc-panel > div {
+      overflow: hidden;
+      min-height: 0;
+      padding: 0 0.875rem;
+    }
+    .sleeve-acc-panel.is-open > div {
+      overflow: visible;
+      padding-top: 0.125rem;
+      padding-bottom: 0.875rem;
+    }
+    .sleeve-acc-panel p {
+      margin: 0;
+      font-size: 0.8125rem;
+      line-height: 1.55;
+      color: #64748b;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sleeve-acc-panel { transition: none; }
+      .sleeve-acc-chevron { transition: none; }
     }
 
     /* Linia – bez pustego białego bloku przed reveal */
@@ -458,14 +749,13 @@
     .process-step { border-radius: .75rem; transition: background-color .45s ease, box-shadow .45s ease, transform .45s cubic-bezier(.16,1,.3,1); }
     .process-step.is-active { background-color: var(--color-amber-muted); box-shadow: inset 3px 0 0 var(--color-amber); transform: translateX(4px); }
     .process-step-num { transition: background-color .45s ease, transform .45s cubic-bezier(.16,1,.3,1), box-shadow .45s ease; }
-    .process-step.is-active .process-step-num { background: var(--color-amber); transform: scale(1.08); box-shadow: 0 4px 14px -4px rgba(245, 158, 11, .40); }
+    .process-step.is-active .process-step-num { background: var(--color-amber); transform: scale(1.08); box-shadow: 0 4px 14px -4px rgba(255, 184, 0, .40); }
     #process-steps.is-paused .process-step { cursor: pointer; }
 
-    /* Animacja procesu sleevowania — sleeve, tunel, dopasowanie */
+    /* Animacja procesu sleevowania — 3 kroki: aplikacja, tunel, osuszanie */
     .sleev-diagram { position: relative; }
     .sleev-diagram svg { display: block; width: 100%; height: 100%; overflow: visible; }
-    .proc-label { font-family: 'Inter', system-ui, sans-serif; font-size: 9px; font-weight: 600; fill: #92a1b3; opacity: .45; }
-    .proc-label-2 { font-size: 8px; }
+    .proc-label { font-family: 'Inter', system-ui, sans-serif; font-size: 8px; font-weight: 600; fill: #92a1b3; opacity: .45; }
     .proc-applicator { transform-origin: 80px 31px; }
     .proc-unit { transform: translate(48px, 62px); }
     .proc-sleeve-fall { transform: translate(48px, 62px); opacity: 0; pointer-events: none; }
@@ -479,61 +769,81 @@
     .sleev-diagram.is-running .proc-sleeve-fit,
     .sleev-diagram.is-running .proc-sleeve-fit-text { animation: proc-sleeve-fit 5.6s ease-in-out infinite; }
     .sleev-diagram.is-running .proc-tunnel-glow { animation: proc-tunnel-glow 5.6s ease-in-out infinite; }
+    .sleev-diagram.is-running .proc-dry-glow { animation: proc-dry-glow 5.6s ease-in-out infinite; }
+    .sleev-diagram.is-running .proc-dry-stream { animation: proc-dry-stream 5.6s ease-in-out infinite; }
     .sleev-diagram.is-running .proc-applicator { animation: proc-applicator 5.6s ease-in-out infinite; }
     .sleev-diagram.is-running .proc-label-1 { animation: proc-label-1 5.6s ease-in-out infinite; }
     .sleev-diagram.is-running .proc-label-2 { animation: proc-label-2 5.6s ease-in-out infinite; }
+    .sleev-diagram.is-running .proc-label-3 { animation: proc-label-3 5.6s ease-in-out infinite; }
     .sleev-diagram.is-running .proc-conveyor-dot { animation: proc-conveyor-dot 5.6s linear infinite; }
 
     @keyframes proc-unit-move {
-      0%, 48% { transform: translate(48px, 62px); }
-      52%, 58% { transform: translate(178px, 62px); }
-      58%, 76% { transform: translate(178px, 62px); }
-      78%, 86% { transform: translate(300px, 62px); }
-      88%, 96% { transform: translate(300px, 62px); }
-      100% { transform: translate(48px, 62px); }
+      0%, 30% { transform: translate(48px, 62px); }
+      33%, 35% { transform: translate(178px, 62px); }
+      35%, 62% { transform: translate(178px, 62px); }
+      65%, 67% { transform: translate(301px, 62px); }
+      67%, 93% { transform: translate(301px, 62px); }
+      96%, 100% { transform: translate(48px, 62px); }
     }
     @keyframes proc-sleeve-fall {
-      0%, 7% { opacity: 0; transform: translate(48px, 8px); }
-      9% { opacity: 1; transform: translate(48px, 8px); }
-      21% { opacity: 1; transform: translate(48px, 62px); }
-      24%, 100% { opacity: 0; transform: translate(48px, 62px); }
+      0%, 5% { opacity: 0; transform: translate(48px, 8px); }
+      7% { opacity: 1; transform: translate(48px, 8px); }
+      18% { opacity: 1; transform: translate(48px, 62px); }
+      22%, 100% { opacity: 0; transform: translate(48px, 62px); }
     }
     @keyframes proc-sleeve-loose {
-      0%, 22% { opacity: 0; transform: scale(1); }
-      26%, 52% { opacity: 1; transform: scale(1); }
-      56%, 60% { opacity: 0; transform: scale(1); }
-      76%, 100% { opacity: 0; transform: scale(1); }
+      0%, 20% { opacity: 0; transform: scale(1); }
+      24%, 34% { opacity: 1; transform: scale(1); }
+      36%, 56% { opacity: 1; transform: scale(1); }
+      58%, 100% { opacity: 0; transform: scale(1); }
     }
     @keyframes proc-sleeve-fit {
       0%, 56% { opacity: 0; transform: scale(1); }
-      60%, 68% { opacity: .65; transform: scale(1); }
-      72%, 88% { opacity: 1; transform: scale(1); }
-      96%, 100% { opacity: 0; transform: scale(1); }
+      60%, 64% { opacity: .65; transform: scale(1); }
+      66%, 91% { opacity: 1; transform: scale(1); }
+      95%, 100% { opacity: 0; transform: scale(1); }
     }
     @keyframes proc-tunnel-glow {
-      0%, 50% { opacity: 0; }
-      54%, 78% { opacity: .8; }
-      82%, 100% { opacity: 0; }
+      0%, 34% { opacity: 0; }
+      38%, 62% { opacity: .85; }
+      66%, 100% { opacity: 0; }
+    }
+    @keyframes proc-dry-glow {
+      0%, 64% { opacity: 0; }
+      68%, 91% { opacity: .75; }
+      95%, 100% { opacity: 0; }
+    }
+    @keyframes proc-dry-stream {
+      0%, 64% { opacity: 0; transform: translateX(0); }
+      68%, 91% { opacity: .7; transform: translateX(4px); }
+      95%, 100% { opacity: 0; transform: translateX(0); }
     }
     @keyframes proc-applicator {
-      0%, 7% { transform: translateY(0); opacity: .85; }
-      12%, 20% { transform: translateY(5px); opacity: 1; }
-      26%, 100% { transform: translateY(0); opacity: .85; }
+      0%, 5% { transform: translateY(0); opacity: .85; }
+      8%, 18% { transform: translateY(5px); opacity: 1; }
+      22%, 100% { transform: translateY(0); opacity: .85; }
     }
     @keyframes proc-label-1 {
-      0%, 50% { fill: #0EA5E9; opacity: 1; }
-      51%, 100% { fill: #92a1b3; opacity: .4; }
+      0%, 31% { fill: #E91E63; opacity: 1; }
+      32%, 100% { fill: #92a1b3; opacity: .4; }
     }
     @keyframes proc-label-2 {
-      0%, 50% { fill: #92a1b3; opacity: .4; }
-      51%, 88% { fill: #F59E0B; opacity: 1; }
-      89%, 100% { fill: #92a1b3; opacity: .4; }
+      0%, 32% { fill: #92a1b3; opacity: .4; }
+      33%, 64% { fill: #FFB800; opacity: 1; }
+      65%, 100% { fill: #92a1b3; opacity: .4; }
+    }
+    @keyframes proc-label-3 {
+      0%, 64% { fill: #92a1b3; opacity: .4; }
+      65%, 92% { fill: #7C3AED; opacity: 1; }
+      93%, 100% { fill: #92a1b3; opacity: .4; }
     }
     @keyframes proc-conveyor-dot {
-      0%, 48% { opacity: 0; transform: translateX(0); }
-      52% { opacity: 1; }
-      54%, 78% { opacity: 1; transform: translateX(88px); }
-      82%, 100% { opacity: 0; transform: translateX(88px); }
+      0%, 30% { opacity: 0; transform: translateX(0); }
+      33% { opacity: 1; transform: translateX(0); }
+      35%, 62% { opacity: 1; transform: translateX(130px); }
+      65%, 67% { opacity: 1; transform: translateX(130px); }
+      67%, 93% { opacity: 1; transform: translateX(253px); }
+      96%, 100% { opacity: 0; transform: translateX(253px); }
     }
     @keyframes proc-cycle-sync {
       from { opacity: 0; }
@@ -550,16 +860,20 @@
     #process-diagram[data-reduced="true"] .proc-sleeve-fit,
     #process-diagram[data-reduced="true"] .proc-sleeve-fit-text,
     #process-diagram[data-reduced="true"] .proc-tunnel-glow,
+    #process-diagram[data-reduced="true"] .proc-dry-glow,
+    #process-diagram[data-reduced="true"] .proc-dry-stream,
     #process-diagram[data-reduced="true"] .proc-applicator,
     #process-diagram[data-reduced="true"] .proc-label-1,
     #process-diagram[data-reduced="true"] .proc-label-2,
+    #process-diagram[data-reduced="true"] .proc-label-3,
     #process-diagram[data-reduced="true"] .proc-conveyor-dot { animation: none !important; }
 
     /* Tabela porównania */
     .compare-table-wrap { -webkit-overflow-scrolling: touch; }
     .compare-table-card {
       background: #fff;
-      box-shadow: 0 1px 2px rgba(16, 28, 38, .04), 0 12px 32px -16px rgba(16, 28, 38, .14);
+      box-shadow: 0 4px 24px -8px rgba(233, 30, 99, .18), 0 2px 12px -4px rgba(34, 197, 94, .12);
+      border: 1px solid rgba(233, 30, 99, .12);
     }
     .compare-table { border-collapse: collapse; width: 100%; table-layout: fixed; }
     .compare-th {
@@ -581,13 +895,14 @@
     }
     .compare-th--highlight {
       width: 36%;
-      background: #eff8ff;
-      border-top: 3px solid var(--color-blue);
+      background: linear-gradient(180deg, #fce7f3 0%, #fdf2f8 100%);
+      border-top: 4px solid var(--color-blue);
     }
     .compare-th--alt {
       width: 34%;
       color: var(--text-secondary);
-      background: #f8fafc;
+      background: linear-gradient(180deg, #fee2e2 0%, #fef2f2 100%);
+      border-top: 4px solid var(--color-red);
     }
     .compare-col-label {
       display: inline-flex;
@@ -596,21 +911,26 @@
       font-family: 'Space Grotesk', sans-serif;
       font-size: .875rem;
       font-weight: 700;
-      color: var(--color-blue);
+      color: #BE185D;
       line-height: 1.35;
       white-space: normal;
     }
     @media (min-width: 640px) {
       .compare-col-label { font-size: .9375rem; }
     }
-    .compare-col-label--muted { color: var(--text-secondary); font-weight: 600; }
+    .compare-col-label--muted { color: #dc2626; font-weight: 600; }
+
+    /* Diagram procesu — kolorowe tło */
+    #process-diagram {
+      background: linear-gradient(135deg, #f3e8ff 0%, #ffffff 40%, #fff7ed 80%, #fdf2f8 100%) !important;
+    }
     .compare-col-dot {
       width: .5rem;
       height: .5rem;
       margin-top: .35rem;
       border-radius: 9999px;
       background: var(--color-blue);
-      box-shadow: 0 0 0 3px rgba(14, 165, 233, .18);
+      box-shadow: 0 0 0 4px rgba(233, 30, 99, .20);
       flex-shrink: 0;
     }
     #porownanie tbody th {
@@ -634,13 +954,13 @@
       #porownanie tbody td { padding: 1.25rem 1.5rem; }
     }
     .compare-col-mtm {
-      background: rgba(14, 165, 233, .035);
-      border-left: 1px solid rgba(14, 165, 233, .10);
+      background: rgba(233, 30, 99, .05);
+      border-left: 2px solid rgba(233, 30, 99, .16);
       color: var(--text-primary);
       font-weight: 500;
     }
     .compare-col-trad {
-      background: #fafbfc;
+      background: rgba(239, 68, 68, .04);
       color: var(--text-secondary);
     }
     #porownanie tbody tr:last-child th,
@@ -648,8 +968,8 @@
     .compare-row { opacity: 0; transition: opacity .45s cubic-bezier(.16,1,.3,1); transition-delay: calc(var(--row-i, 0) * 70ms); }
     #porownanie.compare-ready .compare-row { opacity: 1; }
     #porownanie .compare-row:hover th { background: #f8fafc !important; }
-    #porownanie .compare-row:hover .compare-col-mtm { background: rgba(14, 165, 233, .08) !important; }
-    #porownanie .compare-row:hover .compare-col-trad { background: #f1f5f9 !important; }
+    #porownanie .compare-row:hover .compare-col-mtm { background: rgba(233, 30, 99, .10) !important; }
+    #porownanie .compare-row:hover .compare-col-trad { background: rgba(239, 68, 68, .08) !important; }
     .compare-cell { display: flex; align-items: flex-start; gap: .75rem; }
     .compare-cell__badge {
       flex-shrink: 0;
@@ -661,27 +981,41 @@
       margin-top: .05rem;
       border-radius: 9999px;
     }
-    .compare-cell__badge--yes { background: rgba(14, 165, 233, .12); color: var(--color-blue); }
-    .compare-cell__badge--no { background: rgba(148, 163, 184, .16); color: #64748b; }
+    .compare-cell__badge--yes { background: rgba(34, 197, 94, .18); color: #15803d; }
+    .compare-cell__badge--no { background: rgba(239, 68, 68, .14); color: #dc2626; }
     .compare-cell__icon { width: .875rem; height: .875rem; }
     .compare-cell__text { flex: 1; min-width: 0; line-height: 1.55; }
     @keyframes compare-col-glow {
-      0% { background-color: rgba(14, 165, 233, 0); }
-      35% { background-color: rgba(14, 165, 233, .14); }
-      100% { background-color: rgba(14, 165, 233, .035); }
+      0% { background-color: rgba(233, 30, 99, 0); }
+      35% { background-color: rgba(233, 30, 99, .14); }
+      100% { background-color: rgba(233, 30, 99, .05); }
     }
     #porownanie.compare-highlight .compare-col-mtm { animation: compare-col-glow 1.2s ease forwards; }
 
     /* Eyebrow z kreską */
-    .eyebrow { display: inline-flex; align-items: center; gap: .625rem; font-family: 'Space Grotesk', sans-serif; font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
-    .eyebrow::before { content: ""; width: 1.75rem; height: 2px; background: linear-gradient(90deg, var(--color-blue), var(--color-amber-light)); opacity: .75; }
+    .eyebrow { display: inline-flex; align-items: center; gap: .625rem; font-family: 'Space Grotesk', sans-serif; font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 2.25rem; height: 3px; background: var(--gradient-brand); opacity: 1; border-radius: 2px; }
+
+    /* Nagłówki sekcji — kolorowy akcent */
+    section h2.font-display {
+      background: linear-gradient(135deg, var(--text-primary) 40%, var(--color-blue) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    #korzysci h2.font-display {
+      background: linear-gradient(135deg, var(--text-primary) 30%, var(--color-amber) 70%, var(--color-pink) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
     /* Subtelna siatka techniczna w tle hero / kontakt */
     .grid-bg {
       background-image:
-        linear-gradient(rgba(14, 165, 233, .06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(14, 165, 233, .06) 1px, transparent 1px);
-      background-size: 56px 56px;
+        linear-gradient(rgba(233, 30, 99, .10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 184, 0, .08) 1px, transparent 1px);
+      background-size: 48px 48px;
       mask-image: radial-gradient(ellipse 90% 70% at 75% 0%, #000 40%, transparent 100%);
       -webkit-mask-image: radial-gradient(ellipse 90% 70% at 75% 0%, #000 40%, transparent 100%);
     }
@@ -697,22 +1031,32 @@
     .skip-link:focus { position: fixed; top: .5rem; left: .5rem; z-index: 100; padding: .5rem 1rem; background: var(--accent); color: #fff; border-radius: .375rem; outline: 2px solid #fff; }
 
     /* Pasek postępu czytania */
-    .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, var(--color-blue), var(--color-amber-light)); transform-origin: 0 50%; will-change: width; transition: width .1s linear; }
+    .scroll-progress { position: fixed; top: 0; left: 0; height: 4px; width: 0; z-index: 60; background: var(--gradient-brand); transform-origin: 0 50%; will-change: width; transition: width .1s linear; box-shadow: 0 0 12px rgba(233, 30, 99, .45); }
 
     /* Aktywny link w nawigacji (scrollspy) */
     .nav-link { position: relative; }
-    .nav-link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1.45rem; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: 0 50%; transition: transform .25s cubic-bezier(.16,1,.3,1); }
-    .nav-link.is-active { color: var(--color-blue); }
-    .nav-link.is-active::after { background: linear-gradient(90deg, var(--color-blue), var(--color-amber-light)); transform: scaleX(1); }
+    .nav-link.is-active { color: var(--color-blue); font-weight: 600; }
     .mobile-nav-link.is-active { color: var(--accent-dark); font-weight: 600; }
 
     .line-visual-wrap { position: relative; }
     .line-visual-glow {
       position: absolute; inset: 8% 4% 12% 4%;
-      background: radial-gradient(ellipse 75% 65% at 50% 50%, rgba(14, 165, 233, .14), transparent 72%);
+      background:
+        radial-gradient(ellipse 75% 65% at 50% 50%, rgba(233, 30, 99, .22), transparent 72%),
+        radial-gradient(ellipse 55% 50% at 30% 70%, rgba(255, 184, 0, .14), transparent 65%);
       pointer-events: none;
     }
-    .line-visual-media { position: relative; z-index: 1; background: transparent; overflow: visible; }
+    .line-visual-media {
+      position: relative;
+      z-index: 1;
+      background: transparent;
+      overflow: visible;
+    }
+    .line-visual-img {
+      transform: scale(1.04);
+      transform-origin: center center;
+      filter: drop-shadow(0 20px 40px rgba(26, 11, 59, .18));
+    }
 
     /* Hero – wejście ze staggerem */
     .hero-item { opacity: 0; transform: translateY(1.25rem); transition: opacity .65s cubic-bezier(.16,1,.3,1), transform .65s cubic-bezier(.16,1,.3,1); transition-delay: var(--hero-delay, 0ms); }
@@ -721,7 +1065,9 @@
     #hero.hero-ready .hero-visual-wrap { opacity: 1; transform: scale(1) translateY(0); }
     .hero-visual-glow {
       position: absolute; inset: -12% -8% -20% -8%;
-      background: radial-gradient(ellipse 70% 60% at 50% 55%, rgba(14, 165, 233, .25), transparent 70%);
+      background:
+        radial-gradient(ellipse 60% 55% at 45% 50%, rgba(233, 30, 99, .35), transparent 65%),
+        radial-gradient(ellipse 50% 45% at 70% 60%, rgba(255, 184, 0, .22), transparent 60%);
       pointer-events: none;
     }
     .hero-visual-media {
@@ -729,6 +1075,19 @@
       border-radius: 12px;
       background: transparent;
       box-shadow: none;
+      overflow: visible;
+    }
+    .hero-visual-img {
+      transform: scale(1.08) rotate(-4deg);
+      transform-origin: 52% 58%;
+      filter: drop-shadow(0 28px 48px rgba(0, 0, 0, .35));
+      transition: transform .8s cubic-bezier(.16, 1, .3, 1) .35s;
+    }
+    @media (min-width: 1024px) {
+      .hero-visual-img {
+        transform: scale(1.14) rotate(-5deg);
+        transform-origin: 54% 56%;
+      }
     }
     #hero-heading { display: block; text-align: left; }
     #hero-heading .hero-heading-title { margin: 0; padding: 0; }
@@ -755,8 +1114,8 @@
     input[aria-invalid="true"]:focus, textarea[aria-invalid="true"]:focus { box-shadow: 0 0 0 2px rgba(220,38,38,.25) !important; }
 
     /* Schemat linii */
-    .line-step-btn[aria-selected="true"] { background: var(--color-blue); color: #fff; border-color: var(--color-blue); box-shadow: 0 8px 24px -8px rgba(14, 165, 233, .45); }
-    .line-connector { flex: 1; min-width: 1rem; height: 2px; background: linear-gradient(90deg, var(--color-blue), var(--color-amber-light), var(--color-blue)); margin-top: 1.25rem; }
+    .line-step-btn[aria-selected="true"] { background: var(--gradient-warm); color: #fff; border-color: transparent; box-shadow: 0 8px 28px -8px rgba(233, 30, 99, .50); }
+    .line-connector { flex: 1; min-width: 1rem; height: 3px; background: var(--gradient-brand); border-radius: 2px; margin-top: 1.25rem; }
     @media (max-width: 1023px) {
       .line-flow-desktop { display: none; }
     }
@@ -776,8 +1135,8 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .scroll-progress, .nav-link::after, .to-top, .hero-item, .hero-visual-wrap,
-      #header-inner, .reveal-stagger, .compare-row { transition: none; }
+      .scroll-progress, .to-top, .hero-item, .hero-visual-wrap,
+      .hero-visual-img, #header-inner, .reveal-stagger, .compare-row { transition: none; }
     }
   </style>
 
@@ -814,6 +1173,11 @@
         "@type": "Question",
         "name": "Czym różni się sleeviarka od tunelu obkurczającego?",
         "acceptedAnswer": { "@type": "Answer", "text": "Sleeviarka nakłada folię termokurczliwą na opakowanie. Tunel obkurczający obkurcza folię pod wpływem ciepła. To dwa kolejne etapy procesu." }
+      },
+      {
+        "@type": "Question",
+        "name": "Co zrobić, gdy potrzebny jest tunel parowy, a na hali nie ma pary?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Układ może być opcjonalnie wyposażony w generator pary i zmiękczacz wody." }
       }
     ]
   }
@@ -848,6 +1212,7 @@
             <a href="#jak-dziala" class="nav-link hover:text-navy-900 transition-colors shrink-0">Sposób działania</a>
             <a href="#korzysci" class="nav-link hover:text-navy-900 transition-colors shrink-0">Korzyści</a>
             <a href="#porownanie" class="nav-link hover:text-navy-900 transition-colors shrink-0">Porównanie</a>
+            <a href="#sposoby-sleevowania" class="nav-link hover:text-navy-900 transition-colors shrink-0">Sposoby</a>
             <a href="#linia" class="nav-link hover:text-navy-900 transition-colors shrink-0">Linia</a>
             <a href="#zastosowania" class="nav-link hover:text-navy-900 transition-colors shrink-0">Branże</a>
             <a href="#faq" class="nav-link hover:text-navy-900 transition-colors shrink-0">FAQ</a>
@@ -874,6 +1239,7 @@
         <a href="#jak-dziala" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">Sposób działania</a>
         <a href="#korzysci" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">Korzyści</a>
         <a href="#porownanie" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">Porównanie</a>
+        <a href="#sposoby-sleevowania" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">Sposoby sleevowania</a>
         <a href="#linia" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">Linia</a>
         <a href="#zastosowania" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">Branże</a>
         <a href="#faq" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">FAQ</a>
@@ -902,8 +1268,8 @@
               <span class="block w-14 h-1 mt-5 rounded-full bg-accent-500" aria-hidden="true"></span>
             </h1>
             <div class="hero-body hero-item mt-6 space-y-5 text-base sm:text-lg text-steel-200 leading-relaxed text-justify" style="--hero-delay: 160ms">
-              <p>Sleevowanie to proces nakładania folii termokurczliwej w formie rękawa na opakowanie i obkurczania jej w tunelu grzewczym. Etykieta termokurczliwa obejmuje opakowanie w pełni — 360° — i sprawdza się przy nieregularnych kształtach butelek, kubków i innych formatów.</p>
-              <p>Od aplikatora rękawa po tunel obkurczający: folia dopasowuje się do profilu produktu, zapewniając estetykę, trwałość w wilgoci i możliwość zabezpieczenia przed manipulacją (tamper-evident) bez dodatkowych elementów.</p>
+              <p>Sleevowanie to proces nakładania na opakowanie folii termokurczliwej w formie rękawa i obkurczania jej w tunelu grzewczym. Etykieta termokurczliwa obejmuje opakowanie w pełni — 360° — i sprawdza się przy nieregularnych kształtach butelek, kubków, szklanek i innych pojemników.</p>
+              <p>Od aplikatora folii po tunel obkurczający folia dopasowuje się do profilu produktu zapewniając estetykę, trwałość i daje możliwość zabezpieczenia przed otwarciem (tamper-evident) bez dodatkowych elementów. Sleeve zapewnia również dużą przestrzeń marketingową.</p>
             </div>
             <div class="hero-item mt-8 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" style="--hero-delay: 280ms">
               <a href="#jak-dziala" class="group inline-flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-4 text-base font-semibold text-white bg-accent-500 hover:bg-accent-400 rounded-[10px] shadow-lg shadow-accent-500/25 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 focus:ring-offset-navy-900 transition-all">
@@ -919,15 +1285,14 @@
           <div id="hero-visual" class="hero-visual-wrap relative mt-10 lg:mt-2 w-full max-w-lg mx-auto lg:max-w-none lg:mx-0 lg:justify-self-stretch">
             <div class="hero-visual-glow" aria-hidden="true"></div>
             <div class="hero-visual-media aspect-[4/3] sm:aspect-[16/10] lg:aspect-[3/2] overflow-visible">
-              <img src="assets/img/hero-machine-nobg.png" alt="Maszyna do sleevowania – linia produkcyjna z aplikatorem rękawa i modułami obkurczania" width="1024" height="620" class="absolute inset-0 w-full h-full object-contain object-center drop-shadow-xl" loading="eager" decoding="async" fetchpriority="high">
+              <img src="assets/img/hero-machine-nobg.png" alt="Maszyna do sleevowania – linia produkcyjna z aplikatorem rękawa i modułami obkurczania" width="1024" height="620" class="hero-visual-img absolute inset-0 w-full h-full object-contain object-center drop-shadow-xl" loading="eager" decoding="async" fetchpriority="high">
             </div>
-            <p class="relative z-10 mt-3 text-xs text-steel-400 text-left leading-relaxed">Linia do sleevowania · aplikator rękawa · tunel obkurczający</p>
           </div>
         </div>
 
         <dl class="hero-item relative mt-12 lg:mt-14 grid grid-cols-2 lg:grid-cols-4 gap-px bg-steel-700/40 border border-steel-700/40 rounded-xl overflow-hidden" style="--hero-delay: 400ms">
           <div class="hero-stats-cell bg-navy-900/60 backdrop-blur px-4 sm:px-6 py-6 sm:py-7">
-            <dt class="counter text-3xl sm:text-4xl font-display font-bold text-accent-400 tabular-nums" data-to="2" data-prefix="" data-suffix="">0</dt>
+            <dt class="counter text-3xl sm:text-4xl font-display font-bold text-accent-400 tabular-nums" data-to="3" data-prefix="" data-suffix="">0</dt>
             <dd class="mt-1.5 text-sm text-steel-300 leading-snug">kroki procesu sleevowania</dd>
           </div>
           <div class="hero-stats-cell bg-navy-900/60 backdrop-blur px-4 sm:px-6 py-6 sm:py-7">
@@ -981,7 +1346,7 @@
             <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-navy-900 text-accent-400 mb-3 shrink-0">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3Z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4"/></svg>
             </div>
-            <h3 class="font-display font-semibold text-lg text-navy-900">Ochrona przed manipulacją</h3>
+            <h3 class="font-display font-semibold text-lg text-navy-900">Zabezpieczenie przed otwarciem</h3>
             <p class="mt-1.5 text-sm text-steel-600 leading-snug">Rękaw może pełnić funkcję plomby na zamknięciu (tamper-evident), zwiększając bezpieczeństwo i zaufanie konsumenta — bez dodatkowych komponentów.</p>
           </li>
         </ul>
@@ -996,31 +1361,35 @@
           <div class="reveal">
             <p class="eyebrow text-accent-600 mb-4"><span class="text-steel-400">02</span> Sposób działania</p>
             <h2 id="jak-dziala-heading" class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-navy-900">
-              Jak działa sleevowanie — w 2 krokach
+              Jak działa sleevowanie — w 3 krokach
             </h2>
             <p class="mt-4 text-lg text-steel-600 leading-relaxed">
-              Sleevowanie to prosty, wydajny proces. Etykietę w formie rękawa nakładamy na opakowanie, a następnie obkurczamy w tunelu, aż idealnie przylgnie do jego kształtu.
+              Sleevowanie to prosty, wydajny proces dekorowania produktów w trzech etapach: nakładamy rękaw termokurczliwy na opakowanie, obkurczamy go w tunelu, a następnie osuszamy opakowanie przed dalszym pakowaniem.
             </p>
             <ol id="process-steps" class="mt-9 space-y-4" aria-label="Etapy procesu sleevowania">
               <li class="process-step flex gap-4 px-3 py-2 -mx-3" data-process-step="1">
                 <span class="process-step-num flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-lg bg-navy-900 text-white font-display text-sm font-bold ring-4 ring-white transition-colors" aria-hidden="true">1</span>
-                <span class="block pt-1 flex-1 min-w-0"><strong class="text-navy-900 font-semibold">Aplikacja rękawa</strong> <span class="text-steel-600">– aplikator precyzyjnie rozcina rękaw z folii termokurczliwej i nakłada go na opakowanie z wysoką powtarzalnością</span></span>
+                <span class="block pt-1 flex-1 min-w-0"><strong class="text-navy-900 font-semibold">Aplikacja rękawa</strong> <span class="text-steel-600">– aplikator precyzyjnie odcina rękaw z folii termokurczliwej i nakłada go na opakowanie z dużą powtarzalnością</span></span>
               </li>
               <li class="process-step flex gap-4 px-3 py-2 -mx-3" data-process-step="2">
                 <span class="process-step-num flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-lg bg-navy-900 text-white font-display text-sm font-bold ring-4 ring-white transition-colors" aria-hidden="true">2</span>
                 <span class="block pt-1 flex-1 min-w-0"><strong class="text-navy-900 font-semibold">Obkurczanie w tunelu</strong> <span class="text-steel-600">– opakowanie przejeżdża przez tunel grzewczy, folia równomiernie się obkurcza i dopasowuje do kształtu produktu</span></span>
               </li>
+              <li class="process-step flex gap-4 px-3 py-2 -mx-3" data-process-step="3">
+                <span class="process-step-num flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-lg bg-navy-900 text-white font-display text-sm font-bold ring-4 ring-white transition-colors" aria-hidden="true">3</span>
+                <span class="block pt-1 flex-1 min-w-0"><strong class="text-navy-900 font-semibold">Osuszanie</strong> <span class="text-steel-600">– tunel osuszający usuwa wilgoć i kondensację z powierzchni opakowań po obkurczaniu, przygotowując produkt do pakowania</span></span>
+              </li>
             </ol>
           </div>
           <div class="reveal">
             <figure class="rounded-2xl overflow-hidden ring-1 ring-steel-200 shadow-card bg-white">
-              <div id="process-diagram" class="sleev-diagram aspect-[4/3] sm:aspect-video bg-gradient-to-br from-steel-50 via-white to-accent-500/[0.04] p-3 sm:p-5" role="img" aria-label="Animacja sleevowania: sleeve spada na butelkę z wcięciem, przejazd przez tunel i dopasowana etykieta">
+              <div id="process-diagram" class="sleev-diagram aspect-[4/3] sm:aspect-video bg-gradient-to-br from-steel-50 via-white to-accent-500/[0.04] p-3 sm:p-5" role="img" aria-label="Animacja sleevowania w 3 krokach: aplikacja rękawa, obkurczanie w tunelu i osuszanie opakowania">
                 <span class="proc-cycle-sync absolute w-0 h-0 overflow-hidden" aria-hidden="true"></span>
                 <svg viewBox="0 0 440 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <defs>
                     <linearGradient id="proc-sleeve-loose-grad" x1="0" y1="0" x2="1" y2="1">
                       <stop offset="0%" stop-color="#4da3e6" stop-opacity=".4"/>
-                      <stop offset="100%" stop-color="#0066cc" stop-opacity=".28"/>
+                      <stop offset="100%" stop-color="#E91E63" stop-opacity=".28"/>
                     </linearGradient>
                     <linearGradient id="proc-sleeve-fit-grad" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="0%" stop-color="#4da3e6"/>
@@ -1028,33 +1397,46 @@
                     </linearGradient>
                     <linearGradient id="proc-tunnel-heat" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="0%" stop-color="#ff8c42" stop-opacity=".5"/>
-                      <stop offset="100%" stop-color="#0066cc" stop-opacity=".15"/>
+                      <stop offset="100%" stop-color="#E91E63" stop-opacity=".15"/>
+                    </linearGradient>
+                    <linearGradient id="proc-dry-air" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#C4B5FD" stop-opacity=".45"/>
+                      <stop offset="100%" stop-color="#E91E63" stop-opacity=".12"/>
                     </linearGradient>
                   </defs>
 
                   <line x1="20" y1="188" x2="420" y2="188" stroke="#dce2ea" stroke-width="1.5"/>
-                  <line x1="20" y1="188" x2="420" y2="188" stroke="#0066cc" stroke-width="1.5" stroke-dasharray="5 7" opacity=".25"/>
-                  <circle class="proc-conveyor-dot" cx="56" cy="188" r="3" fill="#0066cc" opacity="0"/>
+                  <line x1="20" y1="188" x2="420" y2="188" stroke="#E91E63" stroke-width="1.5" stroke-dasharray="5 7" opacity=".25"/>
+                  <circle class="proc-conveyor-dot" cx="56" cy="188" r="3" fill="#E91E63" opacity="0"/>
 
                   <!-- Aplikator / strefa nakładania sleeve -->
                   <g class="proc-applicator">
                     <rect x="52" y="18" width="56" height="8" rx="2" fill="#404d5c"/>
                     <rect x="72" y="26" width="16" height="5" rx="1" fill="#536273"/>
-                    <rect x="68" y="31" width="24" height="10" rx="2" fill="#0066cc" opacity=".85"/>
+                    <rect x="68" y="31" width="24" height="10" rx="2" fill="#E91E63" opacity=".85"/>
                   </g>
 
                   <!-- Tunel obkurczający -->
                   <g transform="translate(148, 44)">
-                    <rect x="0" y="0" width="132" height="144" rx="10" fill="#f6f8fa" stroke="#bcc7d4" stroke-width="1.5"/>
-                    <rect class="proc-tunnel-glow" x="8" y="8" width="116" height="128" rx="7" fill="url(#proc-tunnel-heat)" opacity="0"/>
-                    <text x="66" y="78" text-anchor="middle" fill="#536273" font-family="Inter, sans-serif" font-size="9" font-weight="600">TUNEL</text>
+                    <rect x="0" y="0" width="120" height="144" rx="10" fill="#f6f8fa" stroke="#bcc7d4" stroke-width="1.5"/>
+                    <rect class="proc-tunnel-glow" x="8" y="8" width="104" height="128" rx="7" fill="url(#proc-tunnel-heat)" opacity="0"/>
+                    <text x="60" y="78" text-anchor="middle" fill="#536273" font-family="Inter, sans-serif" font-size="9" font-weight="600">TUNEL</text>
                     <path d="M20 118 Q28 108 36 118 T52 118 T68 118 T84 118 T100 118" stroke="#ff8c42" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".55"/>
+                  </g>
+
+                  <!-- Tunel osuszający -->
+                  <g transform="translate(286, 50)">
+                    <rect x="0" y="0" width="108" height="132" rx="10" fill="#faf5ff" stroke="#C4B5FD" stroke-width="1.5"/>
+                    <rect class="proc-dry-glow" x="8" y="8" width="92" height="116" rx="7" fill="url(#proc-dry-air)" opacity="0"/>
+                    <text x="54" y="74" text-anchor="middle" fill="#7C3AED" font-family="Inter, sans-serif" font-size="8" font-weight="600">OSUSZ.</text>
+                    <path class="proc-dry-stream" d="M16 96 Q28 88 40 96 T64 96 T88 96" stroke="#A78BFA" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0"/>
+                    <path class="proc-dry-stream" d="M16 110 Q28 102 40 110 T64 110 T88 110" stroke="#C4B5FD" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0"/>
                   </g>
 
                   <!-- Spadający odcięty sleeve -->
                   <g class="proc-sleeve-fall">
-                    <rect x="2" y="14" width="60" height="104" rx="11" fill="url(#proc-sleeve-loose-grad)" stroke="#0066cc" stroke-width="1.5" stroke-dasharray="5 3"/>
-                    <line x1="2" y1="14" x2="62" y2="14" stroke="#0066cc" stroke-width="2" stroke-linecap="round"/>
+                    <rect x="2" y="14" width="60" height="104" rx="11" fill="url(#proc-sleeve-loose-grad)" stroke="#E91E63" stroke-width="1.5" stroke-dasharray="5 3"/>
+                    <line x1="2" y1="14" x2="62" y2="14" stroke="#E91E63" stroke-width="2" stroke-linecap="round"/>
                   </g>
 
                   <!-- Butelka + sleeve (ruchoma grupa) -->
@@ -1064,23 +1446,24 @@
                     <path d="M26 5 H38 V16 C38 20 35 22 32 22 C29 22 26 20 26 16 V5 Z" fill="#dce2ea" stroke="#536273" stroke-width="1.2"/>
                     <path d="M20 22 C16 26 14 34 16 42 C18 48 20 50 20 54 C13 58 10 66 12 74 C14 82 18 86 18 92 V112 C18 117 24 120 32 120 C40 120 46 117 46 112 V92 C46 86 50 82 52 74 C54 66 51 58 44 54 C44 50 46 48 48 42 C50 34 48 26 44 22 C40 18 36 18 32 18 C28 18 24 18 20 22 Z" fill="#eef4fa" stroke="#536273" stroke-width="1.5"/>
                     <!-- luźny sleeve -->
-                    <rect class="proc-sleeve-loose" x="2" y="14" width="60" height="104" rx="11" fill="url(#proc-sleeve-loose-grad)" stroke="#0066cc" stroke-width="1.5" stroke-dasharray="5 3"/>
+                    <rect class="proc-sleeve-loose" x="2" y="14" width="60" height="104" rx="11" fill="url(#proc-sleeve-loose-grad)" stroke="#E91E63" stroke-width="1.5" stroke-dasharray="5 3"/>
                     <!-- dopasowany sleeve (śledzi kształt butelki) -->
-                    <path class="proc-sleeve-fit" d="M18 20 C14 24 12 32 14 40 C16 46 18 48 18 52 C11 56 8 64 10 72 C12 80 16 84 16 90 V110 C16 115 22 118 32 118 C42 118 48 115 48 110 V90 C48 84 52 80 54 72 C56 64 53 56 46 52 C46 48 48 46 50 40 C52 32 50 24 46 20 C42 16 38 16 32 16 C26 16 22 16 18 20 Z" fill="url(#proc-sleeve-fit-grad)" fill-opacity=".9" stroke="#0066cc" stroke-width="1.3"/>
+                    <path class="proc-sleeve-fit" d="M18 20 C14 24 12 32 14 40 C16 46 18 48 18 52 C11 56 8 64 10 72 C12 80 16 84 16 90 V110 C16 115 22 118 32 118 C42 118 48 115 48 110 V90 C48 84 52 80 54 72 C56 64 53 56 46 52 C46 48 48 46 50 40 C52 32 50 24 46 20 C42 16 38 16 32 16 C26 16 22 16 18 20 Z" fill="url(#proc-sleeve-fit-grad)" fill-opacity=".9" stroke="#E91E63" stroke-width="1.3"/>
                     <text x="32" y="72" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="7" font-weight="700" class="proc-sleeve-fit-text">360°</text>
                   </g>
 
-                  <text class="proc-label proc-label-1" x="108" y="208" text-anchor="middle">1 · Sleeve spada na opakowanie</text>
-                  <text class="proc-label proc-label-2" x="332" y="208" text-anchor="middle">2 · Obkurczanie w tunelu → dopasowanie</text>
+                  <text class="proc-label proc-label-1" x="88" y="208" text-anchor="middle">1 · Aplikacja rękawa</text>
+                  <text class="proc-label proc-label-2" x="214" y="208" text-anchor="middle">2 · Obkurczanie w tunelu</text>
+                  <text class="proc-label proc-label-3" x="340" y="208" text-anchor="middle">3 · Osuszanie</text>
                 </svg>
               </div>
               <figcaption class="px-4 py-3 text-xs text-steel-500 bg-steel-50 border-t border-steel-200">
                 <span class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center">
-                  <span>Sleeve spada na butelkę</span>
+                  <span>Aplikacja rękawa</span>
                   <svg class="w-3.5 h-3.5 text-accent-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-                  <span>Przejazd przez tunel</span>
+                  <span>Obkurczanie w tunelu</span>
                   <svg class="w-3.5 h-3.5 text-accent-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-                  <span>Etykieta dopasowana do kształtu opakowania</span>
+                  <span>Osuszanie opakowania</span>
                 </span>
               </figcaption>
             </figure>
@@ -1115,7 +1498,7 @@
             </div>
             <h3 class="font-display text-lg font-bold text-navy-900">Dowolne kształty opakowań</h3>
             <p class="mt-2 text-3xl sm:text-4xl font-display font-bold text-accent-500 tabular-nums">3 tunele</p>
-            <p class="mt-2 text-sm text-steel-600 leading-snug">Folia dopasowuje się do stożków, przewężeń i kubków — elektryczny, parowy lub suszący tunel obkurczający.</p>
+            <p class="mt-2 text-sm text-steel-600 leading-snug">Tunele dobierane są do potrzeb i możliwości produkcji — elektryczny, parowy, z panelami IR.</p>
           </article>
           <article class="reveal-stagger relative p-6 sm:p-7 bg-white text-steel-800 border border-steel-200 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300" style="--stagger-i: 2">
             <span class="absolute top-6 right-6 font-display text-4xl font-bold text-steel-100" aria-hidden="true">03</span>
@@ -1138,7 +1521,7 @@
         <div class="reveal max-w-3xl">
           <p class="eyebrow text-accent-600 mb-4"><span class="text-steel-400">04</span> Porównanie</p>
           <h2 id="porownanie-heading" class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-navy-900">
-            Etykiety termokurczliwe czy tradycyjne?
+            Etykiety termokurczliwe czy tradycyjne etykiety?
           </h2>
           <p class="mt-4 text-lg text-steel-600">Porównujemy pokrycie opakowania, elastyczność formatów, trwałość i koszty eksploatacji obu technologii etykietowania.</p>
         </div>
@@ -1167,7 +1550,7 @@
                     <span class="compare-cell compare-cell--yes"><span class="compare-cell__badge compare-cell__badge--yes" aria-hidden="true"><svg class="compare-cell__icon" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 10l3 3 7-7"/></svg></span><span class="compare-cell__text">Pełne 360°, bezszwowe</span></span>
                   </td>
                   <td class="compare-col-trad">
-                    <span class="compare-cell compare-cell--no"><span class="compare-cell__badge compare-cell__badge--no" aria-hidden="true"><svg class="compare-cell__icon" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l8 8M14 6l-8 8"/></svg></span><span class="compare-cell__text">Fragmentaryczne, płaskie</span></span>
+                    <span class="compare-cell compare-cell--no"><span class="compare-cell__badge compare-cell__badge--no" aria-hidden="true"><svg class="compare-cell__icon" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l8 8M14 6l-8 8"/></svg></span><span class="compare-cell__text">Fragmentaryczne, płaskie — z wyraźnym początkiem i końcem etykiety</span></span>
                   </td>
                 </tr>
                 <tr class="compare-row" style="--row-i: 1">
@@ -1213,15 +1596,109 @@
       </div>
     </section>
 
+    <!-- ========== SPOSOBY SLIVEOWANIA ========== -->
+    <section id="sposoby-sleevowania" class="section-bg section-bg--sposoby py-20 lg:py-28 border-y border-steel-200/70" aria-labelledby="sposoby-heading">
+      <div class="section-bg__orb section-bg__orb--1" aria-hidden="true"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal max-w-3xl">
+          <p class="eyebrow text-accent-600 mb-4"><span class="text-steel-400">05</span> Sposoby sleevowania</p>
+          <h2 id="sposoby-heading" class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-navy-900">
+            Różne sposoby nakładania rękawa termokurczliwego
+          </h2>
+          <p class="mt-4 text-lg text-steel-600">Ten sam proces sleevowania, różne efekty na opakowaniu — od pełnej etykiety 360° po plombę na zakrętce, sleeve częściowy lub multipack promocyjny.</p>
+        </div>
+
+        <div class="sleeve-board reveal">
+          <figure class="sleeve-showcase">
+            <div class="sleeve-showcase__img-wrap">
+              <img src="assets/img/sposoby-sleevowania.png" alt="Ilustracja sześciu sposobów sleevowania: od sleeve całościowego z plombą po multipack i opakowania nieregularne" width="1200" height="400" class="sleeve-showcase__img" loading="lazy" decoding="async">
+            </div>
+            <ol class="sleeve-showcase__markers" aria-hidden="true">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+            </ol>
+            <figcaption class="sleeve-showcase__caption">Numery odpowiadają typom po prawej stronie</figcaption>
+          </figure>
+
+          <div class="sleeve-acc-list" id="sleeve-acc-list">
+            <div class="sleeve-acc-item" data-sleeve-type="0">
+              <button type="button" class="sleeve-acc-trigger" aria-expanded="false" aria-controls="sleeve-acc-0" id="sleeve-acc-btn-0">
+                <span class="sleeve-acc-num">01</span>
+                <span class="sleeve-acc-title">Sleeve całościowy z plombą</span>
+                <svg class="sleeve-acc-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div id="sleeve-acc-0" class="sleeve-acc-panel" role="region" aria-labelledby="sleeve-acc-btn-0" hidden>
+                <div><p>Pełne pokrycie opakowania wraz z zakrętką — wbudowane zabezpieczenie przed otwarciem (tamper-evident) na korku.</p></div>
+              </div>
+            </div>
+            <div class="sleeve-acc-item" data-sleeve-type="1">
+              <button type="button" class="sleeve-acc-trigger" aria-expanded="false" aria-controls="sleeve-acc-1" id="sleeve-acc-btn-1">
+                <span class="sleeve-acc-num">02</span>
+                <span class="sleeve-acc-title">Sleeve całościowy (full-body)</span>
+                <svg class="sleeve-acc-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div id="sleeve-acc-1" class="sleeve-acc-panel" role="region" aria-labelledby="sleeve-acc-btn-1" hidden>
+                <div><p>Etykieta obejmuje całe opakowanie 360° — maksymalna powierzchnia na grafikę i komunikację marki.</p></div>
+              </div>
+            </div>
+            <div class="sleeve-acc-item" data-sleeve-type="2">
+              <button type="button" class="sleeve-acc-trigger" aria-expanded="false" aria-controls="sleeve-acc-2" id="sleeve-acc-btn-2">
+                <span class="sleeve-acc-num">03</span>
+                <span class="sleeve-acc-title">Sleeve częściowy (half-sleeve)</span>
+                <svg class="sleeve-acc-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div id="sleeve-acc-2" class="sleeve-acc-panel" role="region" aria-labelledby="sleeve-acc-btn-2" hidden>
+                <div><p>Rękaw na wybrany fragment opakowania, np. górną połowę butelki — tańszy materiał przy zachowaniu efektu wizualnego.</p></div>
+              </div>
+            </div>
+            <div class="sleeve-acc-item" data-sleeve-type="3">
+              <button type="button" class="sleeve-acc-trigger" aria-expanded="false" aria-controls="sleeve-acc-3" id="sleeve-acc-btn-3">
+                <span class="sleeve-acc-num">04</span>
+                <span class="sleeve-acc-title">Sleeve na szyjkę / plomba</span>
+                <svg class="sleeve-acc-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div id="sleeve-acc-3" class="sleeve-acc-panel" role="region" aria-labelledby="sleeve-acc-btn-3" hidden>
+                <div><p>Zabezpieczenie zakrętki i szyjki butelki; korpus opakowania pozostaje odkryty — popularne w napojach i chemii.</p></div>
+              </div>
+            </div>
+            <div class="sleeve-acc-item" data-sleeve-type="4">
+              <button type="button" class="sleeve-acc-trigger" aria-expanded="false" aria-controls="sleeve-acc-4" id="sleeve-acc-btn-4">
+                <span class="sleeve-acc-num">05</span>
+                <span class="sleeve-acc-title">Multipack</span>
+                <svg class="sleeve-acc-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div id="sleeve-acc-4" class="sleeve-acc-panel" role="region" aria-labelledby="sleeve-acc-btn-4" hidden>
+                <div><p>Jeden rękaw łączy dwa lub więcej opakowań w zestaw promocyjny — idealny do akcji „2 za 1” i pakietów sezonowych.</p></div>
+              </div>
+            </div>
+            <div class="sleeve-acc-item" data-sleeve-type="5">
+              <button type="button" class="sleeve-acc-trigger" aria-expanded="false" aria-controls="sleeve-acc-5" id="sleeve-acc-btn-5">
+                <span class="sleeve-acc-num">06</span>
+                <span class="sleeve-acc-title">Sleeve na kształty nieregularne</span>
+                <svg class="sleeve-acc-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div id="sleeve-acc-5" class="sleeve-acc-panel" role="region" aria-labelledby="sleeve-acc-btn-5" hidden>
+                <div><p>Dopasowanie do butelek z triggerm, przewężeniami i profilami złożonymi — tam, gdzie płaska etykieta nie wystarczy.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== SCHEMAT LINII SLIVEOWANIA ========== -->
     <section id="linia" class="section-bg section-bg--linia pt-20 lg:pt-28 pb-8 lg:pb-10" aria-labelledby="linia-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="reveal">
-          <p class="eyebrow text-accent-600 mb-4"><span class="text-steel-400">05</span> Linia</p>
+          <p class="eyebrow text-accent-600 mb-4"><span class="text-steel-400">06</span> Linia</p>
           <h2 id="linia-heading" class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-navy-900">
             Dwa układy linii do sleevowania
           </h2>
-          <p class="mt-4 text-lg text-steel-600 max-w-3xl">Każda linia zaczyna się od aplikatora rękawa. Dalej wybierasz tunel obkurczający — elektryczny (IR) albo parowy z tunelem osuszającym, w zależności od folii i wymagań jakościowych.</p>
+          <p class="mt-4 text-lg text-steel-600 max-w-3xl">Każda linia zaczyna się od aplikatora folii. Dalej producent dobiera tunel obkurczający — elektryczny (IR) albo parowy z tunelem osuszającym, w zależności od folii i wymagań jakościowych.</p>
         </div>
 
         <div class="mt-10 lg:mt-14 grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
@@ -1241,7 +1718,7 @@
                 <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-white ring-1 ring-accent-500/30 text-sm font-semibold text-accent-700">Tunel elektryczny (IR)</span>
               </div>
               <p class="mt-5 text-steel-600 leading-relaxed">Kompaktowy układ dwuetapowy: sleeviarka nakłada rękaw termokurczliwy, a tunel elektryczny obkurcza folię promiennikami IR i gorącym powietrzem — bez instalacji parowej.</p>
-              <p class="mt-4 text-sm text-steel-500">Sprawdza się przy większości folii PVC i PET-G, szybkim rozruchu i prostszej eksploatacji. Precyzyjna regulacja temperatury w strefach tunelu.</p>
+              <p class="mt-4 text-sm text-steel-500">Sprawdza się przy większości folii: PET, rPET, PVC i OPS. Charakteryzuje się szybkim rozruchem, prostą eksploatacją i precyzyjną regulacją temperatury w strefach tunelu.</p>
             </div>
             <div class="line-panel-content hidden" data-line-content="1">
               <h3 class="font-display text-xl font-bold text-navy-900">Linia 2 · aplikator rękawa + tunel parowy + tunel osuszający</h3>
@@ -1252,7 +1729,7 @@
                 <svg class="w-4 h-4 text-accent-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
                 <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-white ring-1 ring-accent-500/30 text-sm font-semibold text-accent-700">Tunel osuszający</span>
               </div>
-              <p class="mt-5 text-steel-600 leading-relaxed">Trzyetapowa linia dla wymagających zastosowań: para zapewnia równomierne i delikatne obkurczanie, a tunel osuszający usuwa wilgoć z powierzchni opakowań przed dalszym pakowaniem.</p>
+              <p class="mt-5 text-steel-600 leading-relaxed">Trzyetapowa linia dla wymagających zastosowań: para zapewnia równomierne i precyzyjne obkurczanie, a tunel osuszający usuwa wilgoć z powierzchni opakowań przed dalszym pakowaniem.</p>
               <p class="mt-4 text-sm text-steel-500">Rekomendowana przy złożonych kształtach opakowań, wysokiej jakości grafice i foliach wrażliwych na temperaturę. Sterowanie PLC, odciąg pary i modułowa budowa tuneli.</p>
             </div>
           </div>
@@ -1261,21 +1738,20 @@
         <div class="line-flow-mobile mt-8 lg:mt-0 space-y-2 reveal" id="line-flow-mobile">
           <div class="line-accordion-item rounded-xl ring-1 ring-steel-200 overflow-hidden bg-white">
             <button type="button" class="line-accordion-trigger w-full flex items-center justify-between gap-3 px-4 py-4 text-left font-semibold text-navy-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-500" aria-expanded="true" aria-controls="line-acc-0" id="line-acc-btn-0" data-line-step="0"><span>1. Aplikator rękawa + tunel elektryczny</span><svg class="faq-chevron w-5 h-5 text-steel-400 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-            <div id="line-acc-0" class="line-accordion-panel is-open" role="region" aria-labelledby="line-acc-btn-0"><div class="px-4 pb-4 text-sm text-steel-600 leading-relaxed">Sleeviarka nakłada rękaw, tunel IR obkurcza folię — linia bez instalacji parowej. <span class="block mt-2 text-steel-500">Uniwersalny wybór przy większości folii termokurczliwych.</span></div></div>
+            <div id="line-acc-0" class="line-accordion-panel is-open" role="region" aria-labelledby="line-acc-btn-0"><div class="px-4 pb-4 text-sm text-steel-600 leading-relaxed">Sleeviarka nakłada rękaw, tunel IR obkurcza folię — linia bez instalacji parowej. <span class="block mt-2 text-steel-500">Sprawdza się przy większości folii: PET, rPET, PVC i OPS.</span></div></div>
           </div>
           <div class="line-accordion-item rounded-xl ring-1 ring-steel-200 overflow-hidden bg-white">
             <button type="button" class="line-accordion-trigger w-full flex items-center justify-between gap-3 px-4 py-4 text-left font-semibold text-navy-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-500" aria-expanded="false" aria-controls="line-acc-1" id="line-acc-btn-1" data-line-step="1"><span>2. Aplikator rękawa + tunel parowy + tunel osuszający</span><svg class="faq-chevron w-5 h-5 text-steel-400 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-            <div id="line-acc-1" class="line-accordion-panel" role="region" aria-labelledby="line-acc-btn-1" hidden><div class="px-4 pb-4 text-sm text-steel-600 leading-relaxed">Para obkurcza rękaw z najwyższą jakością, tunel osuszający usuwa wilgoć przed pakowaniem. <span class="block mt-2 text-steel-500">Dla wymagających grafik i nieregularnych kształtów opakowań.</span></div></div>
+            <div id="line-acc-1" class="line-accordion-panel" role="region" aria-labelledby="line-acc-btn-1" hidden><div class="px-4 pb-4 text-sm text-steel-600 leading-relaxed">Para zapewnia równomierne i precyzyjne obkurczanie, tunel osuszający usuwa wilgoć przed pakowaniem. <span class="block mt-2 text-steel-500">Dla wymagających grafik i nieregularnych kształtów opakowań.</span></div></div>
           </div>
         </div>
           </div>
 
           <figure class="line-visual-wrap lg:col-span-5 order-1 lg:order-2 reveal max-w-md lg:max-w-none lg:sticky lg:top-24">
             <div class="line-visual-glow" aria-hidden="true"></div>
-            <div class="line-visual-media aspect-[16/9] lg:aspect-[4/3] relative">
-              <img src="assets/img/linia-sleevowania-nobg.png?v=2" alt="Kompletna linia do sleevowania z transporterem, aplikatorem rękawa i modułami obkurczania" width="889" height="488" class="absolute inset-0 w-full h-full object-contain object-center drop-shadow-xl" loading="lazy" decoding="async">
+            <div class="line-visual-media aspect-[16/9] relative">
+              <img src="assets/img/linia-sleevowania-nobg.png?v=3" alt="Kompletna linia do sleevowania z transporterem, aplikatorem rękawa i modułami obkurczania" width="912" height="512" class="line-visual-img absolute inset-0 w-full h-full object-contain object-center" loading="lazy" decoding="async">
             </div>
-            <figcaption class="relative z-10 mt-3 text-xs text-steel-500 text-left lg:text-center">Kompletna linia do sleevowania · transporter · aplikator rękawa · tunele obkurczające</figcaption>
           </figure>
         </div>
       </div>
@@ -1284,9 +1760,10 @@
     <!-- ========== 8. ZASTOSOWANIA ========== -->
     <section id="zastosowania" class="section-bg section-bg--branze pt-8 lg:pt-10 pb-8 lg:pb-10" aria-labelledby="zastosowania-heading">
       <div class="section-bg__orb section-bg__orb--1" aria-hidden="true"></div>
+      <div class="section-bg__orb section-bg__orb--2" aria-hidden="true"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="reveal">
-          <p class="eyebrow text-accent-600 mb-4"><span class="text-steel-400">06</span> Branże</p>
+          <p class="eyebrow text-accent-600 mb-4"><span class="text-steel-400">07</span> Branże</p>
           <h2 id="zastosowania-heading" class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-navy-900">
             Sleevowanie w wielu branżach produkcyjnych
           </h2>
@@ -1349,7 +1826,7 @@
     <section id="faq" class="section-bg section-bg--faq pt-8 lg:pt-10 pb-20 lg:pb-28 border-y border-steel-200/70" aria-labelledby="faq-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="reveal max-w-3xl">
-          <p class="eyebrow text-accent-600 mb-4"><span class="text-steel-400">07</span> FAQ</p>
+          <p class="eyebrow text-accent-600 mb-4"><span class="text-steel-400">08</span> FAQ</p>
           <h2 id="faq-heading" class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-navy-900">Najczęściej zadawane pytania o sleevowanie</h2>
           <p class="mt-4 text-lg text-steel-600">Krótkie odpowiedzi na typowe pytania dotyczące procesu, technologii i zastosowań etykiet termokurczliwych.</p>
         </div>
@@ -1366,6 +1843,10 @@
             <summary class="flex items-center justify-between gap-3 px-5 py-4 cursor-pointer font-semibold text-navy-900 list-none"><span>Czym różni się sleeviarka od tunelu obkurczającego?</span><svg class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
             <div class="px-5 pb-5 text-sm text-steel-600 leading-relaxed border-t border-steel-100 pt-4"><strong class="text-navy-900">Sleeviarka</strong> (aplikator rękawa) nakłada folię termokurczliwą na opakowanie. <strong class="text-navy-900">Tunel obkurczający</strong> obkurcza folię pod wpływem ciepła i dopasowuje ją do kształtu opakowania. To dwa kolejne etapy tego samego procesu.</div>
           </details>
+          <details class="group rounded-xl ring-1 ring-steel-200 bg-white overflow-hidden">
+            <summary class="flex items-center justify-between gap-3 px-5 py-4 cursor-pointer font-semibold text-navy-900 list-none"><span>Co zrobić, gdy potrzebny jest tunel parowy, a na hali nie ma pary?</span><svg class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+            <div class="px-5 pb-5 text-sm text-steel-600 leading-relaxed border-t border-steel-100 pt-4">Układ może być opcjonalnie wyposażony w generator pary i zmiękczacz wody.</div>
+          </details>
         </div>
       </div>
     </section>
@@ -1374,7 +1855,7 @@
     <section id="filmy" class="section-bg section-bg--filmy pt-8 lg:pt-10 pb-20 lg:pb-28 border-y border-steel-200/70" aria-labelledby="filmy-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="reveal max-w-3xl">
-          <p class="eyebrow text-accent-600 mb-4"><span class="text-steel-400">08</span> Filmy pokazowe</p>
+          <p class="eyebrow text-accent-600 mb-4"><span class="text-steel-400">09</span> Filmy pokazowe</p>
           <h2 id="filmy-heading" class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-navy-900">Sleevowanie w pracy — aplikator, tunel i linia produkcyjna</h2>
           <p class="mt-4 text-lg text-steel-600">Zobacz proces nakładania rękawa termokurczliwego i obkurczania etykiety w tunelu — od aplikatora po gotowe opakowanie na linii.</p>
         </div>
@@ -1386,7 +1867,6 @@
                 Twoja przeglądarka nie obsługuje odtwarzania wideo.
               </video>
             </div>
-            <figcaption class="px-4 py-3 text-xs text-steel-400 bg-navy-900 border-t border-steel-700/50 text-center">Sleevowanie — kompleksowa linia do etykietowania folią termokurczliwą</figcaption>
           </figure>
         </div>
       </div>
@@ -1400,12 +1880,12 @@
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div class="reveal lg:pt-4">
-            <p class="eyebrow text-accent-400 mb-4"><span class="text-steel-500">09</span> Kontakt</p>
+            <p class="eyebrow text-accent-400 mb-4"><span class="text-steel-500">10</span> Kontakt</p>
             <h2 id="kontakt-heading" class="font-display text-3xl sm:text-4xl font-bold tracking-tight">
               Skontaktuj się w sprawie linii do sleevowania
             </h2>
             <p class="mt-5 text-lg text-steel-300 leading-relaxed">
-              Jeśli planujesz wdrożenie linii do sleevowania, opisz swoje opakowanie i oczekiwaną wydajność — pomożemy dobrać konfigurację aplikatora, tunelu i modułów dodatkowych.
+              Jeśli planujesz wdrożenie linii do sleevowania opisz swoje opakowanie i oczekiwaną wydajność — pomożemy dobrać konfigurację aplikatora, tunelu i modułów dodatkowych.
             </p>
             <div class="mt-8 p-5 rounded-xl bg-white/5 ring-1 ring-white/10">
               <p class="text-sm font-semibold text-white">Bezpośredni kontakt</p>

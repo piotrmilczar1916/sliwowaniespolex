@@ -161,7 +161,7 @@
         document.querySelectorAll('.reveal, .reveal-grid').forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Kroki procesu – zsynchronizowane z cyklem animacji (5,6 s, krok 1/2 po 50%)
+      // Kroki procesu – zsynchronizowane z cyklem animacji (5,6 s, 3 kroki co ~1,87 s)
       var processStepsList = document.getElementById('process-steps');
       var jakDzialaSection = document.getElementById('jak-dziala');
       var processDiagram = document.getElementById('process-diagram');
@@ -176,10 +176,10 @@
       if (processStepsList && jakDzialaSection) {
         var processSteps = Array.prototype.slice.call(processStepsList.querySelectorAll('.process-step'));
         var activeStepIndex = 0;
-        var stepSyncTimer = null;
+        var stepSyncTimers = [];
         var stepCycleRunning = false;
         var sectionInView = false;
-        var PROC_STEP_MS = 2800;
+        var PROC_CYCLE_MS = 5600;
 
         function highlightProcessStep(idx) {
           processSteps.forEach(function (step, i) {
@@ -187,23 +187,26 @@
           });
         }
 
-        function clearStepSyncTimer() {
-          if (stepSyncTimer) {
-            window.clearTimeout(stepSyncTimer);
-            stepSyncTimer = null;
-          }
+        function clearStepSyncTimers() {
+          stepSyncTimers.forEach(function (id) { window.clearTimeout(id); });
+          stepSyncTimers = [];
         }
 
         function syncProcessStepsToAnimation() {
           if (!stepCycleRunning || prefersReduced) return;
-          clearStepSyncTimer();
+          clearStepSyncTimers();
           activeStepIndex = 0;
           highlightProcessStep(0);
-          stepSyncTimer = window.setTimeout(function () {
-            if (!stepCycleRunning) return;
-            activeStepIndex = 1;
-            highlightProcessStep(1);
-          }, PROC_STEP_MS);
+          var stepMs = Math.round(PROC_CYCLE_MS / processSteps.length);
+          for (var s = 1; s < processSteps.length; s++) {
+            (function (stepIndex) {
+              stepSyncTimers.push(window.setTimeout(function () {
+                if (!stepCycleRunning) return;
+                activeStepIndex = stepIndex;
+                highlightProcessStep(stepIndex);
+              }, stepMs * stepIndex));
+            })(s);
+          }
         }
 
         function startProcessStepCycle() {
@@ -214,7 +217,7 @@
 
         function stopProcessStepCycle() {
           stepCycleRunning = false;
-          clearStepSyncTimer();
+          clearStepSyncTimers();
         }
 
         if (prefersReduced) {
@@ -384,6 +387,48 @@
         tab.addEventListener('click', function () { activateLineStep(parseInt(tab.getAttribute('data-line-step'), 10)); });
         tab.addEventListener('keydown', function (e) {
           if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activateLineStep(parseInt(tab.getAttribute('data-line-step'), 10)); }
+        });
+      });
+
+      // Sposoby sleevowania – akordeon typów
+      var sleeveMarkers = document.querySelectorAll('.sleeve-showcase__markers li');
+      function setSleeveMarker(idx) {
+        sleeveMarkers.forEach(function (marker, i) {
+          marker.classList.toggle('is-active', i === idx);
+        });
+      }
+      function closeSleeveAccordionItems() {
+        document.querySelectorAll('.sleeve-acc-item').forEach(function (item) {
+          item.classList.remove('is-open');
+        });
+        document.querySelectorAll('.sleeve-acc-trigger').forEach(function (btn) {
+          btn.setAttribute('aria-expanded', 'false');
+        });
+        document.querySelectorAll('.sleeve-acc-panel').forEach(function (panel) {
+          panel.classList.remove('is-open');
+          panel.hidden = true;
+        });
+        setSleeveMarker(-1);
+      }
+      function toggleSleeveAccordion(btn) {
+        var panelId = btn.getAttribute('aria-controls');
+        var panel = document.getElementById(panelId);
+        var item = btn.closest('.sleeve-acc-item');
+        var open = btn.getAttribute('aria-expanded') === 'true';
+        closeSleeveAccordionItems();
+        if (!open && panel && item) {
+          btn.setAttribute('aria-expanded', 'true');
+          item.classList.add('is-open');
+          panel.classList.add('is-open');
+          panel.hidden = false;
+          var idx = parseInt(item.getAttribute('data-sleeve-type'), 10);
+          if (!isNaN(idx)) setSleeveMarker(idx);
+        }
+      }
+      document.querySelectorAll('.sleeve-acc-trigger').forEach(function (btn) {
+        btn.addEventListener('click', function () { toggleSleeveAccordion(btn); });
+        btn.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleSleeveAccordion(btn); }
         });
       });
 
