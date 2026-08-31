@@ -391,8 +391,15 @@
       });
 
       // Sposoby sleevowania – akordeon typów
+      var sleeveShowcase = document.querySelector('.sleeve-showcase');
       var sleeveMarkers = document.querySelectorAll('.sleeve-showcase__markers li');
-      function setSleeveMarker(idx) {
+      function setSleeveHighlight(idx) {
+        if (!sleeveShowcase) return;
+        if (idx < 0) {
+          sleeveShowcase.removeAttribute('data-active');
+        } else {
+          sleeveShowcase.setAttribute('data-active', String(idx));
+        }
         sleeveMarkers.forEach(function (marker, i) {
           marker.classList.toggle('is-active', i === idx);
         });
@@ -408,7 +415,7 @@
           panel.classList.remove('is-open');
           panel.hidden = true;
         });
-        setSleeveMarker(-1);
+        setSleeveHighlight(-1);
       }
       function toggleSleeveAccordion(btn) {
         var panelId = btn.getAttribute('aria-controls');
@@ -422,7 +429,7 @@
           panel.classList.add('is-open');
           panel.hidden = false;
           var idx = parseInt(item.getAttribute('data-sleeve-type'), 10);
-          if (!isNaN(idx)) setSleeveMarker(idx);
+          if (!isNaN(idx)) setSleeveHighlight(idx);
         }
       }
       document.querySelectorAll('.sleeve-acc-trigger').forEach(function (btn) {
