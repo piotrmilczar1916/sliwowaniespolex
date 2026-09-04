@@ -49,7 +49,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --color-indigo: #1a0b3b;
@@ -200,35 +200,285 @@
     #hero .text-steel-300 { color: rgba(255, 255, 255, .72) !important; }
     #hero .text-steel-400,
     #hero .text-steel-500 { color: rgba(255, 255, 255, .55) !important; }
-    #hero .hero-stats-cell,
-    #hero .bg-navy-900\/60 {
-      background: rgba(255, 255, 255, .07) !important;
-      backdrop-filter: blur(10px);
-      border-color: rgba(255, 255, 255, .12) !important;
-    }
-    #hero dl.grid {
-      background: rgba(255, 255, 255, .04) !important;
-      border-color: rgba(255, 255, 255, .14) !important;
-      box-shadow: 0 8px 32px -12px rgba(0, 0, 0, .35);
-    }
-    #hero .hero-stats-cell:nth-child(1) { background: rgba(233, 30, 99, .12) !important; }
-    #hero .hero-stats-cell:nth-child(2) { background: rgba(255, 184, 0, .10) !important; }
-    #hero .hero-stats-cell:nth-child(3) { background: rgba(124, 58, 237, .12) !important; }
-    #hero .hero-stats-cell:nth-child(4) { background: rgba(255, 0, 168, .10) !important; }
-    #hero .hero-stats-cell:nth-child(1) .counter { color: #F472B6 !important; font-weight: 800; }
-    #hero .hero-stats-cell:nth-child(2) .counter { color: var(--color-amber) !important; font-weight: 800; }
-    #hero .hero-stats-cell:nth-child(3) .counter { color: #C4B5FD !important; font-weight: 800; }
-    #hero .hero-stats-cell:nth-child(4) .counter { color: var(--color-pink) !important; font-weight: 800; }
-    #hero a.border-steel-500 {
-      color: var(--color-amber) !important;
-      border-color: rgba(255, 184, 0, .45) !important;
+    #hero .hero-btn-secondary {
+      color: #fff !important;
+      border-color: rgba(255, 255, 255, .35) !important;
       background: rgba(255, 255, 255, .06) !important;
     }
-    #hero a.border-steel-500:hover {
-      border-color: var(--color-amber) !important;
-      background: rgba(255, 184, 0, .12) !important;
+    #hero .hero-btn-secondary:hover {
+      border-color: rgba(255, 255, 255, .55) !important;
+      background: rgba(255, 255, 255, .12) !important;
     }
     #hero .focus\:ring-offset-navy-900:focus { --tw-ring-offset-color: var(--color-indigo) !important; }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .625rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: .6875rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--color-amber);
+    }
+    .hero-eyebrow-line {
+      display: block;
+      width: 2rem;
+      height: 3px;
+      border-radius: 9999px;
+      background: var(--gradient-warm);
+    }
+    .hero-title-line {
+      display: block;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      color: #fff;
+    }
+    .hero-title-gradient {
+      display: block;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      background: var(--gradient-warm);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-btn-primary {
+      background: var(--gradient-warm) !important;
+      box-shadow: 0 8px 28px -8px rgba(233, 30, 99, .55);
+    }
+    .hero-btn-primary:hover { filter: brightness(1.06); }
+    .hero-visual-wrap,
+    .hero-visual-media,
+    .hero-stage {
+      background: none;
+      background-color: transparent;
+    }
+    .hero-visual-wrap {
+      overflow: visible;
+    }
+    .hero-visual-media {
+      position: relative;
+      min-height: 12rem;
+      padding: .5rem 0 .75rem;
+      overflow: visible;
+    }
+    @media (min-width: 1024px) {
+      .hero-visual-media {
+        min-height: 14rem;
+        padding-top: .75rem;
+        padding-bottom: .25rem;
+        margin-top: 2.75rem;
+        margin-left: -.5rem;
+      }
+    }
+    @media (min-width: 1280px) {
+      .hero-visual-media { margin-left: -.75rem; }
+    }
+    .hero-stage {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1024 / 341;
+      max-height: 19rem;
+      margin: 0 auto;
+      overflow: visible;
+    }
+    @media (min-width: 640px) {
+      .hero-stage { max-height: 22rem; }
+    }
+    @media (min-width: 1024px) {
+      .hero-stage { max-height: 25rem; }
+    }
+    .hero-showcase-scene {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: scale(1.08);
+      transform-origin: 50% 90%;
+    }
+    @media (min-width: 640px) {
+      .hero-showcase-scene { transform: scale(1.15); }
+    }
+    @media (min-width: 1024px) {
+      .hero-showcase-scene { transform: scale(1.22); }
+    }
+    @media (min-width: 1024px) and (max-width: 1279px) {
+      .hero-visual-media { margin-top: 2.25rem; margin-left: -.25rem; }
+      .hero-showcase-scene { transform: scale(1.16); }
+    }
+    .hero-showcase-fx {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: visible;
+    }
+    .hero-showcase-arc-glow {
+      position: absolute;
+      top: -2%;
+      left: 22%;
+      width: 56%;
+      height: 52%;
+      background:
+        radial-gradient(ellipse 55% 45% at 50% 72%, rgba(233, 30, 99, .28) 0%, rgba(255, 152, 0, .14) 42%, transparent 72%);
+      filter: blur(10px);
+      opacity: .75;
+    }
+    .hero-showcase-floor-glow {
+      position: absolute;
+      bottom: 4%;
+      left: 6%;
+      right: 2%;
+      height: 22%;
+      background:
+        radial-gradient(ellipse 90% 100% at 50% 0%, rgba(255, 255, 255, .1) 0%, rgba(233, 30, 99, .14) 38%, transparent 72%);
+      filter: blur(7px);
+      opacity: .9;
+    }
+    .hero-showcase-po-glow {
+      position: absolute;
+      bottom: 2%;
+      right: -2%;
+      width: 56%;
+      height: 78%;
+      background:
+        radial-gradient(ellipse 68% 52% at 58% 86%, rgba(233, 30, 99, .24) 0%, rgba(255, 152, 0, .14) 38%, transparent 68%),
+        radial-gradient(ellipse 45% 28% at 62% 92%, rgba(255, 255, 255, .08) 0%, transparent 70%);
+      filter: blur(11px);
+      opacity: .88;
+    }
+    .hero-showcase-reflection {
+      position: absolute;
+      bottom: 5%;
+      left: 8%;
+      right: 3%;
+      height: 10%;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, .09) 0%, rgba(233, 30, 99, .05) 45%, transparent 100%);
+      filter: blur(5px);
+      opacity: .55;
+      transform: scaleY(.45);
+      transform-origin: center top;
+    }
+    .hero-showcase-img {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center bottom;
+      background: none;
+      background-color: transparent;
+      filter:
+        drop-shadow(0 5px 10px rgba(0, 0, 0, .42))
+        drop-shadow(0 14px 22px rgba(0, 0, 0, .22))
+        drop-shadow(4px 10px 18px rgba(233, 30, 99, .12));
+    }
+    @media (min-width: 1024px) {
+      .hero-showcase-img {
+        filter:
+          drop-shadow(0 6px 12px rgba(0, 0, 0, .44))
+          drop-shadow(0 18px 28px rgba(0, 0, 0, .24))
+          drop-shadow(6px 14px 22px rgba(233, 30, 99, .16))
+          drop-shadow(12px 8px 28px rgba(255, 152, 0, .1));
+      }
+    }
+    .hero-benefits {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .75rem;
+      margin-top: 3.25rem;
+      background: none;
+      border: none;
+      box-shadow: none;
+      overflow: visible;
+    }
+    @media (min-width: 1024px) {
+      .hero-benefits { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .875rem; margin-top: 4rem; }
+    }
+    .hero-benefit {
+      position: relative;
+      display: flex;
+      gap: .875rem;
+      align-items: flex-start;
+      padding: 1.125rem 1rem;
+      border-radius: .875rem;
+      background: linear-gradient(155deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .04) 100%);
+      border: 1px solid rgba(255, 255, 255, .16);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 28px -14px rgba(0, 0, 0, .55);
+      transition: border-color .22s ease, background .22s ease, transform .22s ease, box-shadow .22s ease;
+      overflow: hidden;
+    }
+    .hero-benefit::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gradient-warm);
+      opacity: .9;
+    }
+    .hero-benefit:hover {
+      background: linear-gradient(155deg, rgba(255, 255, 255, .14) 0%, rgba(255, 255, 255, .07) 100%);
+      border-color: rgba(255, 255, 255, .3);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px -12px rgba(233, 30, 99, .38);
+    }
+    @media (min-width: 640px) {
+      .hero-benefit { padding: 1.25rem 1.125rem; }
+    }
+    .hero-benefit__icon {
+      flex-shrink: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: .75rem;
+      background: linear-gradient(135deg, rgba(233, 30, 99, .42) 0%, rgba(255, 152, 0, .32) 100%);
+      border: 1px solid rgba(255, 255, 255, .18);
+      color: #fff;
+      box-shadow: 0 6px 16px -8px rgba(233, 30, 99, .55);
+    }
+    .hero-benefit:nth-child(1) .hero-benefit__icon {
+      background: linear-gradient(135deg, rgba(124, 58, 237, .5) 0%, rgba(233, 30, 99, .38) 100%);
+    }
+    .hero-benefit:nth-child(2) .hero-benefit__icon {
+      background: linear-gradient(135deg, rgba(233, 30, 99, .48) 0%, rgba(255, 152, 0, .36) 100%);
+    }
+    .hero-benefit:nth-child(3) .hero-benefit__icon {
+      background: linear-gradient(135deg, rgba(16, 185, 129, .42) 0%, rgba(59, 130, 246, .34) 100%);
+    }
+    .hero-benefit:nth-child(4) .hero-benefit__icon {
+      background: linear-gradient(135deg, rgba(255, 152, 0, .46) 0%, rgba(233, 30, 99, .36) 100%);
+    }
+    .hero-benefit__icon svg { width: 1.25rem; height: 1.25rem; }
+    .hero-benefit__title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: .875rem;
+      font-weight: 700;
+      line-height: 1.25;
+      color: #fff;
+      letter-spacing: .01em;
+    }
+    .hero-benefit__desc {
+      margin-top: .25rem;
+      font-size: .75rem;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, .74);
+    }
+    #site-header:not(.header-scrolled) {
+      background: rgba(26, 11, 59, .12) !important;
+      border-bottom-color: rgba(255, 255, 255, .08) !important;
+    }
+    #site-header:not(.header-scrolled) .nav-link { color: rgba(255, 255, 255, .82) !important; }
+    #site-header:not(.header-scrolled) .nav-link:hover,
+    #site-header:not(.header-scrolled) .nav-link.is-active { color: #fff !important; }
+    #site-header:not(.header-scrolled) #menu-toggle { color: rgba(255, 255, 255, .9) !important; }
+    .logo-domain { color: var(--color-amber); -webkit-text-fill-color: var(--color-amber); }
+    .header-cta { background: var(--gradient-warm) !important; border: none !important; }
 
     #korzysci {
       color: var(--text-primary);
@@ -382,7 +632,7 @@
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .reveal, .reveal-stagger, .hero-item, .hero-visual-wrap, .hero-visual-img,
+      .reveal, .reveal-stagger, .hero-item, .hero-visual-wrap,
       .compare-row, .hero-parallax-layer { opacity: 1 !important; transform: none !important; transition: none !important; animation: none !important; }
       #porownanie .compare-row { opacity: 1 !important; }
       #porownanie.compare-highlight .compare-col-mtm { animation: none !important; }
@@ -405,7 +655,13 @@
 
     .header-scrolled { box-shadow: 0 1px 0 rgba(220,226,234,.9), 0 8px 30px -12px rgba(233, 30, 99, .12); }
     #site-header { background: rgba(255, 255, 255, .92) !important; }
-    #site-header a.font-display { background: var(--gradient-warm); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    #site-header a.font-display { background: none; -webkit-text-fill-color: initial; }
+    #site-header a.font-display .logo-sleever {
+      background: var(--gradient-warm);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
     #header-inner { transition: height .3s cubic-bezier(.16,1,.3,1), padding .3s cubic-bezier(.16,1,.3,1); }
     #site-header.header-compact #header-inner { height: 3.5rem; }
     @media (min-width: 1024px) {
@@ -1127,38 +1383,9 @@
     #hero.hero-ready .hero-item { opacity: 1; transform: translateY(0); }
     .hero-visual-wrap { opacity: 0; transform: scale(.96) translateY(1rem); transition: opacity .8s cubic-bezier(.16,1,.3,1) .35s, transform .8s cubic-bezier(.16,1,.3,1) .35s; will-change: transform; }
     #hero.hero-ready .hero-visual-wrap { opacity: 1; transform: scale(1) translateY(0); }
-    .hero-visual-glow {
-      position: absolute; inset: -12% -8% -20% -8%;
-      background:
-        radial-gradient(ellipse 60% 55% at 45% 50%, rgba(233, 30, 99, .35), transparent 65%),
-        radial-gradient(ellipse 50% 45% at 70% 60%, rgba(255, 184, 0, .22), transparent 60%);
-      pointer-events: none;
-    }
-    .hero-visual-media {
-      position: relative; z-index: 1;
-      border-radius: 12px;
-      background: transparent;
-      box-shadow: none;
-      overflow: visible;
-    }
-    .hero-visual-img {
-      transform: scale(1.08);
-      transform-origin: center center;
-      filter: drop-shadow(0 28px 48px rgba(0, 0, 0, .35));
-      transition: transform .8s cubic-bezier(.16, 1, .3, 1) .35s;
-    }
-    @media (min-width: 1024px) {
-      .hero-visual-img {
-        transform: scale(1.14);
-        transform-origin: center center;
-      }
-    }
     #hero-heading { display: block; text-align: left; }
-    #hero-heading .hero-heading-title { margin: 0; padding: 0; }
     .hero-copy { display: flex; flex-direction: column; align-items: stretch; }
-    .hero-body p { margin: 0; }
-    .hero-stats-cell { display: flex; flex-direction: column; min-height: 100%; }
-    .hero-stats-cell dd { flex: 1; font-weight: 600; }
+    .hero-body p { margin: 0; max-width: 34rem; }
 
     /* Menu mobilne – płynne rozwijanie */
     #mobile-menu { transition: max-height .3s ease, opacity .25s ease; overflow: hidden; max-height: 0; opacity: 0; }
@@ -1200,7 +1427,7 @@
 
     @media (prefers-reduced-motion: reduce) {
       .scroll-progress, .to-top, .hero-item, .hero-visual-wrap,
-      .hero-visual-img, #header-inner, .reveal-stagger, .compare-row { transition: none; }
+      #header-inner, .reveal-stagger, .compare-row { transition: none; }
     }
   </style>
 
@@ -1226,7 +1453,7 @@
       {
         "@type": "Question",
         "name": "Czy sleeve może zastąpić klasyczną etykietę?",
-        "acceptedAnswer": { "@type": "Answer", "text": "W wielu zastosowaniach tak – gdy potrzebne jest pełne pokrycie 360°, dopasowanie do nieregularnych kształtów, zabezpieczenie tamper-evident lub wysoka odporność w wilgoci." }
+        "acceptedAnswer": { "@type": "Answer", "text": "W wielu zastosowaniach tak – gdy potrzebne jest pełne pokrycie 360°, dopasowanie do nieregularnych kształtów, zabezpieczenie tamper-evident lub odporność na wilgoć." }
       },
       {
         "@type": "Question",
@@ -1270,9 +1497,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div id="header-inner" class="flex items-center justify-between gap-4 h-16 lg:h-[4.5rem]">
         <div class="flex items-center gap-5 xl:gap-6 min-w-0">
-          <a href="#top" class="font-display font-bold text-navy-900 text-lg shrink-0" aria-label="sleever.com.pl – strona główna">sleever.com.pl</a>
+          <a href="#top" class="font-display font-bold text-lg shrink-0" aria-label="sleever.com.pl – strona główna"><span class="logo-sleever">sleever</span><span class="logo-domain">.com.pl</span></a>
           <nav class="hidden lg:flex items-center gap-4 xl:gap-5 text-[0.75rem] xl:text-[0.8125rem] font-medium text-steel-600" aria-label="Nawigacja sekcji">
-            <a href="#problem" class="nav-link hover:text-navy-900 transition-colors shrink-0">Problem</a>
+            <a href="#problem" class="nav-link hover:text-navy-900 transition-colors shrink-0">Wyzwanie</a>
             <a href="#jak-dziala" class="nav-link hover:text-navy-900 transition-colors shrink-0">Sposób działania</a>
             <a href="#korzysci" class="nav-link hover:text-navy-900 transition-colors shrink-0">Korzyści</a>
             <a href="#porownanie" class="nav-link hover:text-navy-900 transition-colors shrink-0">Porównanie</a>
@@ -1286,7 +1513,7 @@
         </div>
 
         <div class="flex items-center gap-3 shrink-0">
-          <a href="#kontakt" class="hidden sm:inline-flex items-center gap-2 justify-center px-4 py-2.5 text-sm font-semibold text-white bg-accent-500 hover:bg-accent-600 rounded-lg shadow-sm shadow-accent-500/30 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 transition-colors">
+          <a href="#kontakt" class="header-cta hidden sm:inline-flex items-center gap-2 justify-center px-4 py-2.5 text-sm font-semibold text-white rounded-lg shadow-sm shadow-accent-500/30 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 transition-colors">
             Zapytaj o dobór maszyny
           </a>
           <button type="button" id="menu-toggle" class="lg:hidden p-2 rounded-lg text-steel-700 hover:bg-steel-100 focus:outline-none focus:ring-2 focus:ring-accent-500" aria-expanded="false" aria-controls="mobile-menu" aria-label="Otwórz menu">
@@ -1299,7 +1526,7 @@
 
     <div id="mobile-menu" class="lg:hidden border-t border-steel-200 bg-white" aria-label="Menu mobilne">
       <nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1 text-sm font-medium">
-        <a href="#problem" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">Problem</a>
+        <a href="#problem" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">Wyzwanie</a>
         <a href="#jak-dziala" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">Sposób działania</a>
         <a href="#korzysci" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">Korzyści</a>
         <a href="#porownanie" class="mobile-nav-link py-2.5 text-steel-700 border-b border-steel-100">Porównanie</a>
@@ -1318,63 +1545,92 @@
 
     <!-- ========== 2. HERO ========== -->
     <section id="top" aria-hidden="true" class="sr-only"></section>
-    <section id="hero" class="relative pt-28 lg:pt-36 pb-16 lg:pb-24 text-white overflow-hidden" aria-labelledby="hero-heading">
+    <section id="hero" class="relative pt-28 lg:pt-36 pb-16 lg:pb-20 text-white overflow-hidden" aria-labelledby="hero-heading">
       <div id="hero-grid-bg" class="hero-parallax-layer absolute inset-0 grid-bg" aria-hidden="true"></div>
       <div id="hero-glow-bg" class="hero-parallax-layer absolute -top-32 -right-32 w-[36rem] h-[36rem] bg-accent-500/20 rounded-full blur-[140px]" aria-hidden="true"></div>
       <div class="hero-glow-left hero-parallax-layer" aria-hidden="true"></div>
       <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-steel-500/40 to-transparent" aria-hidden="true"></div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col lg:grid lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:gap-x-12 xl:gap-x-16 lg:items-start">
-          <div class="hero-copy min-w-0 lg:max-w-[40rem]">
-            <h1 id="hero-heading" class="hero-item font-display font-bold tracking-tight" style="--hero-delay: 0ms">
-              <span class="hero-heading-title block text-[2rem] leading-[1.12] sm:text-5xl lg:text-[3.25rem] lg:leading-[1.08] text-white">Sleevowanie</span>
-              <span class="block w-14 h-1 mt-5 rounded-full bg-accent-500" aria-hidden="true"></span>
+        <div class="flex flex-col lg:grid lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-x-7 xl:gap-x-10 lg:items-center">
+          <div class="hero-copy min-w-0">
+            <p class="hero-eyebrow hero-item" style="--hero-delay: 0ms"><span class="hero-eyebrow-line" aria-hidden="true"></span> Sleeveowanie</p>
+            <h1 id="hero-heading" class="hero-item mt-5 font-display tracking-tight" style="--hero-delay: 80ms">
+              <span class="hero-title-line text-[2rem] leading-[1.12] sm:text-[2.35rem] lg:text-[2.75rem] lg:leading-[1.1]">Zwykłe opakowanie?</span>
+              <span class="hero-title-gradient text-[2rem] leading-[1.12] sm:text-[2.35rem] lg:text-[2.75rem] lg:leading-[1.1] mt-1">Zmień je w markę.</span>
             </h1>
-            <div class="hero-body hero-item mt-6 space-y-5 text-base sm:text-lg text-steel-200 leading-relaxed text-justify" style="--hero-delay: 160ms">
-              <p>Sleevowanie to proces nakładania na opakowanie folii termokurczliwej w formie rękawa i obkurczania jej w tunelu grzewczym. Etykieta termokurczliwa obejmuje opakowanie w pełni — 360° — i sprawdza się przy nieregularnych kształtach butelek, kubków, szklanek i innych pojemników.</p>
-              <p>Od aplikatora folii po tunel obkurczający folia dopasowuje się do profilu produktu zapewniając estetykę, trwałość i daje możliwość zabezpieczenia przed otwarciem (tamper-evident) bez dodatkowych elementów. Sleeve zapewnia również dużą przestrzeń marketingową.</p>
+            <div class="hero-body hero-item mt-6 text-base sm:text-lg text-steel-200 leading-relaxed" style="--hero-delay: 180ms">
+              <p>Folia termokurczliwa 360° pozwala nadać nawet najbardziej nietypowym opakowaniom wyjątkowy wygląd, zwiększyć rozpoznawalność produktu i wyróżnić się na półce.</p>
             </div>
             <div class="hero-item mt-8 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" style="--hero-delay: 280ms">
-              <a href="#jak-dziala" class="group inline-flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-4 text-base font-semibold text-white bg-accent-500 hover:bg-accent-400 rounded-[10px] shadow-lg shadow-accent-500/25 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 focus:ring-offset-navy-900 transition-all">
+              <a href="#jak-dziala" class="hero-btn-primary group inline-flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-4 text-base font-semibold text-white rounded-[10px] focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 focus:ring-offset-navy-900 transition-all">
                 Jak działa sleevowanie
                 <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
               </a>
-              <a href="#linia" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-4 text-base font-semibold text-white border border-steel-500 hover:border-steel-300 hover:bg-white/5 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-navy-900 transition-colors">
+              <a href="#linia" class="hero-btn-secondary inline-flex items-center justify-center gap-2.5 w-full sm:w-auto px-7 py-4 text-base font-semibold rounded-[10px] border focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-navy-900 transition-colors">
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full border border-white/40 bg-white/10" aria-hidden="true">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h5v5H4V6zm11-3h5v8h-5V3zM4 16h5v5H4v-5zm11 0h5v5h-5v-5z"/></svg>
+                </span>
                 Moduły linii
               </a>
             </div>
           </div>
 
-          <div id="hero-visual" class="hero-visual-wrap relative mt-10 lg:mt-2 w-full max-w-lg mx-auto lg:max-w-none lg:mx-0 lg:justify-self-stretch">
-            <div class="hero-visual-glow" aria-hidden="true"></div>
-            <div class="hero-visual-media aspect-[4/3] sm:aspect-[16/10] lg:aspect-[3/2] overflow-visible">
-              <img src="assets/img/hero-machine-nobg.png" alt="Maszyna do sleevowania – linia produkcyjna z aplikatorem rękawa i modułami obkurczania" width="1024" height="620" class="hero-visual-img absolute inset-0 w-full h-full object-contain object-center drop-shadow-xl" loading="eager" decoding="async" fetchpriority="high">
+          <div id="hero-visual" class="hero-visual-wrap relative mt-10 lg:mt-0 w-full max-w-2xl mx-auto lg:max-w-none lg:mx-0">
+            <div class="hero-visual-media">
+              <div class="hero-stage">
+                <div class="hero-showcase-scene">
+                  <div class="hero-showcase-fx" aria-hidden="true">
+                    <span class="hero-showcase-arc-glow"></span>
+                    <span class="hero-showcase-floor-glow"></span>
+                    <span class="hero-showcase-po-glow"></span>
+                    <span class="hero-showcase-reflection"></span>
+                  </div>
+                  <img src="assets/img/hero-bottles-showcase.png?v=2" alt="Porównanie opakowań przed i po nałożeniu folii termokurczliwej 360° — od białych butelek po kolorowe etykiety sleeve" width="1024" height="341" class="hero-showcase-img" loading="eager" decoding="async" fetchpriority="high">
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <dl class="hero-item relative mt-12 lg:mt-14 grid grid-cols-2 lg:grid-cols-4 gap-px bg-steel-700/40 border border-steel-700/40 rounded-xl overflow-hidden" style="--hero-delay: 400ms">
-          <div class="hero-stats-cell bg-navy-900/60 backdrop-blur px-4 sm:px-6 py-6 sm:py-7">
-            <dt class="counter text-3xl sm:text-4xl font-display font-bold text-accent-400 tabular-nums" data-to="3" data-prefix="" data-suffix="">0</dt>
-            <dd class="mt-1.5 text-sm text-steel-300 leading-snug">kroki procesu sleevowania</dd>
-          </div>
-          <div class="hero-stats-cell bg-navy-900/60 backdrop-blur px-4 sm:px-6 py-6 sm:py-7">
-            <dt class="counter text-3xl sm:text-4xl font-display font-bold text-accent-400 tabular-nums" data-to="3" data-prefix="" data-suffix="">0</dt>
-            <dd class="mt-1.5 text-sm text-steel-300 leading-snug">typy tuneli obkurczających</dd>
-          </div>
-          <div class="hero-stats-cell bg-navy-900/60 backdrop-blur px-4 sm:px-6 py-6 sm:py-7">
-            <dt class="counter text-3xl sm:text-4xl font-display font-bold text-accent-400 tabular-nums" data-to="360" data-prefix="" data-suffix="°">0°</dt>
-            <dd class="mt-1.5 text-sm text-steel-300 leading-snug">pełne pokrycie opakowania</dd>
-          </div>
-          <div class="hero-stats-cell bg-navy-900/60 backdrop-blur px-4 sm:px-6 py-6 sm:py-7">
-            <dt class="counter text-3xl sm:text-4xl font-display font-bold text-accent-400 tabular-nums" data-to="4" data-prefix="" data-suffix="+">0+</dt>
-            <dd class="mt-1.5 text-sm text-steel-300 leading-snug">kluczowe branże zastosowań</dd>
-          </div>
-        </dl>
-        <p class="hero-item mt-3 text-xs text-steel-500 text-left w-full" style="--hero-delay: 480ms">
-          Wartości orientacyjne — zależne od konfiguracji linii i formatu opakowania.
-        </p>
+        <div class="hero-benefits hero-item" style="--hero-delay: 400ms">
+          <article class="hero-benefit">
+            <span class="hero-benefit__icon" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke-width="1.7"/><path stroke-linecap="round" stroke-width="1.7" d="M12 4v16"/><path stroke-linecap="round" stroke-width="1.5" d="M6.5 7.5a10 10 0 0111 0M6.5 16.5a10 10 0 0111 0"/></svg>
+            </span>
+            <div>
+              <p class="hero-benefit__title">Pełne pokrycie 360°</p>
+              <p class="hero-benefit__desc">bez ograniczeń projektowych</p>
+            </div>
+          </article>
+          <article class="hero-benefit">
+            <span class="hero-benefit__icon" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linejoin="round" stroke-width="1.7" d="M12 4l6.5 8.5L12 21 5.5 12.5 12 4z"/></svg>
+            </span>
+            <div>
+              <p class="hero-benefit__title">Większa rozpoznawalność</p>
+              <p class="hero-benefit__desc">na półce i wśród konkurencji</p>
+            </div>
+          </article>
+          <article class="hero-benefit">
+            <span class="hero-benefit__icon" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M12 3l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3Z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M9 12l2 2 4-4"/></svg>
+            </span>
+            <div>
+              <p class="hero-benefit__title">Ochrona produktu</p>
+              <p class="hero-benefit__desc">i bezpieczeństwo tamper-evident</p>
+            </div>
+          </article>
+          <article class="hero-benefit">
+            <span class="hero-benefit__icon" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 18V6M8 18V10M12 18V8M16 18V12M20 18V4"/></svg>
+            </span>
+            <div>
+              <p class="hero-benefit__title">Wartość, która się sprzedaje</p>
+              <p class="hero-benefit__desc">design, który przyciąga i buduje markę</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -1383,7 +1639,7 @@
       <div class="section-bg__orb section-bg__orb--1" aria-hidden="true"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="reveal max-w-3xl">
-          <p class="eyebrow text-accent-600 mb-4"><span class="text-steel-400">01</span> Problem</p>
+          <p class="eyebrow text-accent-600 mb-4"><span class="text-steel-400">01</span> Wyzwanie</p>
           <h2 id="problem-heading" class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-navy-900">
             Tradycyjna etykieta nie nadąża za nowoczesnym opakowaniem
           </h2>
@@ -1441,7 +1697,7 @@
               </li>
               <li class="process-step flex gap-4 px-3 py-2 -mx-3" data-process-step="3">
                 <span class="process-step-num flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-lg bg-navy-900 text-white font-display text-sm font-bold ring-4 ring-white transition-colors" aria-hidden="true">3</span>
-                <span class="block pt-1 flex-1 min-w-0"><strong class="text-navy-900 font-semibold">Osuszanie</strong> <span class="text-steel-600">– tunel osuszający usuwa wilgoć i kondensację z powierzchni opakowań po obkurczaniu, przygotowując produkt do pakowania</span></span>
+                <span class="block pt-1 flex-1 min-w-0"><strong class="text-navy-900 font-semibold">Osuszanie</strong> <span class="text-steel-600">– tunel osuszający usuwa wilgoć i kondensację z powierzchni opakowań po obkurczaniu przygotowując produkt do pakowania</span></span>
               </li>
             </ol>
           </div>
@@ -1566,16 +1822,16 @@
           <article class="reveal-stagger relative p-6 sm:p-7 bg-white text-steel-800 border border-steel-200 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300" style="--stagger-i: 0">
             <span class="absolute top-6 right-6 font-display text-4xl font-bold text-steel-100" aria-hidden="true">01</span>
             <div class="w-11 h-11 flex items-center justify-center rounded-xl bg-accent-500 text-white mb-4">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke-width="1.8"/><path stroke-linecap="round" stroke-width="1.8" d="M3 12h18"/></svg>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10 4h4v2M9 6.5h6"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8.5 8.5C7.2 9.8 6.5 11.5 6.5 13.5V19c0 1.7 1.5 3 3.5 3h4c2 0 3.5-1.3 3.5-3v-5.5c0-2-.7-3.7-2-5"/><ellipse cx="12" cy="14.5" rx="5.5" ry="2" stroke-width="1.8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.5 10.5a8 8 0 0 1 13.5-2.8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16.5 6h2.2v-2.2"/></svg>
             </div>
             <h3 class="font-display text-lg font-bold text-navy-900">Pełne pokrycie 360°</h3>
             <p class="mt-2 text-3xl sm:text-4xl font-display font-bold text-accent-500 tabular-nums">360°</p>
-            <p class="mt-2 text-sm text-steel-600 leading-snug">Etykieta obejmuje całe opakowanie bez szwów i przerw — maksymalna powierzchnia na grafikę i komunikację marki.</p>
+            <p class="mt-2 text-sm text-steel-600 leading-snug">Etykieta obejmuje całe opakowanie bez przerw — maksymalna powierzchnia na grafikę i komunikację marki.</p>
           </article>
           <article class="reveal-stagger relative p-6 sm:p-7 bg-white text-steel-800 border border-steel-200 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300" style="--stagger-i: 1">
             <span class="absolute top-6 right-6 font-display text-4xl font-bold text-steel-100" aria-hidden="true">02</span>
             <div class="w-11 h-11 flex items-center justify-center rounded-xl bg-accent-500 text-white mb-4">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 4c-1 4-1 12 0 16M17 4c1 4 1 12 0 16"/></svg>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="7" width="4.5" height="13" rx="1.2" stroke-width="1.8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10.5 5.5h2.5v1.5"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.8 7h4.4c.6 0 1.1.5 1.1 1.1v11.4c0 .8-.7 1.5-1.5 1.5h-3.4c-.8 0-1.5-.7-1.5-1.5V8.1c0-.6.5-1.1 1.1-1.1"/><path stroke-linecap="round" stroke-width="1.8" d="M10 11h4"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.5 8.5h3c.8 0 1.5.7 1.5 1.5v9c0 .8-.7 1.5-1.5 1.5h-3"/><path stroke-linecap="round" stroke-width="1.8" d="M18.5 8.5V6.5"/></svg>
             </div>
             <h3 class="font-display text-lg font-bold text-navy-900">Dowolne kształty opakowań</h3>
             <p class="mt-2 text-3xl sm:text-4xl font-display font-bold text-accent-500 tabular-nums">3 tunele</p>
@@ -1584,7 +1840,7 @@
           <article class="reveal-stagger relative p-6 sm:p-7 bg-white text-steel-800 border border-steel-200 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300" style="--stagger-i: 2">
             <span class="absolute top-6 right-6 font-display text-4xl font-bold text-steel-100" aria-hidden="true">03</span>
             <div class="w-11 h-11 flex items-center justify-center rounded-xl bg-accent-500 text-white mb-4">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3Z"/></svg>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="1.8" d="M10 3h4v2"/><rect x="8.5" y="5" width="7" height="3.5" rx="1" stroke-width="1.8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8.5 8.5h7"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.5 8.5v11c0 1.1 1.1 2 2.5 2s2.5-.9 2.5-2v-11"/><path stroke-linecap="round" stroke-width="1.8" stroke-dasharray="2 1.8" d="M8 6.8h8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M11.2 13.5l1.3 1.3 2.8-2.8"/></svg>
             </div>
             <h3 class="font-display text-lg font-bold text-navy-900">Tamper-evident bez dodatków</h3>
             <p class="mt-2 text-3xl sm:text-4xl font-display font-bold text-accent-500 tabular-nums">0 kleju</p>
@@ -1746,7 +2002,7 @@
             <div class="sleeve-acc-item" data-sleeve-type="3">
               <button type="button" class="sleeve-acc-trigger" aria-expanded="false" aria-controls="sleeve-acc-3" id="sleeve-acc-btn-3">
                 <span class="sleeve-acc-num">04</span>
-                <span class="sleeve-acc-title">Sleeve na szyjkę / plomba</span>
+                <span class="sleeve-acc-title">Sleeve na szyjkę zabezpieczający / plomba (tamper-evident)</span>
                 <svg class="sleeve-acc-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
               </button>
               <div id="sleeve-acc-3" class="sleeve-acc-panel" role="region" aria-labelledby="sleeve-acc-btn-3" hidden>
@@ -1921,7 +2177,7 @@
         <div class="mt-10 max-w-3xl space-y-3 reveal">
           <details class="group rounded-xl ring-1 ring-steel-200 bg-white overflow-hidden">
             <summary class="flex items-center justify-between gap-3 px-5 py-4 cursor-pointer font-semibold text-navy-900 list-none"><span>Czy sleeve może zastąpić klasyczną etykietę?</span><svg class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
-            <div class="px-5 pb-5 text-sm text-steel-600 leading-relaxed border-t border-steel-100 pt-4">W wielu zastosowaniach tak – gdy potrzebne jest pełne pokrycie 360°, dopasowanie do nieregularnych kształtów, zabezpieczenie tamper-evident lub wysoka odporność w wilgoci. Przy prostych, cylindrycznych opakowaniach i niewielkim polu etykiety klasyczna etykieta samoprzylepna bywa nadal bardziej ekonomicznym wyborem.</div>
+            <div class="px-5 pb-5 text-sm text-steel-600 leading-relaxed border-t border-steel-100 pt-4">W wielu zastosowaniach tak – gdy potrzebne jest pełne pokrycie 360°, dopasowanie do nieregularnych kształtów, zabezpieczenie tamper-evident lub odporność na wilgoć. Przy prostych, cylindrycznych opakowaniach i niewielkim polu etykiety klasyczna etykieta samoprzylepna bywa nadal bardziej ekonomicznym wyborem.</div>
           </details>
           <details class="group rounded-xl ring-1 ring-steel-200 bg-white overflow-hidden">
             <summary class="flex items-center justify-between gap-3 px-5 py-4 cursor-pointer font-semibold text-navy-900 list-none"><span>Czy sleevowanie nadaje się do krótkich serii?</span><svg class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>

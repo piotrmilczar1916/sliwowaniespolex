@@ -8,7 +8,6 @@
 
       // Hero – wejście ze staggerem + parallax wizualu
       var heroSection = document.getElementById('hero');
-      var heroVisual = document.getElementById('hero-visual');
       var heroVisualMedia = heroSection ? heroSection.querySelector('.hero-visual-media') : null;
       if (heroSection) {
         if (prefersReduced) {
