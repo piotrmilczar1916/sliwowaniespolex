@@ -256,12 +256,19 @@
     }
     .hero-visual-wrap {
       overflow: visible;
+      position: relative;
+      z-index: 1;
     }
     .hero-visual-media {
       position: relative;
       min-height: 12rem;
-      padding: .5rem 0 .75rem;
+      padding: .5rem 0 1.25rem;
       overflow: visible;
+    }
+    @media (max-width: 1023px) {
+      .hero-visual-wrap { margin-bottom: .5rem; }
+      .hero-visual-media { padding-bottom: 1.75rem; }
+      .hero-showcase-scene { transform: scale(1); }
     }
     @media (min-width: 1024px) {
       .hero-visual-media {
@@ -293,11 +300,8 @@
       position: relative;
       width: 100%;
       height: 100%;
-      transform: scale(1.08);
+      transform: scale(1);
       transform-origin: 50% 90%;
-    }
-    @media (min-width: 640px) {
-      .hero-showcase-scene { transform: scale(1.15); }
     }
     @media (min-width: 1024px) {
       .hero-showcase-scene { transform: scale(1.22); }
@@ -388,10 +392,18 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: .75rem;
       margin-top: 3.25rem;
+      position: relative;
+      z-index: 3;
       background: none;
       border: none;
       box-shadow: none;
       overflow: visible;
+    }
+    @media (max-width: 1023px) {
+      .hero-benefits {
+        margin-top: 4.75rem;
+        gap: .625rem;
+      }
     }
     @media (min-width: 1024px) {
       .hero-benefits { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .875rem; margin-top: 4rem; }
@@ -408,7 +420,11 @@
       backdrop-filter: blur(12px);
       box-shadow: 0 10px 28px -14px rgba(0, 0, 0, .55);
       transition: border-color .22s ease, background .22s ease, transform .22s ease, box-shadow .22s ease;
-      overflow: hidden;
+      overflow: visible;
+    }
+    .hero-benefit > div {
+      min-width: 0;
+      flex: 1;
     }
     .hero-benefit::before {
       content: '';
@@ -459,15 +475,39 @@
       font-family: 'Space Grotesk', sans-serif;
       font-size: .875rem;
       font-weight: 700;
-      line-height: 1.25;
+      line-height: 1.3;
       color: #fff;
       letter-spacing: .01em;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
     .hero-benefit__desc {
       margin-top: .25rem;
       font-size: .75rem;
       line-height: 1.45;
       color: rgba(255, 255, 255, .74);
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+    @media (max-width: 639px) {
+      .hero-benefits {
+        margin-top: 4.25rem;
+        gap: .625rem;
+      }
+      .hero-benefit {
+        padding: 1rem .875rem;
+        gap: .75rem;
+        backdrop-filter: none;
+        background: rgba(26, 11, 59, .82);
+      }
+      .hero-benefit__icon {
+        width: 2.125rem;
+        height: 2.125rem;
+        border-radius: .625rem;
+      }
+      .hero-benefit__icon svg { width: 1.125rem; height: 1.125rem; }
+      .hero-benefit__title { font-size: .8125rem; line-height: 1.35; }
+      .hero-benefit__desc { font-size: .6875rem; }
     }
     #site-header:not(.header-scrolled) {
       background: rgba(26, 11, 59, .12) !important;
